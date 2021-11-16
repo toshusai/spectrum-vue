@@ -9,20 +9,6 @@
     "lint": "eslint --fix --ext \".ts,.vue\" --ignore-path .gitignore .",
     "prepublish": "npm run build"
   },
-  "keywords": [
-    "vue",
-    "typescript",
-    "component",
-    "ui-framework",
-    "adobe",
-    "adobe-spectrum",
-    "spectrum-css"
-  ],
-  "author": "toshusai",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "peerDependencies": {
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2"
@@ -85,5 +71,27 @@
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "keywords": [
+    "vue",
+    "typescript",
+    "component",
+    "ui-framework",
+    "adobe",
+    "adobe-spectrum",
+    "spectrum-css"
+  ],
+  "author": "toshusai",
+  "license": "MIT",
+  "homepage": "https://github.com/toshusai/spectrum-vue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toshusai/spectrum-vue"
+  },
+  "bugs": {
+    "url": "https://github.com/toshusai/spectrum-vue/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
 }
