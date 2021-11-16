@@ -9,7 +9,7 @@ export default {
     base: '/spectrum-vue/'
   },
   head: {
-    title: "Vega",
+    title: "Spectrum Vue",
     htmlAttrs: {
       lang: "en",
     },
@@ -26,7 +26,7 @@ export default {
     "@spectrum-css/vars/dist/spectrum-medium.css",
     "@spectrum-css/vars/dist/spectrum-light.css",
     "@spectrum-css/vars/dist/spectrum-dark.css",
-    "spectrum-vue/dist/index.css",
+    "@toshusai/spectrum-vue/dist/index.css",
   ],
 
   plugins: [

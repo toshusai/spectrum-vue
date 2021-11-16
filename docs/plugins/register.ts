@@ -1,4 +1,4 @@
-import * as components from "spectrum-vue"
+import * as components from "@toshusai/spectrum-vue"
 import ComponentView from "../components/ComponentView.vue"
 import Vue from "vue"
 

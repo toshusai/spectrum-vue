@@ -7,7 +7,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import { Color } from "spectrum-vue";
+import { Color } from "@toshusai/spectrum-vue";
 
 @Component({})
 export default class index extends Vue {
