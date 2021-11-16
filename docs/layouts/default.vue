@@ -8,7 +8,7 @@
       ></div>
       <div class="sidenav" :style="sideNavStyle">
         <h2 class="sidenav-header">
-          <a href="/" @click="clickTitle"> Spectrum Vue </a>
+          <a href="/spectrum-vue" @click="clickTitle"> Spectrum Vue </a>
         </h2>
         <div>
           <sp-sidenav :items="navLinks"></sp-sidenav>
@@ -44,6 +44,7 @@
 }
 .sidenav-header > a {
   text-decoration: none;
+  color: inherit;
 }
 .sidenav-header > a:visited {
   color: inherit;
@@ -77,7 +78,7 @@ export default class Default extends Vue {
     return this.links.map((link) => {
       return {
         text: link.text,
-        href: link.href,
+        href: "/spectrum-vue/" + link.href,
         click: (e: Event) => {
           e.preventDefault();
           this.$router.push(link.href);
