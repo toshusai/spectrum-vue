@@ -3,7 +3,10 @@
     class="spectrum-Slider"
     :class="{ 'is-disabled': disabled, 'spectrum-Slider--filled': filled }"
   >
-    <div v-if="label" class="spectrum-Slider-labelContainer">
+    <div
+      v-if="label"
+      class="spectrum-Slider-labelContainer"
+    >
       <label
         id="spectrum-Slider-label-8"
         class="spectrum-Slider-label"
@@ -21,8 +24,14 @@
         {{ valueDisplay }}
       </div>
     </div>
-    <div ref="controls" class="spectrum-Slider-controls">
-      <div class="spectrum-Slider-track" :style="`width:${position}%`" />
+    <div
+      ref="controls"
+      class="spectrum-Slider-controls"
+    >
+      <div
+        class="spectrum-Slider-track"
+        :style="`width:${position}%`"
+      />
       <div
         class="spectrum-Slider-handle"
         :style="`left: ${position}%; cursor: pointer`"
@@ -36,9 +45,12 @@
           :min="min"
           :max="max"
           :disabled="disabled"
-        />
+        >
       </div>
-      <div class="spectrum-Slider-track" :style="`width:${100 - position}%`" />
+      <div
+        class="spectrum-Slider-track"
+        :style="`width:${100 - position}%`"
+      />
     </div>
   </div>
 </template>

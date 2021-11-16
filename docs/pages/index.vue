@@ -36,7 +36,10 @@
       <h2>Components</h2>
       <ul>
         <li style="margin: 8px" v-for="(link, i) in links" :key="i">
-          <sp-link :href="link.href" @click="(e) => clickLink(e, link.href)">
+          <sp-link
+            :href="'/spectrum-vue/' + link.href"
+            @click="(e) => clickLink(e, link.href)"
+          >
             {{ link.text }}
           </sp-link>
         </li>
