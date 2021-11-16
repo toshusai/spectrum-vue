@@ -5,6 +5,9 @@ export default {
   },
   ssr: false,
   target: "static",
+  router: {
+    base: '/spectrum-vue/'
+  },
   head: {
     title: "Vega",
     htmlAttrs: {
