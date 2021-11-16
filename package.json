@@ -1,5 +1,5 @@
 {
-  "name": "spectrum-vue",
+  "name": "@toshusai/spectrum-vue",
   "version": "0.0.1",
   "description": "UI Components for Vue based on Adobe Spectrum",
   "main": "dist/index.js",
@@ -20,6 +20,9 @@
   ],
   "author": "toshusai",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2"
