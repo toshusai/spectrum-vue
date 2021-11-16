@@ -8,35 +8,21 @@ __:warning:__ This project is work in progress. Not a stable version. May make d
 - This project was not developed by Adobe.
 - Not the same as `https://github.com/adobe/react-spectrum`, `https://github.com/adobe/spectrum-web-components` API.
 
+## Install
+```
+yarn add @toshusai/spectrum-vue
+```
 
-| Component        |     |
-| ---------------- | --- |
-| ActionButton     |     |
-| ActionGroup      |     |
-| Checkbox         |     |
-| ColorArea        |     |
-| ColorSlider      |     |
-| Divider          |     |
-| DropIndicator    |     |
-| FieldLabel       |     |
-| HintText         |     |
-| Icon             |     |
-| ItemListItem     |     |
-| Moal             |     |
-| Popover          |     |
-| AutoComplete     |     |
-| ContextMenu      |     |
-| HintTextField    |     |
-| Sidenav          |     |
-| SplitView        |     |
-| SplitViewPane    |     |
-| SplitViewSpliter |     |
-| Table            |     |
-| Textarea         |     |
-| Toast            |     |
-| Tabs             |     |
-| TreeItem         |     |
-| Slider           |     |
+Register Components to global.
+```ts
+import * as components from "@toshusai/spectrum-vue"
+import Vue from "vue"
+
+Object.entries(components).forEach(([name, component]) => {
+    Vue.component(name, component)
+})
+```
+
 
 # License
 MIT
