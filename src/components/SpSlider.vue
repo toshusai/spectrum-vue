@@ -121,7 +121,6 @@ export default class SpSlider extends Vue {
 
   mounted() {
     this.controls = this.$el.querySelector(".spectrum-Slider-controls");
-    console.log(this.controls);
   }
 }
 </script>
