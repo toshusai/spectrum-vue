@@ -1503,10 +1503,10 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/vars/-/vars-4.1.1.tgz#be5d515ebf3b268a10c399e1db80d4f139af6238"
   integrity sha512-LflV9y/+u1nPg+uBx5TWI78UXisTEho+0jzWYkOXM66FzQ6SA65TInGh7F7IiNSe9vBBPvtSg4GjNWNwvdyI8w==
 
-"@toshusai/spectrum-vue@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@toshusai/spectrum-vue/-/spectrum-vue-0.0.1.tgz#3ed00a744701096704f600df1ebb1b652954693f"
-  integrity sha512-ziZBYIHSElLw9A8aGfvVFjAqN4svCZllERb1in+ioS3OVxFmQLcYdKaQFkMdAE4BInSz2o+b9Bpci92vrKQ41g==
+"@toshusai/spectrum-vue@0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@toshusai/spectrum-vue/-/spectrum-vue-0.0.2.tgz#7db8582dc7f1cd4ac89607b78fc2fdda5ef13fcc"
+  integrity sha512-223LqQ89tMHkcfAWd2sRoeYODftw0SBTZ5sZoxlRn2tTRGTa+Iz7yaIm0/Djg8lSx6KzTVQxm4Yw4BrlD/LhbA==
   dependencies:
     "@adobe/spectrum-css-workflow-icons" "^1.2.1"
     "@spectrum-css/actionbutton" "^1.0.5"

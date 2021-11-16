@@ -13,7 +13,7 @@
   "dependencies": {
     "@spectrum-css/page": "^3.0.7",
     "@spectrum-css/vars": "^4.1.1",
-    "@toshusai/spectrum-vue": "^0.0.1",
+    "@toshusai/spectrum-vue": "0.0.2",
     "@types/loadicons": "^1.0.0",
     "core-js": "^3.15.1",
     "loadicons": "^1.0.0",
