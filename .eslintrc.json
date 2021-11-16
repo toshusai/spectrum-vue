@@ -1,0 +1,44 @@
+{
+    "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module",
+        "ecmaVersion": 2020
+    },
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "ignorePatterns": [
+        "static/**/*",
+        "docs/**/*"
+    ],
+    "parser": "vue-eslint-parser",
+    "rules": {
+        "eqeqeq": "off",
+        "vue/component-tags-order": [
+            "error",
+            {
+                "order": [
+                    "template",
+                    "style",
+                    "script"
+                ]
+            }
+        ],
+        "import/order": [
+            2,
+            {
+                "alphabetize": {
+                    "order": "asc"
+                }
+            }
+        ]
+    },
+    "plugins": [
+        "import"
+    ],
+    "extends": [
+        "plugin:vue/recommended"
+    ]
+}
