@@ -104,8 +104,8 @@ export default class Default extends Vue {
   }
 
   mounted() {
-    loadicons("/spectrum-css-icons.svg", () => {});
-    loadicons("/spectrum-icons.svg", () => {});
+    loadicons("/spectrum-vue/spectrum-css-icons.svg", () => {});
+    loadicons("/spectrum-vue/spectrum-icons.svg", () => {});
     this.navLinks = this.getNavLinks(window.location.pathname);
   }
 }
