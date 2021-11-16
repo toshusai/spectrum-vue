@@ -1,0 +1,43 @@
+name: cd
+
+on: [push, pull_request]
+
+# defaults:
+#   run:
+#     shell: bash
+#     working-directory: docs
+
+jobs:
+  cd:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Install dependencies
+        run: yarn
+        working-directory: ./docs
+
+      - name: Generate
+        run: yarn run generate
+        working-directory: ./docs
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

@@ -1,0 +1,5 @@
+node_modules
+docs/.nuxt
+dist
+yarn-error.log
+.DS_Store
