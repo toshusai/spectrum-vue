@@ -134,6 +134,11 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
+"@spectrum-css/accordion@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/accordion/-/accordion-3.0.9.tgz#a8d5d6e66743f737a3c442f3f7499836d526d72d"
+  integrity sha512-4y+eTLwMVxvhJ9rHynn6dToIBO4LvUKWDDjatMsZQLqRKMzGtzCfoC+62B8icSH4IPYIiU9Czd7SooTnVb9+DQ==
+
 "@spectrum-css/actionbutton@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@spectrum-css/actionbutton/-/actionbutton-1.0.5.tgz#f57afb311ae01ff863cfbe5b3308791775c38a85"
