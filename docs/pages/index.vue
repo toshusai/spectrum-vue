@@ -80,7 +80,9 @@
             <sp-link>link</sp-link>
           </div>
           <div class="margin">
-            <sp-action-menu :items="[{text: 'Item1', action: ()=>{}}]">ActionMenu</sp-action-menu>
+            <sp-action-menu :items="[{ text: 'Item1', action: () => {} }]">
+              ActionMenu
+            </sp-action-menu>
           </div>
           <div class="margin">
             <sp-avatar src="/spectrum-vue/example-ava.jpeg" />
@@ -133,7 +135,17 @@
                 id: '1',
                 name: 'Root',
                 children: [
-                  { id: '2', name: 'Child', children: [] },
+                  {
+                    id: '2',
+                    name: 'Child',
+                    children: [
+                      {
+                        id: '3',
+                        name: 'Grandchild',
+                        children: [{ id: '2', name: 'Child', children: [] }],
+                      },
+                    ],
+                  },
                   { id: '3', name: 'Child', children: [] },
                 ],
               }"
