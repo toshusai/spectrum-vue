@@ -6,6 +6,7 @@ import SpActionMenu from "./components/SpActionMenu.vue"
 import SpAssetFile from "./components/SpAssetFile.vue"
 import SpAssetFolder from "./components/SpAssetFolder.vue"
 import SpAssetImage from "./components/SpAssetImage.vue"
+import SpAssetList from "./components/SpAssetList.vue"
 import SpAutoComplete from "./components/SpAutoComplete.vue"
 import SpCheckbox from "./components/SpCheckbox.vue"
 import SpColorArea from "./components/SpColorArea.vue"
@@ -49,6 +50,7 @@ export {
     SpAssetFile,
     SpAssetFolder,
     SpAssetImage,
+    SpAssetList,
     SpAutoComplete,
     SpCheckbox,
     SpColorArea,
