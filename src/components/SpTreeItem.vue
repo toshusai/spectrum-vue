@@ -85,7 +85,10 @@ import { Component, Prop, PropSync, Vue } from "vue-property-decorator";
 import { DropPosition } from "../utils/DropPosition";
 import { Item } from "../utils/Item";
 
-@Component({})
+@Component({
+  name: "SpTreeItem",
+  components: { SpTreeItem },
+})
 export default class SpTreeItem extends Vue {
   @Prop({ default: true }) hideRoot!: boolean;
   @Prop({ default: true }) isRoot!: boolean;
