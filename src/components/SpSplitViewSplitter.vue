@@ -13,6 +13,10 @@
   </div>
 </template>
 
+<style>
+@import "@spectrum-css/splitview";
+</style>
+
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
