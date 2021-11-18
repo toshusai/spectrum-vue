@@ -16,9 +16,22 @@
       </div>
     </div>
     <div class="header">
-      <sp-action-button :quiet="true" @click="openSideNav">
-        <sp-icon name="ShowMenu"></sp-icon>
-      </sp-action-button>
+      <div style="display: flex; height: 42px">
+        <sp-action-button
+          style="padding-bottom: 4px"
+          :quiet="true"
+          @click="openSideNav"
+        >
+          <sp-icon name="ShowMenu"></sp-icon>
+        </sp-action-button>
+        <github-button
+          style="margin: auto 8px auto auto"
+          dataSize="Large"
+          href="https://github.com/toshusai/spectrum-vue"
+        >
+          Star
+        </github-button>
+      </div>
       <sp-divider style="margin: 0" />
     </div>
     <div style="margin: 8px">
@@ -56,8 +69,13 @@ import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 import loadicons from "loadicons";
 import { links } from "../data/links";
+import GithubButton from "vue-github-button";
 
-@Component({})
+@Component({
+  components: {
+    GithubButton,
+  },
+})
 export default class Default extends Vue {
   links = links;
   navLinks: {
