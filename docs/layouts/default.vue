@@ -72,7 +72,7 @@ export default class Default extends Vue {
   theme: string = "dark";
 
   changeTheme(newTheme: string) {
-    document.body.parentElement?.classList.remove(`spectrum--${this.thema}`);
+    document.body.parentElement?.classList.remove(`spectrum--${this.theme}`);
     document.body.parentElement?.classList.add(`spectrum--${newTheme}`);
   }
 
