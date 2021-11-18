@@ -77,6 +77,12 @@
             <sp-link>link</sp-link>
           </div>
           <div class="margin">
+            <sp-accordion>
+              <template v-slot:header> Header </template>
+              Content
+            </sp-accordion>
+          </div>
+          <div class="margin">
             <sp-divider></sp-divider>
           </div>
           <div class="margin">
