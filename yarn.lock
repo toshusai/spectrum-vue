@@ -154,6 +154,11 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/button/-/button-4.0.1.tgz#b06e0eebcedb4c76681e51bff90f8b4eb730cf47"
   integrity sha512-hS+a2PD92SE1+WBwQkN87hAI77k8lCQYwtt0VwwZ10EuHdOVa8ihM8i5GZSvCTvFQcdzQKbsm358WYNZji4Jag==
 
+"@spectrum-css/checkbox@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/checkbox/-/checkbox-3.0.9.tgz#7fef1887912289f7c86e181dca24108e6be7d90e"
+  integrity sha512-lSlkvNHwgSX+JNzzJ5OgZ/a7KtikcthJi2YWcZb567RH8g0+SQ6ooYBRVDFvB6aH6eypiX/7n6Nh03yYT3w+Ug==
+
 "@spectrum-css/colorarea@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@spectrum-css/colorarea/-/colorarea-1.0.4.tgz#5596a57f37c49b310ff49c87858c3150ac368567"
