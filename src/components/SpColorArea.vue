@@ -131,10 +131,10 @@ export default class SpColorArea extends Vue {
       if (e instanceof TouchEvent) return;
       const el = this.$refs.el as HTMLElement;
       const rect = el.getBoundingClientRect();
-      const s = (e.pageX - rect.left) / this.width;
+      const s = (e.clientX - rect.left) / this.width;
       let si = Math.round(s * 100);
-      this.xx = e.pageX - rect.left;
-      this.yy = e.pageY - rect.top;
+      this.xx = e.clientX - rect.left;
+      this.yy = e.clientY- rect.top;
       if (si > 100) {
         si = 100;
         this.xx = this.width;
@@ -142,7 +142,7 @@ export default class SpColorArea extends Vue {
         si = 0;
         this.xx = 0;
       }
-      const v = 1 - (e.pageY - rect.top) / this.width;
+      const v = 1 - (e.clientY- rect.top) / this.width;
       let vi = Math.round(v * 100);
       if (vi > 100) {
         vi = 100;
