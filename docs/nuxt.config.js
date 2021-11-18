@@ -35,19 +35,19 @@ export default {
 
   buildModules: ["@nuxt/typescript-build"],
 
-  // build: {
-  //   babel: {
-  //     plugins: [
-  //       ["@babel/plugin-proposal-private-property-in-object", { loose: true }],
-  //     ],
-  //   },
-  //   extend(config) {
-  //     const path = require("path");
-  //     config.resolve.alias.vue = path.join(__dirname, "../../node_modules/vue");
-  //     config.performance = config.performance || {};
-  //     config.performance.maxEntrypointSize = 1000 * 1024;
-  //     config.performance.maxAssetSize = 1000 * 1024;
-  //     config.optimization.splitChunks.maxSize = 100 * 1024;
-  //   },
-  // },
+  build: {
+    babel: {
+      plugins: [
+        ["@babel/plugin-proposal-private-property-in-object", { loose: true }],
+      ],
+    },
+    // extend(config) {
+    //   const path = require("path");
+    //   // config.resolve.alias.vue = path.join(__dirname, "../../node_modules/vue");
+    //   config.performance = config.performance || {};
+    //   config.performance.maxEntrypointSize = 1000 * 1024;
+    //   config.performance.maxAssetSize = 1000 * 1024;
+    //   config.optimization.splitChunks.maxSize = 100 * 1024;
+    // },
+  },
 };
