@@ -3,6 +3,9 @@ import SpActionBar from "./components/SpActionBar.vue"
 import SpActionButton from "./components/SpActionButton.vue"
 import SpActionGroup from "./components/SpActionGroup.vue"
 import SpActionMenu from "./components/SpActionMenu.vue"
+import SpAssetFile from "./components/SpAssetFile.vue"
+import SpAssetFolder from "./components/SpAssetFolder.vue"
+import SpAssetImage from "./components/SpAssetImage.vue"
 import SpAutoComplete from "./components/SpAutoComplete.vue"
 import SpCheckbox from "./components/SpCheckbox.vue"
 import SpColorArea from "./components/SpColorArea.vue"
@@ -43,6 +46,9 @@ export {
     SpActionMenu,
     SpActionButton,
     SpActionGroup,
+    SpAssetFile,
+    SpAssetFolder,
+    SpAssetImage,
     SpAutoComplete,
     SpCheckbox,
     SpColorArea,
