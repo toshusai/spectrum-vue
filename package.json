@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@adobe/spectrum-css-workflow-icons": "^1.2.1",
+    "@spectrum-css/accordion": "^3.0.9",
     "@spectrum-css/actionbutton": "^1.0.5",
     "@spectrum-css/actiongroup": "^1.0.4",
     "@spectrum-css/actionmenu": "^3.0.8",
