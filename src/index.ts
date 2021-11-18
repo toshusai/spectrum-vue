@@ -1,6 +1,7 @@
 import SpActionButton from "./components/SpActionButton.vue"
 import SpActionGroup from "./components/SpActionGroup.vue"
 import SpAutoComplete from "./components/SpAutoComplete.vue"
+import SpCheckbox from "./components/SpCheckbox.vue"
 import SpColorArea from "./components/SpColorArea.vue"
 import SpColorSlider from "./components/SpColorSlider.vue"
 import SpContextMenu from "./components/SpContextMenu.vue"
@@ -8,6 +9,7 @@ import SpDivider from "./components/SpDivider.vue"
 import SpDropIndicator from "./components/SpDropIndicator.vue"
 import SpFieldLabel from "./components/SpFieldLabel.vue"
 import SpH1 from "./components/SpH1.vue"
+import SpHelpText from "./components/SpHelpText.vue"
 import SpHintTextfield from "./components/SpHintTextfield.vue"
 import SpIcon from "./components/SpIcon.vue"
 import SpItemListItem from "./components/SpItemListItem.vue"
@@ -40,6 +42,8 @@ export {
     SpModal,
     SpAutoComplete,
     SpTextArea,
+    SpCheckbox,
+    SpHelpText,
     SpToast,
     SpTag,
     SpContextMenu,
