@@ -66,7 +66,15 @@ export default class Default extends Vue {
     click: (e: Event) => void;
     selected: boolean;
   }[] = [];
+
   nav: boolean = false;
+
+  theme: string = "dark";
+
+  changeTheme(newTheme: string) {
+    document.body.parentElement?.classList.remove(`spectrum--${this.thema}`);
+    document.body.parentElement?.classList.add(`spectrum--${newTheme}`);
+  }
 
   get sideNavStyle(): Partial<CSSStyleDeclaration> {
     return {
