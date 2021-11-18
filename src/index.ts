@@ -10,6 +10,8 @@ import SpAssetList from "./components/SpAssetList.vue"
 import SpAutoComplete from "./components/SpAutoComplete.vue"
 import SpAvatar from "./components/SpAvatar.vue"
 import SpBadge from "./components/SpBadge.vue"
+import SpBreadcrumbs from "./components/SpBreadcrumbs.vue"
+import SpBreadcrumbsItem from "./components/SpBreadcrumbsItem.vue"
 import SpCheckbox from "./components/SpCheckbox.vue"
 import SpColorArea from "./components/SpColorArea.vue"
 import SpColorSlider from "./components/SpColorSlider.vue"
@@ -56,6 +58,8 @@ export {
     SpAutoComplete,
     SpAvatar,
     SpBadge,
+    SpBreadcrumbs,
+    SpBreadcrumbsItem,
     SpCheckbox,
     SpColorArea,
     SpColorSlider,
