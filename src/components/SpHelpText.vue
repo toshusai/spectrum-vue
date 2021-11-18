@@ -17,17 +17,20 @@
         <use xlink:href="#spectrum-icon-18-Alert" />
       </svg>
       <div class="spectrum-HelpText-text">
-        {{ text }}
+        <slot />
       </div>
     </div>
   </div>
 </template>
+<style>
+@import "@spectrum-css/helptext";
+</style>
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
-export default class SpHintText extends Vue {
+export default class SpHelpText extends Vue {
   @Prop({ default: "" })
   text!: string;
 
