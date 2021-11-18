@@ -57,6 +57,17 @@
             <sp-help-text>Helptext</sp-help-text>
           </div>
           <div class="margin">
+            <sp-slider
+              :min="0"
+              :max="1"
+              :value="sliderValue"
+              :showValue="true"
+              label="Slider"
+              @input="(v) => (sliderValue = v)"
+            />
+          </div>
+
+          <div class="margin">
             <sp-menu>
               <sp-menu-item>MenuItem 1</sp-menu-item>
               <sp-menu-item>MenuItem 2</sp-menu-item>
@@ -106,17 +117,21 @@
               </template>
             </sp-tree-item>
           </div>
+          <div class="margin">
+            <sp-tabs :tabs="['TAB1', 'TAB2']"></sp-tabs>
+          </div>
         </sp-split-view-pane>
         <sp-split-view-splitter :gripper="true" />
         <sp-split-view-pane style="padding: 8px">
           <div class="margin">
-            <sp-color-area />
+            <sp-color-area
+              :h="hue"
+              :color="color"
+              @change="(v) => (color = v)"
+            />
           </div>
           <div class="margin">
-            <sp-color-slider />
-          </div>
-          <div class="margin">
-            <sp-slider />
+            <sp-color-slider :h="hue" @change="(v) => (hue = v)" />
           </div>
         </sp-split-view-pane>
       </sp-split-view>
@@ -147,6 +162,7 @@
 </style>
 
 <script lang="ts">
+import { Color } from "@toshusai/spectrum-vue";
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
 import { links } from "../data/links";
@@ -156,6 +172,10 @@ export default class index extends Vue {
   componentTableData = [{ name: "ActionButton" }];
   componentTableHeader = [{ text: "Components", key: "name" }];
   links = links;
+
+  color: Color = new Color();
+  sliderValue = 0;
+  hue = 0;
   clickLink(e: Event, href: string) {
     e.preventDefault();
     this.$router.push(href);
