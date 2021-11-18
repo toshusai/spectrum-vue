@@ -36,6 +36,9 @@
       <sp-split-view :vertical="true">
         <sp-split-view-pane style="padding: 8px">
           <div class="margin">
+            <sp-button>Button CTA</sp-button>
+          </div>
+          <div class="margin">
             <sp-action-button> ActionButton </sp-action-button>
           </div>
           <div class="margin">
