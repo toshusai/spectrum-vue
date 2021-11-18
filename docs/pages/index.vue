@@ -80,7 +80,10 @@
             <sp-action-menu :items="[{text: 'Item1', action: ()=>{}}]">ActionMenu</sp-action-menu>
           </div>
           <div class="margin">
-            <sp-avatar src="" />
+            <sp-avatar src="/spectrum-vue/example-ava.jpeg" />
+          </div>
+          <div class="margin">
+            <sp-badge>badge</sp-badge>
           </div>
           <div class="margin">
             <sp-accordion>
