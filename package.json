@@ -20,6 +20,7 @@
     "@spectrum-css/actiongroup": "^1.0.4",
     "@spectrum-css/actionmenu": "^3.0.9",
     "@spectrum-css/asset": "^3.0.8",
+    "@spectrum-css/assetlist": "^3.0.9",
     "@spectrum-css/button": "^4.0.0",
     "@spectrum-css/checkbox": "^3.0.9",
     "@spectrum-css/colorarea": "^1.0.3",

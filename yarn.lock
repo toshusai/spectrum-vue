@@ -159,6 +159,11 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/asset/-/asset-3.0.8.tgz#4db8d5bbe4d4cb86e9502f39887d9ff03361a879"
   integrity sha512-tOaqLLWi1uD/wR1mQZmD/hB2HT6Ci+U6vmwVi3HItR9EDH6cHwDSxkcDjqhbD87JrjbLIX31Jo7p+ZMMv7w3tw==
 
+"@spectrum-css/assetlist@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/assetlist/-/assetlist-3.0.9.tgz#bd1944f5418caa81a3129fcf64e9aa7d3f86679a"
+  integrity sha512-FG3KUI7enuuu3jTRY4FMfxq8pvCUFt0kn3Jnlp3aQbxXMUjmqCC6yt4DHMwC6wYesddH8vaw+EZJgWdJ64MCtg==
+
 "@spectrum-css/button@^4.0.0":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@spectrum-css/button/-/button-4.0.1.tgz#b06e0eebcedb4c76681e51bff90f8b4eb730cf47"
