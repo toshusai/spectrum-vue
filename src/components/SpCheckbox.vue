@@ -38,6 +38,9 @@
     </span>
   </label>
 </template>
+<style>
+@import "@spectrum-css/checkbox";
+</style>
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
