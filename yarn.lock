@@ -149,10 +149,10 @@
   resolved "https://registry.yarnpkg.com/@spectrum-css/actiongroup/-/actiongroup-1.0.5.tgz#06e01002cd6dc7c8cb75bfca2788b6560656cda5"
   integrity sha512-t4yhg07DpKd5kgv9r64tbxiuxI1HJsj2ny5H5WDADEv+UXbI7g9quQqWj9Qv7/PiJAU4BmfZC0PQXptec0yGkQ==
 
-"@spectrum-css/actionmenu@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@spectrum-css/actionmenu/-/actionmenu-3.0.8.tgz#a25f79982ca4d9269b760f40697c5950e9767b4a"
-  integrity sha512-JhD5BXgj0yqqd13gfT+YvJK0ypTpiLUmKEC1lbcVyUvKiqrmhX2rYyApgRROrauHjJZN4xrcw/wvr4UMib2MpQ==
+"@spectrum-css/actionmenu@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@spectrum-css/actionmenu/-/actionmenu-3.0.9.tgz#941e2896f5732bfdd429b69c5c442d6d991cfc75"
+  integrity sha512-GWE1Sk4FHCyOADFeyPrHdAxssfthUWAZTQ6fY9/6TyC9/qFeDJ3Q0DSq/MCKEsZklMP/R1ir/T7f9AHGoWVxdw==
 
 "@spectrum-css/button@^4.0.0":
   version "4.0.1"

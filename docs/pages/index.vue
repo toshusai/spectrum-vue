@@ -77,6 +77,9 @@
             <sp-link>link</sp-link>
           </div>
           <div class="margin">
+            <sp-action-menu :items="[{text: 'Item1', action: ()=>{}}]">ActionMenu</sp-action-menu>
+          </div>
+          <div class="margin">
             <sp-accordion>
               <template v-slot:header> Header </template>
               Content
