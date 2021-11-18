@@ -52,7 +52,7 @@
     </li>
     <li class="spectrum-TreeView-item is-open">
       <template v-if="isOpen">
-        <tree-item
+        <sp-tree-item
           v-for="(child, i) in children"
           :key="i"
           :is-root="false"
@@ -69,7 +69,7 @@
           <template #default="{ item }">
             <slot :item="item" />
           </template>
-        </tree-item>
+        </sp-tree-item>
       </template>
     </li>
   </ul>
