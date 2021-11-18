@@ -8,7 +8,7 @@ __:warning:__ This project is work in progress. Not a stable version. May make d
 
 - It was created __"based"__ on Spectrum and is not the same as Spectrum.
 - This project was not developed by Adobe.
-- Not the same as [React Spectrum](`https://github.com/adobe/react-spectrum`), [Spectrum Web Components](`https://github.com/adobe/spectrum-web-components`) API.
+- Not the same as [React Spectrum](https://github.com/adobe/react-spectrum), [Spectrum Web Components](https://github.com/adobe/spectrum-web-components) API.
 
 
 ## Install
