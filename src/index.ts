@@ -1,6 +1,8 @@
 import SpAccordion from "./components/SpAccordion.vue"
+import SpActionBar from "./components/SpActionBar.vue"
 import SpActionButton from "./components/SpActionButton.vue"
 import SpActionGroup from "./components/SpActionGroup.vue"
+import SpActionMenu from "./components/SpActionMenu.vue"
 import SpAutoComplete from "./components/SpAutoComplete.vue"
 import SpCheckbox from "./components/SpCheckbox.vue"
 import SpColorArea from "./components/SpColorArea.vue"
@@ -37,6 +39,8 @@ import { MenuItem } from "./utils/MenuItem"
 
 export {
     SpAccordion,
+    SpActionBar,
+    SpActionMenu,
     SpActionButton,
     SpActionGroup,
     SpAutoComplete,
