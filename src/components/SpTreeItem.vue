@@ -16,9 +16,14 @@
       @contextmenu="(v, is) => $emit('contextmenu', v, is)"
       @click="$emit('select', item)"
     >
-      <a class="spectrum-TreeView-itemLink">
+      <!-- about padding-left -->
+      <!-- https://github.com/toshusai/spectrum-vue/issues/1 -->
+      <a
+        class="spectrum-TreeView-itemLink"
+        style="padding-left: var(--spectrum-treeview-item-affordance-size)"
+      >
         <svg
-          v-if="hasChild"
+          v-show="hasChild"
           class="
             spectrum-Icon
             spectrum-UIIcon-ChevronRight100
