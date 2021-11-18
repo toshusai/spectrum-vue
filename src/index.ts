@@ -9,6 +9,7 @@ import SpAssetImage from "./components/SpAssetImage.vue"
 import SpAssetList from "./components/SpAssetList.vue"
 import SpAutoComplete from "./components/SpAutoComplete.vue"
 import SpAvatar from "./components/SpAvatar.vue"
+import SpBadge from "./components/SpBadge.vue"
 import SpCheckbox from "./components/SpCheckbox.vue"
 import SpColorArea from "./components/SpColorArea.vue"
 import SpColorSlider from "./components/SpColorSlider.vue"
@@ -54,6 +55,7 @@ export {
     SpAssetList,
     SpAutoComplete,
     SpAvatar,
+    SpBadge,
     SpCheckbox,
     SpColorArea,
     SpColorSlider,
