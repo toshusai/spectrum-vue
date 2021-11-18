@@ -91,6 +91,14 @@
               Content
             </sp-accordion>
           </div>
+
+          <div class="margin">
+            <sp-breadcrumbs>
+              <sp-breadcrumbs-item>breadcrumb</sp-breadcrumbs-item>
+              <sp-breadcrumbs-item>breadcrumb</sp-breadcrumbs-item>
+              <sp-breadcrumbs-item>breadcrumb</sp-breadcrumbs-item>
+            </sp-breadcrumbs>
+          </div>
           <div class="margin">
             <sp-divider></sp-divider>
           </div>
