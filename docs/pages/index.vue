@@ -202,6 +202,9 @@
           <div class="margin">
             <sp-date-picker />
           </div>
+          <div class="margin">
+            <sp-dialog :small="true"> </sp-dialog>
+          </div>
         </sp-split-view-pane>
       </sp-split-view>
     </div>

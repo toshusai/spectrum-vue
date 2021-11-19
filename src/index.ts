@@ -25,6 +25,7 @@ import SpColorWheel from "./components/SpColorWheel.vue"
 import SpCombobox from "./components/SpCombobox.vue"
 import SpContextMenu from "./components/SpContextMenu.vue"
 import SpDatePicker from "./components/SpDatePicker.vue"
+import SpDialog from "./components/SpDialog.vue"
 import SpDivider from "./components/SpDivider.vue"
 import SpDropIndicator from "./components/SpDropIndicator.vue"
 import SpFieldLabel from "./components/SpFieldLabel.vue"
@@ -84,6 +85,7 @@ export {
     SpCombobox,
     SpContextMenu,
     SpDatePicker,
+    SpDialog,
     SpDivider,
     SpDropIndicator,
     SpFieldLabel,
