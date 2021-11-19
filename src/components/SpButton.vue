@@ -20,6 +20,7 @@ export default class TimelineLayer extends Vue {
   @Prop({ default: false }) primary!: boolean;
   @Prop({ default: false }) disabled!: boolean;
   @Prop({ default: false }) quiet!: boolean;
+  @Prop({ default: false }) group!: boolean;
   @Prop({ default: "M" }) size!: string;
   @Prop({ default: "cta" }) type!: string;
 
@@ -29,6 +30,7 @@ export default class TimelineLayer extends Vue {
       "spectrum-Button--" + this.type,
       this.quiet ? "spectrum-Button--quiet" : "",
       "spectrum-Button--size" + this.size,
+      this.group ? "spectrum-ButtonGroup-item" : "",
     ];
   }
 }

@@ -32,26 +32,13 @@ import { Prop } from "vue-property-decorator";
 
 @Component({})
 export default class SpActionButton extends Vue {
-  @Prop({ default: false })
-  quiet!: boolean;
-
-  @Prop({ default: false })
-  item!: boolean;
-
-  @Prop({ default: false })
-  corner!: boolean;
-
-  @Prop({ default: false })
-  selected!: boolean;
-
-  @Prop({ default: false })
-  emphasized!: boolean;
-
-  @Prop({ default: false })
-  disabled!: boolean;
-
-  @Prop({ default: "M" })
-  size!: string;
+  @Prop({ default: false }) quiet!: boolean;
+  @Prop({ default: false }) item!: boolean;
+  @Prop({ default: false }) corner!: boolean;
+  @Prop({ default: false }) selected!: boolean;
+  @Prop({ default: false }) emphasized!: boolean;
+  @Prop({ default: false }) disabled!: boolean;
+  @Prop({ default: "M" }) size!: string;
 
   get cssClass() {
     return [

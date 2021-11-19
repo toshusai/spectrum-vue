@@ -1,0 +1,20 @@
+<template>
+  <div
+    class="spectrum-ButtonGroup"
+    :class="vertical ? 'spectrum-ButtonGroup--vertical' : ''"
+  >
+    <slot />
+  </div>
+</template>
+<style>
+@import "@spectrum-css/buttongroup";
+</style>
+<script lang="ts">
+import Vue from "vue";
+import { Component, Prop } from "vue-property-decorator";
+
+@Component({})
+export default class SpButtonGroup extends Vue {
+  @Prop({ default: false }) vertical!: boolean;
+}
+</script>

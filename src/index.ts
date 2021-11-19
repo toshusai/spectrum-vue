@@ -13,6 +13,7 @@ import SpBadge from "./components/SpBadge.vue"
 import SpBreadcrumbs from "./components/SpBreadcrumbs.vue"
 import SpBreadcrumbsItem from "./components/SpBreadcrumbsItem.vue"
 import SpButton from "./components/SpButton.vue"
+import SpButtonGroup from "./components/SpButtonGroup.vue"
 import SpCheckbox from "./components/SpCheckbox.vue"
 import SpColorArea from "./components/SpColorArea.vue"
 import SpColorSlider from "./components/SpColorSlider.vue"
@@ -62,6 +63,7 @@ export {
     SpBreadcrumbs,
     SpBreadcrumbsItem,
     SpButton,
+    SpButtonGroup,
     SpCheckbox,
     SpColorArea,
     SpColorSlider,
