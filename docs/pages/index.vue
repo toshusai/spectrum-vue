@@ -199,6 +199,9 @@
           <div class="margin">
             <sp-picker-button />
           </div>
+          <div class="margin">
+            <sp-date-picker />
+          </div>
         </sp-split-view-pane>
       </sp-split-view>
     </div>
