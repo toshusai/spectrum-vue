@@ -34,6 +34,7 @@
     "@spectrum-css/colorloupe": "^1.0.8",
     "@spectrum-css/colorslider": "^1.0.3",
     "@spectrum-css/colorwheel": "^1.0.8",
+    "@spectrum-css/dial": "^1.0.9",
     "@spectrum-css/dialog": "^3.0.9",
     "@spectrum-css/divider": "^1.0.4",
     "@spectrum-css/dropindicator": "^3.0.4",
