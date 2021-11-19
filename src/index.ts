@@ -15,7 +15,9 @@ import SpBreadcrumbsItem from "./components/SpBreadcrumbsItem.vue"
 import SpButton from "./components/SpButton.vue"
 import SpButtonGroup from "./components/SpButtonGroup.vue"
 import SpCalendar from "./components/SpCalendar.vue"
+import SpCard from "./components/SpCard.vue"
 import SpCheckbox from "./components/SpCheckbox.vue"
+import SpCoachMark from "./components/SpCoachMark.vue"
 import SpColorArea from "./components/SpColorArea.vue"
 import SpColorSlider from "./components/SpColorSlider.vue"
 import SpContextMenu from "./components/SpContextMenu.vue"
@@ -66,7 +68,9 @@ export {
     SpButton,
     SpButtonGroup,
     SpCalendar,
+    SpCard,
     SpCheckbox,
+    SpCoachMark,
     SpColorArea,
     SpColorSlider,
     SpContextMenu,
