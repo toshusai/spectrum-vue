@@ -187,6 +187,9 @@
           <div class="margin">
             <sp-color-slider :h="hue" @change="(v) => (hue = v)" />
           </div>
+          <div class="margin">
+            <sp-color-wheel />
+          </div>
         </sp-split-view-pane>
       </sp-split-view>
     </div>

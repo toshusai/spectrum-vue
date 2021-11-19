@@ -21,6 +21,7 @@ import SpCoachMark from "./components/SpCoachMark.vue"
 import SpColorArea from "./components/SpColorArea.vue"
 import SpColorLoupe from "./components/SpColorLoupe.vue"
 import SpColorSlider from "./components/SpColorSlider.vue"
+import SpColorWheel from "./components/SpColorWheel.vue"
 import SpContextMenu from "./components/SpContextMenu.vue"
 import SpDivider from "./components/SpDivider.vue"
 import SpDropIndicator from "./components/SpDropIndicator.vue"
@@ -75,6 +76,7 @@ export {
     SpColorArea,
     SpColorLoupe,
     SpColorSlider,
+    SpColorWheel,
     SpContextMenu,
     SpDivider,
     SpDropIndicator,
