@@ -22,6 +22,7 @@ import SpColorArea from "./components/SpColorArea.vue"
 import SpColorLoupe from "./components/SpColorLoupe.vue"
 import SpColorSlider from "./components/SpColorSlider.vue"
 import SpColorWheel from "./components/SpColorWheel.vue"
+import SpCombobox from "./components/SpCombobox.vue"
 import SpContextMenu from "./components/SpContextMenu.vue"
 import SpDivider from "./components/SpDivider.vue"
 import SpDropIndicator from "./components/SpDropIndicator.vue"
@@ -35,6 +36,8 @@ import SpLink from "./components/SpLink.vue"
 import SpMenu from "./components/SpMenu.vue"
 import SpMenuItem from "./components/SpMenuItem.vue"
 import SpModal from "./components/SpModal.vue"
+import SpPicker from "./components/SpPicker.vue"
+import SpPickerButton from "./components/SpPickerButton.vue"
 import SpPopover from "./components/SpPopover.vue"
 import SpSidenav from "./components/SpSidenav.vue"
 import SpSlider from "./components/SpSlider.vue"
@@ -77,6 +80,7 @@ export {
     SpColorLoupe,
     SpColorSlider,
     SpColorWheel,
+    SpCombobox,
     SpContextMenu,
     SpDivider,
     SpDropIndicator,
@@ -90,6 +94,8 @@ export {
     SpMenu,
     SpMenuItem,
     SpModal,
+    SpPicker,
+    SpPickerButton,
     SpPopover,
     SpSidenav,
     SpSlider,

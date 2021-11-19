@@ -190,6 +190,15 @@
           <div class="margin">
             <sp-color-wheel />
           </div>
+          <div class="margin">
+            <sp-combobox> </sp-combobox>
+          </div>
+          <div class="margin">
+            <sp-picker />
+          </div>
+          <div class="margin">
+            <sp-picker-button />
+          </div>
         </sp-split-view-pane>
       </sp-split-view>
     </div>
