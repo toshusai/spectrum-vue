@@ -205,6 +205,9 @@
           <div class="margin">
             <sp-dialog :small="true"> </sp-dialog>
           </div>
+          <div class="margin">
+            <sp-dropzone />
+          </div>
         </sp-split-view-pane>
       </sp-split-view>
     </div>
