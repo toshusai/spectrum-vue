@@ -1,8 +1,7 @@
 <template>
   <label
-    class="
-      spectrum-Checkbox spectrum-Checkbox--sizeM spectrum-Checkbox--emphasized
-    "
+    class="spectrum-Checkbox"
+    :class="cssClass"
   >
     <input
       id="checkbox-0"
@@ -47,7 +46,21 @@ import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
 export default class SpCheckbox extends Vue {
-  @Prop({ default: false })
-  checked!: boolean;
+  @Prop({ default: false }) checked!: boolean;
+  @Prop({ default: "M" }) size!: string;
+  @Prop({ default: false }) disabled!: boolean;
+  @Prop({ default: false }) emphasized!: boolean;
+  @Prop({ default: false }) indeterminate!: boolean;
+  @Prop({ default: false }) invalid!: boolean;
+
+  get cssClass() {
+    return [
+      this.emphasized ? "spectrum-Checkbox--emphasized" : "",
+      this.indeterminate ? "is-indeterminate" : "",
+      this.invalid ? "is-invalid" : "",
+      this.disabled ? "is-disabled" : "",
+      "spectrum-Checkbox--size" + this.size,
+    ];
+  }
 }
 </script>
