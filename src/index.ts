@@ -19,6 +19,7 @@ import SpCard from "./components/SpCard.vue"
 import SpCheckbox from "./components/SpCheckbox.vue"
 import SpCoachMark from "./components/SpCoachMark.vue"
 import SpColorArea from "./components/SpColorArea.vue"
+import SpColorLoupe from "./components/SpColorLoupe.vue"
 import SpColorSlider from "./components/SpColorSlider.vue"
 import SpContextMenu from "./components/SpContextMenu.vue"
 import SpDivider from "./components/SpDivider.vue"
@@ -72,6 +73,7 @@ export {
     SpCheckbox,
     SpCoachMark,
     SpColorArea,
+    SpColorLoupe,
     SpColorSlider,
     SpContextMenu,
     SpDivider,
