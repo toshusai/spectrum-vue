@@ -28,6 +28,7 @@
     "@spectrum-css/buttongroup": "^3.0.9",
     "@spectrum-css/calendar": "^3.0.9",
     "@spectrum-css/checkbox": "^3.0.9",
+    "@spectrum-css/coachmark": "^3.0.9",
     "@spectrum-css/colorarea": "^1.0.3",
     "@spectrum-css/colorhandle": "^1.0.3",
     "@spectrum-css/colorloupe": "^1.0.8",
