@@ -26,6 +26,7 @@
     "@spectrum-css/breadcrumb": "^4.0.5",
     "@spectrum-css/button": "^4.0.0",
     "@spectrum-css/buttongroup": "^3.0.9",
+    "@spectrum-css/calendar": "^3.0.9",
     "@spectrum-css/checkbox": "^3.0.9",
     "@spectrum-css/colorarea": "^1.0.3",
     "@spectrum-css/colorhandle": "^1.0.3",

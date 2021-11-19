@@ -55,6 +55,9 @@
             <sp-action-button> ActionButton </sp-action-button>
           </div>
           <div class="margin">
+            <sp-calendar :date="date" @change="(d) => (date = d)" />
+          </div>
+          <div class="margin">
             <sp-action-group :compact="true">
               <sp-action-button :item="true">Action</sp-action-button>
               <sp-action-button :item="true">Group</sp-action-button>
@@ -227,6 +230,8 @@ export default class index extends Vue {
   color: Color = new Color();
   sliderValue = 0;
   hue = 0;
+  date: Date = new Date();
+
   clickLink(e: Event, href: string) {
     e.preventDefault();
     this.$router.push(href);
