@@ -38,6 +38,7 @@
     "@spectrum-css/dialog": "^3.0.9",
     "@spectrum-css/divider": "^1.0.4",
     "@spectrum-css/dropindicator": "^3.0.4",
+    "@spectrum-css/dropzone": "^3.0.9",
     "@spectrum-css/fieldlabel": "^4.0.0",
     "@spectrum-css/helptext": "^1.0.5",
     "@spectrum-css/icon": "^3.0.4",
