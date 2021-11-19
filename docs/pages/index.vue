@@ -39,6 +39,19 @@
             <sp-button>Button CTA</sp-button>
           </div>
           <div class="margin">
+            <sp-button-group>
+              <sp-button type="secondary" size="S" :group="true">
+                Secondary
+              </sp-button>
+              <sp-button type="primary" size="S" :group="true">
+                Primary
+              </sp-button>
+              <sp-button type="negative" size="S" :group="true">
+                Negative
+              </sp-button>
+            </sp-button-group>
+          </div>
+          <div class="margin">
             <sp-action-button> ActionButton </sp-action-button>
           </div>
           <div class="margin">
