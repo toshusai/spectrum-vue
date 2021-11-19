@@ -28,6 +28,7 @@ import SpDatePicker from "./components/SpDatePicker.vue"
 import SpDialog from "./components/SpDialog.vue"
 import SpDivider from "./components/SpDivider.vue"
 import SpDropIndicator from "./components/SpDropIndicator.vue"
+import SpDropzone from "./components/SpDropzone.vue"
 import SpFieldLabel from "./components/SpFieldLabel.vue"
 import SpH1 from "./components/SpH1.vue"
 import SpHelpText from "./components/SpHelpText.vue"
@@ -88,6 +89,7 @@ export {
     SpDialog,
     SpDivider,
     SpDropIndicator,
+    SpDropzone,
     SpFieldLabel,
     SpH1,
     SpHelpText,
