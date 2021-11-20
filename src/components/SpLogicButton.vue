@@ -7,6 +7,9 @@
     {{ or ? "Or" : "And" }}
   </button>
 </template>
+<style>
+@import "@spectrum-css/button";
+</style>
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
