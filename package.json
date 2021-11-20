@@ -6,7 +6,7 @@
   "module": "dist/index.esm.js",
   "scripts": {
     "build": "rollup -c",
-    "lint": "eslint --fix --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint": "node scripts/generateIndexTs.js && eslint --fix --ext \".ts,.vue\" --ignore-path .gitignore .",
     "prepublish": "npm run build"
   },
   "peerDependencies": {
