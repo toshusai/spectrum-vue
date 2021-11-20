@@ -12,7 +12,7 @@
     <div
       class="spectrum-Popover spectrum-Popover--bottom"
       :class="{ 'is-open': isOpen }"
-      style="position: absolute; top: 28px; z-index: 1"
+      style="position: absolute; top: 28px; z-index: 1; left: 0"
     >
       <ul
         class="spectrum-Menu"
