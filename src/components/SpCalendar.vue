@@ -7,7 +7,7 @@
         aria-live="assertive"
         aria-atomic="true"
       >
-        {{ year }} {{ computedMonth }}
+        {{ calenderHeader }}
       </div>
       <button
         aria-label="Previous"
@@ -120,6 +120,17 @@ export default class SpCalendar extends Vue {
   day1 = new Date();
   monthPrivate: number = new Date().getMonth();
 
+  /**
+   * calender Header like 2020/03
+   */
+  get calenderHeader() {
+    return `${this.year} ${this.computedMonth + 1}`;
+  }
+
+  /**
+   * computedMonth works Prop and private value.
+   * 0 based index.
+   */
   get computedMonth() {
     if (this.month) return this.month;
     return this.monthPrivate;
