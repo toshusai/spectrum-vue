@@ -14,7 +14,7 @@
         spectrum-ProgressBar-label
       "
     >
-      {{ text }}
+      <slot />
     </div>
     <div
       class="
