@@ -21,7 +21,7 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import { Prop } from "vue-property-decorator";
-import { addDragEventOnce } from "../utils/mouse";
+import addDragEventOnce from "../utils/addDragEventOnce";
 
 @Component({})
 export default class SpSplitViewSplitter extends Vue {

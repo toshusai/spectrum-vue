@@ -15,6 +15,7 @@ import SpBreadcrumbsItem from "./components/SpBreadcrumbsItem.vue"
 import SpButton from "./components/SpButton.vue"
 import SpButtonGroup from "./components/SpButtonGroup.vue"
 import SpCalendar from "./components/SpCalendar.vue"
+import SpCalendarDate from "./components/SpCalendarDate.vue"
 import SpCard from "./components/SpCard.vue"
 import SpCheckbox from "./components/SpCheckbox.vue"
 import SpCoachMark from "./components/SpCoachMark.vue"
@@ -25,10 +26,12 @@ import SpColorWheel from "./components/SpColorWheel.vue"
 import SpCombobox from "./components/SpCombobox.vue"
 import SpContextMenu from "./components/SpContextMenu.vue"
 import SpDatePicker from "./components/SpDatePicker.vue"
+import SpDial from "./components/SpDial.vue"
 import SpDialog from "./components/SpDialog.vue"
 import SpDivider from "./components/SpDivider.vue"
 import SpDropIndicator from "./components/SpDropIndicator.vue"
 import SpDropzone from "./components/SpDropzone.vue"
+import SpFieldGroup from "./components/SpFieldGroup.vue"
 import SpFieldLabel from "./components/SpFieldLabel.vue"
 import SpH1 from "./components/SpH1.vue"
 import SpHelpText from "./components/SpHelpText.vue"
@@ -54,16 +57,17 @@ import SpTextArea from "./components/SpTextArea.vue"
 import SpTextfield from "./components/SpTextfield.vue"
 import SpToast from "./components/SpToast.vue"
 import SpTreeItem from "./components/SpTreeItem.vue"
-import { Color } from "./utils/Color"
-import { DropPosition } from "./utils/DropPosition"
-import { MenuItem } from "./utils/MenuItem"
-
+import Color from "./utils/Color"
+import DropPosition from "./utils/DropPosition"
+import Item from "./utils/Item"
+import MenuItem from "./utils/MenuItem"
+import addDragEventOnce from "./utils/addDragEventOnce"
 export {
     SpAccordion,
     SpActionBar,
-    SpActionMenu,
     SpActionButton,
     SpActionGroup,
+    SpActionMenu,
     SpAssetFile,
     SpAssetFolder,
     SpAssetImage,
@@ -76,6 +80,7 @@ export {
     SpButton,
     SpButtonGroup,
     SpCalendar,
+    SpCalendarDate,
     SpCard,
     SpCheckbox,
     SpCoachMark,
@@ -86,10 +91,12 @@ export {
     SpCombobox,
     SpContextMenu,
     SpDatePicker,
+    SpDial,
     SpDialog,
     SpDivider,
     SpDropIndicator,
     SpDropzone,
+    SpFieldGroup,
     SpFieldLabel,
     SpH1,
     SpHelpText,
@@ -115,7 +122,9 @@ export {
     SpTextfield,
     SpToast,
     SpTreeItem,
-    MenuItem,
-    DropPosition,
     Color,
+    DropPosition,
+    Item,
+    MenuItem,
+    addDragEventOnce
 }

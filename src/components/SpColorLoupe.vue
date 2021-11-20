@@ -19,7 +19,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import { Color } from "../utils/Color";
+import Color from "../utils/Color";
 
 @Component({})
 export default class SpColorLoupe extends Vue {

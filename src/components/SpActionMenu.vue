@@ -52,7 +52,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import { MenuItem } from "../utils/MenuItem";
+import MenuItem from "../utils/MenuItem";
 
 @Component({})
 export default class SpActionMenu extends Vue {
