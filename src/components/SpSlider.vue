@@ -29,6 +29,22 @@
       class="spectrum-Slider-controls"
     >
       <div
+        v-if="ramp"
+        class="spectrum-Slider-ramp"
+      >
+        <svg
+          viewBox="0 0 240 16"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M240,4v8c0,2.3-1.9,4.1-4.2,4L1,9C0.4,9,0,8.5,0,8c0-0.5,0.4-1,1-1l234.8-7C238.1-0.1,240,1.7,240,4z"
+          />
+        </svg>
+      </div>
+      <div
+        v-else
         class="spectrum-Slider-track"
         :style="`width:${position}%`"
       />
@@ -48,9 +64,11 @@
         >
       </div>
       <div
+        v-if="!ramp"
         class="spectrum-Slider-track"
         :style="`width:${100 - position}%`"
       />
+      <!-- <div class="spectrum-Slider-fill" :style="`left: 0%; width: 0%`" /> -->
     </div>
   </div>
 </template>
@@ -69,11 +87,13 @@ export default class SpSlider extends Vue {
   @Prop({ default: false }) disabled!: boolean;
   @Prop({ default: false }) filled!: boolean;
   @Prop({ default: false }) showValue!: boolean;
+  @Prop({ default: false }) ramp!: boolean;
   @Prop({ default: "" }) label!: string;
   @Prop({ default: 0 }) value!: number;
   @Prop({ default: 0 }) step!: number;
   @Prop({ default: 0 }) min!: number;
   @Prop({ default: 0 }) max!: number;
+  @Prop({ default: 0 }) offset!: number;
 
   controls: HTMLElement | null = null;
   start = -1;

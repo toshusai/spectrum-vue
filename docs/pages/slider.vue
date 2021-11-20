@@ -35,6 +35,17 @@
       :value="value4"
       @input="(v) => (value4 = v)"
     />
+
+    <h3>ramp</h3>
+    <sp-slider
+      :label="'Ramp'"
+      :showValue="true"
+      :min="0"
+      :max="100"
+      :value="value5"
+      :ramp="true"
+      @input="(v) => (value5 = v)"
+    />
   </component-view>
 </template>
 <script lang="ts">
@@ -46,6 +57,7 @@ export default class index extends Vue {
   value2: number = 0;
   value3: number = 0;
   value4: number = 0;
+  value5: number = 50;
 
   propData = [
     { prop: "disabled", type: "boolean", default: "false" },
