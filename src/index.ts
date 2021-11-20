@@ -54,6 +54,7 @@ import SpPicker from "./components/SpPicker.vue"
 import SpPickerButton from "./components/SpPickerButton.vue"
 import SpPopover from "./components/SpPopover.vue"
 import SpProgressBar from "./components/SpProgressBar.vue"
+import SpProgressCircle from "./components/SpProgressCircle.vue"
 import SpSidenav from "./components/SpSidenav.vue"
 import SpSlider from "./components/SpSlider.vue"
 import SpSplitView from "./components/SpSplitView.vue"
@@ -128,6 +129,7 @@ export {
     SpPickerButton,
     SpPopover,
     SpProgressBar,
+    SpProgressCircle,
     SpSidenav,
     SpSlider,
     SpSplitView,
