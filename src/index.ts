@@ -33,6 +33,8 @@ import SpDropIndicator from "./components/SpDropIndicator.vue"
 import SpDropzone from "./components/SpDropzone.vue"
 import SpFieldGroup from "./components/SpFieldGroup.vue"
 import SpFieldLabel from "./components/SpFieldLabel.vue"
+import SpForm from "./components/SpForm.vue"
+import SpFormItem from "./components/SpFormItem.vue"
 import SpH1 from "./components/SpH1.vue"
 import SpHelpText from "./components/SpHelpText.vue"
 import SpHintTextfield from "./components/SpHintTextfield.vue"
@@ -98,6 +100,8 @@ export {
     SpDropzone,
     SpFieldGroup,
     SpFieldLabel,
+    SpForm,
+    SpFormItem,
     SpH1,
     SpHelpText,
     SpHintTextfield,
