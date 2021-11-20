@@ -31,6 +31,7 @@
       <div
         class="spectrum-Dial-handle"
         tabindex="0"
+        :style="`transform: rotate(${deg}deg);`"
       >
         <input
           type="range"
@@ -56,5 +57,11 @@ export default class SpDial extends Vue {
   @Prop({ default: false }) small!: boolean;
   @Prop({ default: false }) disabled!: boolean;
   @Prop({ default: false }) showValue!: boolean;
+
+  // -45 to 225
+  get deg() {
+    const r = this.value / 100;
+    return -45 * (1 - r) + 255 * r;
+  }
 }
 </script>
