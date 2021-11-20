@@ -56,6 +56,7 @@ import SpPopover from "./components/SpPopover.vue"
 import SpProgressBar from "./components/SpProgressBar.vue"
 import SpProgressCircle from "./components/SpProgressCircle.vue"
 import SpQuickAction from "./components/SpQuickAction.vue"
+import SpRadio from "./components/SpRadio.vue"
 import SpSidenav from "./components/SpSidenav.vue"
 import SpSlider from "./components/SpSlider.vue"
 import SpSplitView from "./components/SpSplitView.vue"
@@ -132,6 +133,7 @@ export {
     SpProgressBar,
     SpProgressCircle,
     SpQuickAction,
+    SpRadio,
     SpSidenav,
     SpSlider,
     SpSplitView,
