@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator--quiet"
-    style="position: absolute"
-  >
+  <div class="spectrum-CoachMarkIndicator spectrum-CoachMarkIndicator--quiet">
     <div class="spectrum-CoachMarkIndicator-ring" />
     <div class="spectrum-CoachMarkIndicator-ring" />
     <div class="spectrum-CoachMarkIndicator-ring" />
