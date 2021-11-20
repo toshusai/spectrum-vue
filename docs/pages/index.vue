@@ -41,7 +41,9 @@
         :key="i"
       >
         <h3 class="margin">
-          <sp-link :herf="link.href">{{ link.text }}</sp-link>
+          <sp-link @click="(e) => clickLink(e, link.href)" :herf="link.href">
+            {{ link.text }}
+          </sp-link>
         </h3>
         <div class="margin">
           <component
