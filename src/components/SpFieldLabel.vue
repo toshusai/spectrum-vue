@@ -1,12 +1,22 @@
 <template>
   <label
-    for="fieldLabelExample-lifestory"
-    class="
-      spectrum-FieldLabel spectrum-FieldLabel--sizeM
-      spectrum-Form-itemLabel
-    "
+    v-bind="$attrs"
+    class="spectrum-FieldLabel spectrum-Form-itemLabel"
+    :class="['spectrum-FieldLabel--size' + size]"
   >
-    {{ text }}
+    <slot />
+    <svg
+      v-if="required"
+      class="
+        spectrum-Icon
+        spectrum-UIIcon-Asterisk100
+        spectrum-FieldLabel-requiredIcon
+      "
+      focusable="false"
+      aria-hidden="true"
+    >
+      <use xlink:href="#spectrum-css-icon-Asterisk100" />
+    </svg>
   </label>
 </template>
 <style>
@@ -18,7 +28,7 @@ import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
 export default class SpFieldLabel extends Vue {
-  @Prop({ default: "" })
-  text!: string;
+  @Prop({ default: "M" }) size!: string;
+  @Prop({ default: false }) required!: boolean;
 }
 </script>
