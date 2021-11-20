@@ -1,3 +1,4 @@
+import InlineAlert from "./components/InlineAlert.vue"
 import SpAccordion from "./components/SpAccordion.vue"
 import SpActionBar from "./components/SpActionBar.vue"
 import SpActionButton from "./components/SpActionButton.vue"
@@ -65,6 +66,7 @@ import Item from "./utils/Item"
 import MenuItem from "./utils/MenuItem"
 import addDragEventOnce from "./utils/addDragEventOnce"
 export {
+    InlineAlert,
     SpAccordion,
     SpActionBar,
     SpActionButton,
