@@ -1,0 +1,12 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {},
+  "author": "tosuhsai",
+  "license": "MIT",
+  "dependencies": {
+    "case": "^1.6.3"
+  }
+}
