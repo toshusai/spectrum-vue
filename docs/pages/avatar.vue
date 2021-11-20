@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Avatar"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <avatar></avatar>
-    </component-view>
+  <component-view name="Avatar" :propData="propData" :eventData="eventData">
+    <sp-avatar></sp-avatar>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="DropIndicator"
     :propData="propData"
     :eventData="eventData"
-    >
-        <drop-indicator></drop-indicator>
-    </component-view>
+  >
+    <sp-drop-indicator></sp-drop-indicator>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

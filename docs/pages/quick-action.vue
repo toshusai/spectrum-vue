@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="QuickAction"
     :propData="propData"
     :eventData="eventData"
-    >
-        <quick-action></quick-action>
-    </component-view>
+  >
+    <sp-quick-action></sp-quick-action>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

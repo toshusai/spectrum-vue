@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Dialog"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <dialog></dialog>
-    </component-view>
+  <component-view name="Dialog" :propData="propData" :eventData="eventData">
+    <sp-dialog></sp-dialog>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

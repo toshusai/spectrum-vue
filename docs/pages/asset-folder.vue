@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="AssetFolder"
     :propData="propData"
     :eventData="eventData"
-    >
-        <asset-folder></asset-folder>
-    </component-view>
+  >
+    <sp-asset-folder></sp-asset-folder>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

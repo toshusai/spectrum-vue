@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="ColorLoupe"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <color-loupe></color-loupe>
-    </component-view>
+  <component-view name="ColorLoupe" :propData="propData" :eventData="eventData">
+    <sp-color-loupe></sp-color-loupe>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

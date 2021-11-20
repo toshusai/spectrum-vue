@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="HintTextfield"
     :propData="propData"
     :eventData="eventData"
-    >
-        <hint-textfield></hint-textfield>
-    </component-view>
+  >
+    <sp-hint-textfield></sp-hint-textfield>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

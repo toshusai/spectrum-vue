@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Dropzone"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <dropzone></dropzone>
-    </component-view>
+  <component-view name="Dropzone" :propData="propData" :eventData="eventData">
+    <sp-dropzone></sp-dropzone>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="ItemListItem"
     :propData="propData"
     :eventData="eventData"
-    >
-        <item-list-item></item-list-item>
-    </component-view>
+  >
+    <sp-item-list-item></sp-item-list-item>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

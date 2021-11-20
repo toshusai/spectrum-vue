@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Textfield"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <textfield></textfield>
-    </component-view>
+  <component-view name="Textfield" :propData="propData" :eventData="eventData">
+    <sp-textfield></sp-textfield>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Badge"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <badge></badge>
-    </component-view>
+  <component-view name="Badge" :propData="propData" :eventData="eventData">
+    <sp-badge></sp-badge>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="ProgressBar"
     :propData="propData"
     :eventData="eventData"
-    >
-        <progress-bar></progress-bar>
-    </component-view>
+  >
+    <sp-progress-bar></sp-progress-bar>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

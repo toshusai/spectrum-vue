@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Tag"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <tag></tag>
-    </component-view>
+  <component-view name="Tag" :propData="propData" :eventData="eventData">
+    <sp-tag></sp-tag>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

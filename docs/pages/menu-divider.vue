@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="MenuDivider"
     :propData="propData"
     :eventData="eventData"
-    >
-        <menu-divider></menu-divider>
-    </component-view>
+  >
+    <sp-menu-divider></sp-menu-divider>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

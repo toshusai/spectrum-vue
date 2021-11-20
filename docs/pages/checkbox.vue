@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Checkbox"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <checkbox></checkbox>
-    </component-view>
+  <component-view name="Checkbox" :propData="propData" :eventData="eventData">
+    <sp-checkbox></sp-checkbox>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

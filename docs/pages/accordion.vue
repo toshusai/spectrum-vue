@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Accordion"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <accordion></accordion>
-    </component-view>
+  <component-view name="Accordion" :propData="propData" :eventData="eventData">
+    <sp-accordion></sp-accordion>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

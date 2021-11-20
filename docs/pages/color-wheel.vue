@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="ColorWheel"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <color-wheel></color-wheel>
-    </component-view>
+  <component-view name="ColorWheel" :propData="propData" :eventData="eventData">
+    <sp-color-wheel></sp-color-wheel>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

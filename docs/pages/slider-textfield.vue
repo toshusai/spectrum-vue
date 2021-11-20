@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="SliderTextfield"
     :propData="propData"
     :eventData="eventData"
-    >
-        <slider-textfield></slider-textfield>
-    </component-view>
+  >
+    <sp-slider-textfield></sp-slider-textfield>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

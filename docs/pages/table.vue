@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Table"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <table></table>
-    </component-view>
+  <component-view name="Table" :propData="propData" :eventData="eventData">
+    <sp-table></sp-table>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

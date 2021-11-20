@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="ActionMenu"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <action-menu></action-menu>
-    </component-view>
+  <component-view name="ActionMenu" :propData="propData" :eventData="eventData">
+    <sp-action-menu></sp-action-menu>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="TreeItem"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <tree-item></tree-item>
-    </component-view>
+  <component-view name="TreeItem" :propData="propData" :eventData="eventData">
+    <sp-tree-item></sp-tree-item>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

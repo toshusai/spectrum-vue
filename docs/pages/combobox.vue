@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Combobox"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <combobox></combobox>
-    </component-view>
+  <component-view name="Combobox" :propData="propData" :eventData="eventData">
+    <sp-combobox></sp-combobox>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
