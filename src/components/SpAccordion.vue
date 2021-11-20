@@ -5,7 +5,7 @@
   >
     <div
       class="spectrum-Accordion-item"
-      :class="{'is-open':isOpen, 'is-disabled': disabled}"
+      :class="{ 'is-open': isOpen, 'is-disabled': disabled }"
       role="presentation"
     >
       <h3 class="spectrum-Accordion-itemHeading">
@@ -14,12 +14,22 @@
           type="button"
           aria-expanded="true"
           :disabled="disabled"
-          @click="()=>isOpen = !isOpen"
+          @click="() => (isOpen = !isOpen)"
         >
-          <slot name="header" />
+          <template v-if="header">
+            {{ header }}
+          </template>
+          <slot
+            v-else
+            name="header"
+          />
         </button>
         <svg
-          class="spectrum-Icon spectrum-UIIcon-ChevronRight100 spectrum-Accordion-itemIndicator"
+          class="
+            spectrum-Icon
+            spectrum-UIIcon-ChevronRight100
+            spectrum-Accordion-itemIndicator
+          "
           focusable="false"
           aria-hidden="true"
         >
@@ -41,13 +51,12 @@
 </style>
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop }from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
 export default class SpAccordion extends Vue {
-    isOpen:boolean = false
-    @Prop({default: false}) disabled!:boolean;
-    // @Prop({default: ""})header!:string
-
+  isOpen: boolean = false;
+  @Prop({ default: false }) disabled!: boolean;
+  @Prop({ default: "" }) header!: string;
 }
 </script>
