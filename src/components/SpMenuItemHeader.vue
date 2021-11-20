@@ -1,13 +1,11 @@
 <template>
-  <li
-    class="spectrum-Menu-item"
-    role="menuitem"
-    tabindex="0"
-    :class="[disabled ? 'is-disabled' : '']"
-    :aria-disabled="disabled"
+  <span
+    id="menu-heading-category-1"
+    class="spectrum-Menu-sectionHeading"
+    aria-hidden="true"
   >
     <slot />
-  </li>
+  </span>
 </template>
 <style>
 @import "@spectrum-css/menu";
