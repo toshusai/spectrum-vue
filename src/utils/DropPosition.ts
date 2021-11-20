@@ -1,5 +1,7 @@
-export enum DropPosition {
+enum DropPosition {
     TOP,
     MIDDLE,
     BOTTOM,
 }
+
+export default DropPosition

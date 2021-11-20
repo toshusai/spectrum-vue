@@ -1,6 +1,6 @@
 import * as convert from "color-convert"
 
-export class Color {
+export default class Color {
     r = 0;
     g = 0;
     b = 0;

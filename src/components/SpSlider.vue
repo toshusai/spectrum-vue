@@ -62,7 +62,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop, Ref } from "vue-property-decorator";
-import { addDragEventOnce } from "../utils/mouse";
+import addDragEventOnce from "../utils/addDragEventOnce";
 
 @Component({})
 export default class SpSlider extends Vue {

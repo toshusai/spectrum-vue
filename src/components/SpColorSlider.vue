@@ -59,7 +59,7 @@
 import * as convert from "color-convert";
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
-import { addDragEventOnce } from "../utils/mouse";
+import addDragEventOnce from "../utils/addDragEventOnce";
 
 @Component({})
 export default class SpColorSlider extends Vue {

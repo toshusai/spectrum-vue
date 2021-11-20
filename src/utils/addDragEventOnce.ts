@@ -2,7 +2,7 @@ export const LEFT = 0;
 export const MIDDLE = 1;
 export const RIGHT = 2;
 
-export function addDragEventOnce(
+export default function addDragEventOnce(
     callback: (e: MouseEvent | TouchEvent) => void,
     onUp?: (e: MouseEvent | TouchEvent) => void
 ) {

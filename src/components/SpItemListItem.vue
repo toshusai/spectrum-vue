@@ -51,7 +51,7 @@
 
 <script lang="ts">
 import { Component, Prop, Ref, Vue } from "vue-property-decorator";
-import { DropPosition } from "../utils/DropPosition";
+import DropPosition from "../utils/DropPosition";
 import SpDropIndicator from "./SpDropIndicator.vue";
 
 @Component({
