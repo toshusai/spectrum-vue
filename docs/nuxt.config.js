@@ -6,7 +6,7 @@ export default {
   ssr: false,
   target: "static",
   router: {
-    base: '/spectrum-vue/'
+    base: "/spectrum-vue/",
   },
   head: {
     title: "Spectrum Vue",
@@ -29,9 +29,7 @@ export default {
     "@toshusai/spectrum-vue/dist/index.css",
   ],
 
-  plugins: [
-    "~/plugins/register"
-  ],
+  plugins: ["~/plugins/register"],
 
   buildModules: ["@nuxt/typescript-build"],
 
