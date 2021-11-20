@@ -2,25 +2,19 @@
   <div
     class="spectrum-ProgressCircle"
     :class="[
-      'spectrum-ProgressCircle--' + small,
+      'spectrum-ProgressCircle--' + size,
       indeterminate ? 'spectrum-ProgressCircle--indeterminate' : '',
     ]"
   >
     <div class="spectrum-ProgressCircle-track" />
     <div class="spectrum-ProgressCircle-fills">
       <div class="spectrum-ProgressCircle-fillMask1">
-        <div
-          class="spectrum-ProgressCircle-fillSubMask1"
-          :style="mask1Style"
-        >
+        <div class="spectrum-ProgressCircle-fillSubMask1" :style="mask1Style">
           <div class="spectrum-ProgressCircle-fill" />
         </div>
       </div>
       <div class="spectrum-ProgressCircle-fillMask2">
-        <div
-          class="spectrum-ProgressCircle-fillSubMask2"
-          :style="mask2Style"
-        >
+        <div class="spectrum-ProgressCircle-fillSubMask2" :style="mask2Style">
           <div class="spectrum-ProgressCircle-fill" />
         </div>
       </div>
@@ -47,7 +41,7 @@ export default class SpProgressCircle extends Vue {
     if (this.value < 0) {
       deg = 180;
     } else if (this.value < 50) {
-      deg = 180 + (this.value + 50) * 1.8;
+      deg = 180 + this.value * 2 * 1.8;
     }
     return `transform: rotate(${deg}deg)`;
   }
