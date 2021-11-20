@@ -1,7 +1,10 @@
-
+/**
+ * Generate src/index.ts
+ * import and export all component & utils
+ */
 const fs = require("fs")
 
-const dir = fs.readdirSync("./src/components")
+const dir = fs.readdirSync("../src/components")
 
 let exportNames = []
 let src = ``
