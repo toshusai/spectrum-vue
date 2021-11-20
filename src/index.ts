@@ -44,7 +44,9 @@ import SpItemListItem from "./components/SpItemListItem.vue"
 import SpLink from "./components/SpLink.vue"
 import SpLogicButton from "./components/SpLogicButton.vue"
 import SpMenu from "./components/SpMenu.vue"
+import SpMenuDivider from "./components/SpMenuDivider.vue"
 import SpMenuItem from "./components/SpMenuItem.vue"
+import SpMenuItemHeader from "./components/SpMenuItemHeader.vue"
 import SpModal from "./components/SpModal.vue"
 import SpPicker from "./components/SpPicker.vue"
 import SpPickerButton from "./components/SpPickerButton.vue"
@@ -113,7 +115,9 @@ export {
     SpLink,
     SpLogicButton,
     SpMenu,
+    SpMenuDivider,
     SpMenuItem,
+    SpMenuItemHeader,
     SpModal,
     SpPicker,
     SpPickerButton,
