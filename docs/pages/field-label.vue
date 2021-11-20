@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="FieldLabel"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <field-label></field-label>
-    </component-view>
+  <component-view name="FieldLabel" :propData="propData" :eventData="eventData">
+    <sp-field-label></sp-field-label>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

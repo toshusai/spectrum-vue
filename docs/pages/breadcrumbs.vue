@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="Breadcrumbs"
     :propData="propData"
     :eventData="eventData"
-    >
-        <breadcrumbs></breadcrumbs>
-    </component-view>
+  >
+    <sp-breadcrumbs></sp-breadcrumbs>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

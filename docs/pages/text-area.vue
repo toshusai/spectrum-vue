@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="TextArea"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <text-area></text-area>
-    </component-view>
+  <component-view name="TextArea" :propData="propData" :eventData="eventData">
+    <sp-text-area></sp-text-area>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

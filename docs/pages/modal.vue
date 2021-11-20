@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Modal"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <modal></modal>
-    </component-view>
+  <component-view name="Modal" :propData="propData" :eventData="eventData">
+    <sp-modal></sp-modal>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

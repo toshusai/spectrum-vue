@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="SplitViewSplitter"
     :propData="propData"
     :eventData="eventData"
-    >
-        <split-view-splitter></split-view-splitter>
-    </component-view>
+  >
+    <sp-split-view-splitter></sp-split-view-splitter>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

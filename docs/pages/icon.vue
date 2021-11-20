@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Icon"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <icon></icon>
-    </component-view>
+  <component-view name="Icon" :propData="propData" :eventData="eventData">
+    <sp-icon></sp-icon>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

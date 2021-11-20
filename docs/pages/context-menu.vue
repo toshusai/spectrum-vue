@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="ContextMenu"
     :propData="propData"
     :eventData="eventData"
-    >
-        <context-menu></context-menu>
-    </component-view>
+  >
+    <sp-context-menu></sp-context-menu>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

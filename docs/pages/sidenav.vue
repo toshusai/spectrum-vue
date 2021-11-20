@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Sidenav"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <sidenav></sidenav>
-    </component-view>
+  <component-view name="Sidenav" :propData="propData" :eventData="eventData">
+    <sp-sidenav></sp-sidenav>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="AssetList"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <asset-list></asset-list>
-    </component-view>
+  <component-view name="AssetList" :propData="propData" :eventData="eventData">
+    <sp-asset-list></sp-asset-list>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

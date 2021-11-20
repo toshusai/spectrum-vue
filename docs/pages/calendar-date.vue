@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="CalendarDate"
     :propData="propData"
     :eventData="eventData"
-    >
-        <calendar-date></calendar-date>
-    </component-view>
+  >
+    <sp-calendar-date></sp-calendar-date>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

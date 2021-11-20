@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="ActionBar"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <action-bar></action-bar>
-    </component-view>
+  <component-view name="ActionBar" :propData="propData" :eventData="eventData">
+    <sp-action-bar></sp-action-bar>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

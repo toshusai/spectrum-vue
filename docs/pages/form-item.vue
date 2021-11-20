@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="FormItem"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <form-item></form-item>
-    </component-view>
+  <component-view name="FormItem" :propData="propData" :eventData="eventData">
+    <sp-form-item></sp-form-item>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

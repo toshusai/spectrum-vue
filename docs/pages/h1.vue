@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="H1"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <h1></h1>
-    </component-view>
+  <component-view name="H1" :propData="propData" :eventData="eventData">
+    <sp-h1></sp-h1>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

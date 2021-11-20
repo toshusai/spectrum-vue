@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="PaginationButton"
     :propData="propData"
     :eventData="eventData"
-    >
-        <pagination-button></pagination-button>
-    </component-view>
+  >
+    <sp-pagination-button></sp-pagination-button>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Radio"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <radio></radio>
-    </component-view>
+  <component-view name="Radio" :propData="propData" :eventData="eventData">
+    <sp-radio></sp-radio>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Popover"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <popover></popover>
-    </component-view>
+  <component-view name="Popover" :propData="propData" :eventData="eventData">
+    <sp-popover></sp-popover>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="Picker"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <picker></picker>
-    </component-view>
+  <component-view name="Picker" :propData="propData" :eventData="eventData">
+    <sp-picker></sp-picker>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

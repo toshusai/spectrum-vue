@@ -1,12 +1,11 @@
-
 <template>
-    <component-view
+  <component-view
     name="AutoComplete"
     :propData="propData"
     :eventData="eventData"
-    >
-        <auto-complete></auto-complete>
-    </component-view>
+  >
+    <sp-auto-complete></sp-auto-complete>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";

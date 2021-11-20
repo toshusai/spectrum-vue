@@ -1,12 +1,7 @@
-
 <template>
-    <component-view
-    name="FieldGroup"
-    :propData="propData"
-    :eventData="eventData"
-    >
-        <field-group></field-group>
-    </component-view>
+  <component-view name="FieldGroup" :propData="propData" :eventData="eventData">
+    <sp-field-group></sp-field-group>
+  </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
