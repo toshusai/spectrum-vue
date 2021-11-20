@@ -45,7 +45,7 @@ import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
-export default class InlineAlert extends Vue {
+export default class SpInlineAlert extends Vue {
   @Prop({ default: "" }) header!: string;
   @Prop({ default: "info" }) type!: string;
 }

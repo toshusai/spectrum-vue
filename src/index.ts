@@ -1,4 +1,3 @@
-import InlineAlert from "./components/InlineAlert.vue"
 import SpAccordion from "./components/SpAccordion.vue"
 import SpActionBar from "./components/SpActionBar.vue"
 import SpActionButton from "./components/SpActionButton.vue"
@@ -40,6 +39,7 @@ import SpH1 from "./components/SpH1.vue"
 import SpHelpText from "./components/SpHelpText.vue"
 import SpHintTextfield from "./components/SpHintTextfield.vue"
 import SpIcon from "./components/SpIcon.vue"
+import SpInlineAlert from "./components/SpInlineAlert.vue"
 import SpItemListItem from "./components/SpItemListItem.vue"
 import SpLink from "./components/SpLink.vue"
 import SpLogicButton from "./components/SpLogicButton.vue"
@@ -74,7 +74,6 @@ import Item from "./utils/Item"
 import MenuItem from "./utils/MenuItem"
 import addDragEventOnce from "./utils/addDragEventOnce"
 export {
-    InlineAlert,
     SpAccordion,
     SpActionBar,
     SpActionButton,
@@ -116,6 +115,7 @@ export {
     SpHelpText,
     SpHintTextfield,
     SpIcon,
+    SpInlineAlert,
     SpItemListItem,
     SpLink,
     SpLogicButton,
