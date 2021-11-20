@@ -42,6 +42,7 @@ import SpHintTextfield from "./components/SpHintTextfield.vue"
 import SpIcon from "./components/SpIcon.vue"
 import SpItemListItem from "./components/SpItemListItem.vue"
 import SpLink from "./components/SpLink.vue"
+import SpLogicButton from "./components/SpLogicButton.vue"
 import SpMenu from "./components/SpMenu.vue"
 import SpMenuItem from "./components/SpMenuItem.vue"
 import SpModal from "./components/SpModal.vue"
@@ -110,6 +111,7 @@ export {
     SpIcon,
     SpItemListItem,
     SpLink,
+    SpLogicButton,
     SpMenu,
     SpMenuItem,
     SpModal,
