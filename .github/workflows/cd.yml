@@ -26,14 +26,14 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install dependencies
-        run: yarn
+        run: npm install
 
       - name: Install dependencies for docs
-        run: yarn
+        run: npm install
         working-directory: ./docs
 
       - name: Generate
-        run: yarn run generate
+        run: npm run generate
         working-directory: ./docs
 
       - name: Deploy
