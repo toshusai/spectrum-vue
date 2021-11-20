@@ -34,9 +34,9 @@
     </ul>
 
     <div>
-      <h2>Components</h2>
+      <h2>Components Quick Preview</h2>
       <div
-        style="margin-top: 64px"
+        style="margin-bottom: 64px"
         v-for="(link, i) in links.filter((l) => !l.hide)"
         :key="i"
       >
