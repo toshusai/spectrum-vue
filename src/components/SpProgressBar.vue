@@ -48,6 +48,8 @@ import { Component, Prop } from "vue-property-decorator";
 export default class SpProgressBar extends Vue {
   @Prop({ default: 0 }) value!: number;
   @Prop({ default: false }) indeterminate!: false;
+  @Prop({ default: false }) sideLabel!: false;
+  @Prop({ default: false }) overBackground!: false;
   @Prop({ default: "M" }) size!: string;
 }
 </script>
