@@ -51,6 +51,7 @@
   z-index: 100;
   transform: translateX(0px);
   transition: transform var(--spectrum-global-animation-duration-200, 160ms);
+  overflow: scroll;
 }
 .sidenav-header {
   cursor: pointer;
