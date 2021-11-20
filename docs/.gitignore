@@ -1,4 +1,6 @@
 dist
+node_modules
+.nuxt
 # ignore if host here
 # > mv dist spectrum-vue
 # > php -S localhost:8080
