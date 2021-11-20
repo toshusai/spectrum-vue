@@ -1,12 +1,15 @@
 <template>
   <div class="spectrum-Form-item">
     <div
-      class="
-        spectrum-HelpText spectrum-HelpText--sizeS spectrum-HelpText--negative
-      "
+      class="spectrum-HelpText"
+      :class="[
+        'spectrum-HelpText--' + type,
+        'spectrum-HelpText--size' + size,
+        disabled ? 'is-disabled' : '',
+      ]"
     >
       <svg
-        v-if="icon"
+        v-if="alert"
         class="
           spectrum-Icon spectrum-Icon--sizeM
           spectrum-HelpText-validationIcon
@@ -31,10 +34,10 @@ import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
 export default class SpHelpText extends Vue {
-  @Prop({ default: "" })
-  text!: string;
-
-  @Prop({ default: false })
-  icon!: boolean;
+  @Prop({ default: "M" }) size!: string;
+  // natural or negative
+  @Prop({ default: "natural" }) type!: string;
+  @Prop({ default: false }) alert!: boolean;
+  @Prop({ default: false }) disabled!: boolean;
 }
 </script>
