@@ -49,6 +49,7 @@ import SpMenuItem from "./components/SpMenuItem.vue"
 import SpMenuItemHeader from "./components/SpMenuItemHeader.vue"
 import SpMeter from "./components/SpMeter.vue"
 import SpModal from "./components/SpModal.vue"
+import SpPaginationButton from "./components/SpPaginationButton.vue"
 import SpPicker from "./components/SpPicker.vue"
 import SpPickerButton from "./components/SpPickerButton.vue"
 import SpPopover from "./components/SpPopover.vue"
@@ -121,6 +122,7 @@ export {
     SpMenuItemHeader,
     SpMeter,
     SpModal,
+    SpPaginationButton,
     SpPicker,
     SpPickerButton,
     SpPopover,
