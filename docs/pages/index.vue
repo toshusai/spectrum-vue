@@ -64,7 +64,18 @@
             </sp-action-group>
           </div>
           <div class="margin">
-            <sp-checkbox> Checkbox </sp-checkbox>
+            <sp-checkbox :checked="true" :emphasized="true">
+              Checkbox
+            </sp-checkbox>
+          </div>
+          <div class="margin">
+            <sp-form>
+              <sp-radio name="radio" :emphasized="true" :checked="true">
+                Radio
+              </sp-radio>
+              <br />
+              <sp-radio name="radio" :emphasized="true"> Radio</sp-radio>
+            </sp-form>
           </div>
           <div class="margin">
             <sp-textfield placeholder="Textfield"> </sp-textfield>
