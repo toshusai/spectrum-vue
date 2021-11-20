@@ -1,6 +1,7 @@
 <template>
   <div
-    class="spectrum-ProgressBar spectrum-ProgressBar--sizeM is-positive"
+    class="spectrum-ProgressBar spectrum-ProgressBar--sizeM"
+    :class="['is-' + type]"
     value="50"
     role="progressbar"
     aria-valuenow="50"
@@ -41,5 +42,6 @@ import { Component, Prop } from "vue-property-decorator";
 @Component({})
 export default class SpMeter extends Vue {
   @Prop({ default: 0 }) value!: number;
+  @Prop({ default: "positive" }) type!: number;
 }
 </script>
