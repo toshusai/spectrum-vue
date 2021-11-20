@@ -59,6 +59,7 @@ import SpQuickAction from "./components/SpQuickAction.vue"
 import SpRadio from "./components/SpRadio.vue"
 import SpSidenav from "./components/SpSidenav.vue"
 import SpSlider from "./components/SpSlider.vue"
+import SpSliderTextfield from "./components/SpSliderTextfield.vue"
 import SpSplitView from "./components/SpSplitView.vue"
 import SpSplitViewPane from "./components/SpSplitViewPane.vue"
 import SpSplitViewSplitter from "./components/SpSplitViewSplitter.vue"
@@ -74,6 +75,7 @@ import DropPosition from "./utils/DropPosition"
 import Item from "./utils/Item"
 import MenuItem from "./utils/MenuItem"
 import addDragEventOnce from "./utils/addDragEventOnce"
+import "./styles"
 export {
     SpAccordion,
     SpActionBar,
@@ -136,6 +138,7 @@ export {
     SpRadio,
     SpSidenav,
     SpSlider,
+    SpSliderTextfield,
     SpSplitView,
     SpSplitViewPane,
     SpSplitViewSplitter,
