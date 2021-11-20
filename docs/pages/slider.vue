@@ -52,7 +52,7 @@
 import { Vue, Component } from "vue-property-decorator";
 
 @Component({})
-export default class index extends Vue {
+export default class SliderPage extends Vue {
   value1: number = 0.5;
   value2: number = 0;
   value3: number = 0;

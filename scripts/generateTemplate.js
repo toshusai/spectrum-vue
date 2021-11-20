@@ -6,8 +6,8 @@ const Case = require("case")
 
 const dir = fs.readdirSync("../src/components")
 
-const slotKeyword = `$SLOT`
-const classNameKeyword = `$CLASSNAME`
+const slotKeyword = `__SLOT`
+const classNameKeyword = `__CLASSNAME`
 
 const template = `
 <template>
@@ -32,7 +32,7 @@ export default class ${classNameKeyword}Page extends Vue {
 
 let exportNames = []
 for (let i = 0; i < dir.length; i++) {
-    const name = dir[i].replace(".vue", "").replace(/$Sp/, "")
+    const name = dir[i].replace(".vue", "").replace(/^Sp/, "")
     exportNames.push(name)
 }
 
@@ -44,6 +44,6 @@ exportNames.map(name=>{
         return
     }
     let src = template.replace(slotKeyword, `<${kebab}></${kebab}>`)
-    src = src.replace(classNameKeyword, name)
+    src = src.replace(new RegExp(classNameKeyword, 'g'), name)
     fs.writeFileSync(path, src)
 })
