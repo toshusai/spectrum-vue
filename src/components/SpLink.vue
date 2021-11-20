@@ -23,5 +23,6 @@ export default class SpLink extends Vue {
   @Prop({ default: "M" }) size!: string;
   // secondary or overBackground
   @Prop({ default: "" }) type!: string;
+  @Prop({ default: false }) quiet!: boolean;
 }
 </script>
