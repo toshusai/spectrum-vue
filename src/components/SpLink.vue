@@ -7,6 +7,7 @@
       quiet ? 'spectrum-Link--quiet' : '',
     ]"
     v-bind="$attrs"
+    @click="(e) => $emit('click', e)"
   >
     <slot />
   </a>
