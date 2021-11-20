@@ -6,7 +6,7 @@
   "module": "dist/index.esm.js",
   "scripts": {
     "build": "rollup -c",
-    "lint": "node scripts/generateIndexTs.js && eslint --fix --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lint": "eslint --fix --ext \".ts,.vue\" --ignore-path .gitignore .",
     "prepublish": "npm run build"
   },
   "peerDependencies": {
@@ -58,6 +58,7 @@
     "@spectrum-css/radio": "^3.0.9",
     "@spectrum-css/sidenav": "^3.0.8",
     "@spectrum-css/slider": "^3.0.5",
+    "@spectrum-css/splitbutton": "^3.0.9",
     "@spectrum-css/splitview": "^3.0.4",
     "@spectrum-css/table": "^4.0.4",
     "@spectrum-css/tabs": "^3.1.0",
