@@ -7,7 +7,7 @@
 
     <slot />
 
-    <h2>Use</h2>
+    <h2>Usage</h2>
     <sp-divider />
 
     <template v-if="propData.length > 0">

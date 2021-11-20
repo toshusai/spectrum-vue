@@ -8,13 +8,13 @@ const dir = fs.readdirSync("../src/components")
 
 let exportNames = []
 for (let i = 0; i < dir.length; i++) {
-    const name = dir[i].replace(".vue", "").replace(/$Sp/,"")
+    const name = dir[i].replace(".vue", "").replace(/^Sp/,"")
     exportNames.push(name)
 }
 
 
 const array = exportNames.map(name=>{
-    return `{ text: "${name}", href: "/sp-${Case.kebab(name)}", }`
+    return `{ text: "${name}", href: "/${Case.kebab(name)}", }`
 }).join(",\n    ")
 
 const src = `export const links = [${array}]`
