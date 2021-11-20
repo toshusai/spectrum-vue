@@ -19,6 +19,7 @@ for (let i = 0; i < dir.length; i++) {
     exportNames.push(name)
     }
 }
+src += `import "./styles"\n`
 
 src += `export {\n    ${exportNames.join(",\n    ")}\n}\n`
 
