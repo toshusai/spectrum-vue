@@ -6,7 +6,10 @@
     }"
     @mousedown="start"
   >
-    <div v-if="gripper" class="spectrum-SplitView-gripper" />
+    <div
+      v-if="gripper"
+      class="spectrum-SplitView-gripper"
+    />
   </div>
 </template>
 
