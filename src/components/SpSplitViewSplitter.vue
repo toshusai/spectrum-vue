@@ -6,10 +6,7 @@
     }"
     @mousedown="start"
   >
-    <div
-      v-if="gripper"
-      class="spectrum-SplitView-gripper"
-    />
+    <div v-if="gripper" class="spectrum-SplitView-gripper" />
   </div>
 </template>
 
@@ -25,35 +22,35 @@ import addDragEventOnce from "../utils/addDragEventOnce";
 
 @Component({})
 export default class SpSplitViewSplitter extends Vue {
-  isDrag = false;
-
   @Prop({ default: true }) isDraggable!: boolean;
   @Prop({ default: false }) gripper!: boolean;
+  @Prop({ default: false }) vertical!: boolean;
 
-  prevX = 0;
+  prev = 0;
 
   start() {
-    this.isDrag = true;
-    addDragEventOnce((e) => {
-      if (e instanceof MouseEvent) {
-        let delta = e.pageX - this.prevX;
-        if (this.prevX == 0) {
-          delta = 0;
+    addDragEventOnce(
+      (e) => {
+        if (e instanceof MouseEvent) {
+          let delta = e.pageX - this.prev;
+          if (this.vertical) {
+            delta = e.pageY - this.prev;
+          }
+          if (this.prev == 0) {
+            delta = 0;
+          }
+          this.$emit("change", delta);
+          if (this.vertical) {
+            this.prev = e.pageY;
+          } else {
+            this.prev = e.pageX;
+          }
         }
-        this.$emit("change", delta);
-        this.prevX = e.pageX;
+      },
+      () => {
+        this.prev = 0;
       }
-    });
-  }
-
-  move(e: MouseEvent) {
-    if (!this.isDrag) return;
-    // this.$emit("change", e.movementX);
-  }
-
-  end() {
-    this.isDrag = false;
-    // document.body.removeEventListener("mousemove", this.move);
+    );
   }
 }
 </script>
