@@ -37,8 +37,8 @@
       :value="value"
       :disabled="disabled"
       :placeholder="placeholder"
-      @change="(e) => $emit('change', e.target.value, e)"
-      @input="(e) => $emit('input', e.target.value)"
+      @change="change"
+      @input="input"
       @focus="(e) => $emit('focus', e)"
       @blur="(e) => $emit('blur', e)"
       @keydown="(e) => $emit('keydown', e)"
@@ -91,6 +91,23 @@ export default class SpTextfield extends Vue {
       "is-disabled": this.disabled,
       "spectrum-Textfield--quiet": this.quiet,
     };
+  }
+
+  changeOrInput(key: string, e: InputEvent) {
+    const el = e.target as HTMLInputElement;
+    if (this.type == "number") {
+      this.$emit(key, Number.parseFloat(el.value), e);
+      return;
+    }
+    this.$emit(key, el.value, e);
+  }
+
+  input(e: InputEvent) {
+    this.changeOrInput("input", e);
+  }
+
+  change(e: InputEvent) {
+    this.changeOrInput("change", e);
   }
 }
 </script>
