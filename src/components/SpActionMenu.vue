@@ -37,7 +37,7 @@
         >
           <span class="spectrum-Menu-itemLabel">
             <slot
-              v-if="$slots.item"
+              v-if="!!$scopedSlots.item || !!$slots.item"
               :item="item"
               name="item"
             />
