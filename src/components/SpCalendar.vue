@@ -109,11 +109,11 @@ const weekDay3 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   },
 })
 export default class SpCalendar extends Vue {
-  @Prop({ default: new Date().getFullYear() }) year!: number;
+  @Prop({ default: () => new Date().getFullYear() }) year!: number;
   @Prop({ required: false }) month: number | undefined;
   @Prop({ default: "Single" }) weekDayType!: string;
   @Prop({ default: "Header" }) header!: string;
-  @Prop({ default: new Date() }) date!: Date;
+  @Prop({ default: () => new Date() }) date!: Date;
 
   day1 = new Date();
   monthPrivate: number = new Date().getMonth();
