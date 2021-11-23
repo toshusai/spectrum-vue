@@ -107,19 +107,21 @@ export default class Default extends Vue {
   }
 
   getNavLinks(path: string) {
-    return this.links.map((link) => {
-      return {
-        text: link.text,
-        href: "/spectrum-vue/" + link.href,
-        click: (e: Event) => {
-          e.preventDefault();
-          this.$router.push(link.href);
-          this.nav = false;
-          this.navLinks = this.getNavLinks(link.href);
-        },
-        selected: path == link.href,
-      };
-    });
+    return this.links
+      .filter((x) => !x.hide)
+      .map((link) => {
+        return {
+          text: link.text,
+          href: "/spectrum-vue/" + link.href,
+          click: (e: Event) => {
+            e.preventDefault();
+            this.$router.push(link.href);
+            this.nav = false;
+            this.navLinks = this.getNavLinks(link.href);
+          },
+          selected: path == link.href,
+        };
+      });
   }
 
   clickTitle(e: Event) {
