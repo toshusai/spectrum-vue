@@ -38,3 +38,11 @@ Add global css.
 
 # License
 MIT
+
+
+# Development
+
+
+```
+npm run build && rsync dist docs/node_modules/@toshusai/spectrum-vue
+```
