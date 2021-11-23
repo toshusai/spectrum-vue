@@ -1,6 +1,12 @@
 <template>
-  <div ref="el" class="spectrum-ColorSlider">
-    <div class="spectrum-ColorSlider-checkerboard" role="presentation">
+  <div
+    ref="el"
+    class="spectrum-ColorSlider"
+  >
+    <div
+      class="spectrum-ColorSlider-checkerboard"
+      role="presentation"
+    >
       <div
         class="spectrum-ColorSlider-gradient"
         role="presentation"
@@ -39,7 +45,7 @@
       max="100"
       step="1"
       @pointerdown="start"
-    />
+    >
   </div>
 </template>
 

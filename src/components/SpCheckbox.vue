@@ -1,12 +1,15 @@
 <template>
-  <label class="spectrum-Checkbox" :class="cssClass">
+  <label
+    class="spectrum-Checkbox"
+    :class="cssClass"
+  >
     <input
       id="checkbox-0"
       type="checkbox"
       class="spectrum-Checkbox-input"
       :checked="checked"
       @change="$emit('change', !checked)"
-    />
+    >
     <span class="spectrum-Checkbox-box">
       <svg
         class="

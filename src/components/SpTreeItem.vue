@@ -48,7 +48,7 @@
             style="background: white"
             src="img/x.png"
             alt="Flowers"
-          />
+          >
         </div>
         <span class="spectrum-TreeView-itemLabel">
           <slot :item="item" />

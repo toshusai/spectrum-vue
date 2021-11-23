@@ -1,5 +1,8 @@
 <template>
-  <ul class="spectrum-Menu" role="menu">
+  <ul
+    class="spectrum-Menu"
+    role="menu"
+  >
     <slot />
   </ul>
 </template>

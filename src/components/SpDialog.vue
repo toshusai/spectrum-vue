@@ -1,6 +1,9 @@
 <template>
   <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-    <div class="spectrum-Underlay" :class="[isOpen ? 'is-open' : '']" />
+    <div
+      class="spectrum-Underlay"
+      :class="[isOpen ? 'is-open' : '']"
+    />
     <div
       class="spectrum-Modal"
       :class="[isOpen ? 'is-open' : '', large ? 'spectrum-Dialog--large' : '']"
@@ -42,7 +45,7 @@
               spectrum-Divider--horizontal
               spectrum-Dialog-divider
             "
-          />
+          >
           <section class="spectrum-Dialog-content">
             <slot />
           </section>

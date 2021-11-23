@@ -1,14 +1,20 @@
 <template>
-  <div class="spectrum-Radio" :class="cssClass">
+  <div
+    class="spectrum-Radio"
+    :class="cssClass"
+  >
     <input
       :id="id"
       type="radio"
       v-bind="$attrs"
       class="spectrum-Radio-input"
       :checked="checked"
-    />
+    >
     <span class="spectrum-Radio-button" />
-    <label class="spectrum-Radio-label" :for="id">
+    <label
+      class="spectrum-Radio-label"
+      :for="id"
+    >
       <slot />
     </label>
   </div>

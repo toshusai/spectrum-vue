@@ -1,5 +1,8 @@
 <template>
-  <div ref="el" class="spectrum-ColorArea">
+  <div
+    ref="el"
+    class="spectrum-ColorArea"
+  >
     <div
       type="range"
       style="pointer-events: all; z-index: 2"
@@ -21,7 +24,10 @@
       max="1"
       step="0.01"
     /> -->
-    <div class="spectrum-ColorArea-gradient" :style="gradientStyle" />
+    <div
+      class="spectrum-ColorArea-gradient"
+      :style="gradientStyle"
+    />
 
     <div
       class="spectrum-ColorHandle spectrum-ColorArea-handle"

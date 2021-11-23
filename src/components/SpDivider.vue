@@ -1,5 +1,5 @@
 <template>
-  <hr class="spectrum-Divider spectrum-Divider--sizeM" />
+  <hr class="spectrum-Divider spectrum-Divider--sizeM">
 </template>
 
 

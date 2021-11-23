@@ -41,7 +41,10 @@
       class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover"
       :class="{ 'is-open': isOpen }"
     >
-      <ul class="spectrum-Menu" role="listbox">
+      <ul
+        class="spectrum-Menu"
+        role="listbox"
+      >
         <li
           v-for="(item, i) in items"
           :key="i"

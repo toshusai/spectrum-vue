@@ -13,7 +13,7 @@
         class="spectrum-Textfield-input spectrum-InputGroup-input"
         aria-invalid="false"
         v-bind="$attrs"
-      />
+      >
     </div>
     <button
       tabindex="-1"

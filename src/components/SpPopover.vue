@@ -15,11 +15,19 @@
       tabindex="-1"
       aria-modal="true"
     >
-      <div class="spectrum-Dialog-grid" style="display: block">
+      <div
+        class="spectrum-Dialog-grid"
+        style="display: block"
+      >
         <slot />
       </div>
     </section>
-    <svg idth="12" height="23" class="spectrum-Popover-tip" style="top: 16px">
+    <svg
+      idth="12"
+      height="23"
+      class="spectrum-Popover-tip"
+      style="top: 16px"
+    >
       <path
         class="spectrum-Popover-tip-triangle"
         d="M 0 0.7071067811865476 L 10.707106781186548 11.414213562373096 L 0 22.121320343559645"

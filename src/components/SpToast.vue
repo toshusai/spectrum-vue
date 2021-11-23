@@ -1,5 +1,8 @@
 <template>
-  <div :class="cssClass" :style="style">
+  <div
+    :class="cssClass"
+    :style="style"
+  >
     <!--  -->
     <svg
       v-if="positive"
@@ -43,7 +46,10 @@
         <span class="spectrum-Button-label">{{ button }}</span>
       </button>
     </div>
-    <div v-if="removable" class="spectrum-Toast-buttons">
+    <div
+      v-if="removable"
+      class="spectrum-Toast-buttons"
+    >
       <button
         class="
           spectrum-ClearButton

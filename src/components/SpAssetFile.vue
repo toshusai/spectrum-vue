@@ -1,6 +1,9 @@
 <template>
   <div class="spectrum-Asset">
-    <svg viewBox="0 0 128 128" class="spectrum-Asset-file">
+    <svg
+      viewBox="0 0 128 128"
+      class="spectrum-Asset-file"
+    >
       <path
         class="spectrum-Asset-fileBackground"
         d="M24,126c-5.5,0-10-4.5-10-10V12c0-5.5,4.5-10,10-10h61.5c2.1,0,4.1,0.8,5.6,2.3l20.5,20.4c1.5,1.5,2.4,3.5,2.4,5.7V116c0,5.5-4.5,10-10,10H24z"
