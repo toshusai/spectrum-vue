@@ -1,17 +1,14 @@
 <template>
   <div style="position: relative; display: inline-block">
     <button
-      class="
-        spectrum-ActionButton
-        spectrum-ActionButton--sizeM
-        spectrum-ActionButton--quiet
-      "
+      class="spectrum-ActionButton spectrum-ActionButton--quiet"
       :class="btnClass"
       @click="open"
     >
       <svg
         v-if="icon"
-        class="spectrum-Icon spectrum-Icon--sizeM"
+        class="spectrum-Icon"
+        :class="`spectrum-Icon--size` + size"
         focusable="false"
         aria-hidden="true"
       >
@@ -26,10 +23,7 @@
       :class="{ 'is-open': isOpen }"
       style="position: absolute; top: 100%; left: 0; z-index: 100"
     >
-      <ul
-        class="spectrum-Menu"
-        role="menu"
-      >
+      <ul class="spectrum-Menu" role="menu">
         <li
           v-for="(item, i) in items"
           :key="i"
@@ -39,16 +33,17 @@
           @click="(e) => clickItem(e, item)"
         >
           <span class="spectrum-Menu-itemLabel">
-            {{ item.text }}
+            <slot v-if="$slots.item" :item="item" name="item" />
+            <template v-else>
+              {{ item.text }}
+            </template>
           </span>
         </li>
       </ul>
     </div>
   </div>
 </template>
-<style>
-@import "@spectrum-css/actionmenu";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
@@ -59,6 +54,7 @@ export default class SpActionMenu extends Vue {
   isOpen: boolean = false;
   @Prop({ default: () => [] }) items!: MenuItem[];
   @Prop({ default: true }) icon!: boolean;
+  @Prop({ default: "M" }) size!: string;
 
   open() {
     this.isOpen = true;
@@ -76,9 +72,10 @@ export default class SpActionMenu extends Vue {
   }
 
   get btnClass() {
-    return {
-      "is-selected": this.isOpen,
-    };
+    return [
+      this.isOpen ? "is-selected" : "",
+      "spectrum-ActionButton--size" + this.size,
+    ];
   }
 }
 </script>
