@@ -30,7 +30,10 @@
       {{ value }}%
     </div>
     <div class="spectrum-ProgressBar-track">
-      <div class="spectrum-ProgressBar-fill" :style="`width: ${value}%`" />
+      <div
+        class="spectrum-ProgressBar-fill"
+        :style="`width: ${value}%`"
+      />
     </div>
   </div>
 </template>

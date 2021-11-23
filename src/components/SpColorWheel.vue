@@ -1,5 +1,8 @@
 <template>
-  <div class="spectrum-ColorWheel" :class="{ 'is-disabled': disabled }">
+  <div
+    class="spectrum-ColorWheel"
+    :class="{ 'is-disabled': disabled }"
+  >
     <svg
       class="spectrum-ColorWheel-wheel"
       viewBox="0 0 160 160"
@@ -7,11 +10,24 @@
     >
       <defs>
         <mask id="mask">
-          <circle cx="80" cy="80" r="80" fill="white" />
-          <circle cx="80" cy="80" r="56" fill="black" />
+          <circle
+            cx="80"
+            cy="80"
+            r="80"
+            fill="white"
+          />
+          <circle
+            cx="80"
+            cy="80"
+            r="56"
+            fill="black"
+          />
         </mask>
       </defs>
-      <g class="spectrum-ColorWheel-segment" mask="url(#mask)">
+      <g
+        class="spectrum-ColorWheel-segment"
+        mask="url(#mask)"
+      >
         <rect
           v-for="(_, i) in rad"
           :key="i"
@@ -30,7 +46,12 @@
         class="spectrum-ColorWheel-outerCircle"
         mask="url(#mask)"
       />
-      <circle cx="80" cy="80" r="56" class="spectrum-ColorWheel-innerCircle" />
+      <circle
+        cx="80"
+        cy="80"
+        r="56"
+        class="spectrum-ColorWheel-innerCircle"
+      />
     </svg>
 
     <div
@@ -63,7 +84,7 @@
       min="0"
       max="360"
       step="`"
-    />
+    >
   </div>
 </template>
 

@@ -29,14 +29,18 @@
             style="background: white"
             src="img/x.png"
             alt="Flowers"
-          />
+          >
         </div>
         <span class="spectrum-TreeView-itemLabel">
           <slot :item="item" />
         </span>
       </a>
     </li>
-    <sp-drop-indicator ref="di" style="display: none" :style="diStyle" />
+    <sp-drop-indicator
+      ref="di"
+      style="display: none"
+      :style="diStyle"
+    />
   </ul>
 </template>
 

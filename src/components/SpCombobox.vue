@@ -30,7 +30,7 @@
         type="text"
         class="spectrum-Textfield-input spectrum-InputGroup-input"
         :disabled="disabled"
-      />
+      >
     </div>
     <button
       tabindex="-1"

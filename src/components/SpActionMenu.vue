@@ -23,7 +23,10 @@
       :class="{ 'is-open': isOpen }"
       style="position: absolute; top: 100%; left: 0; z-index: 100"
     >
-      <ul class="spectrum-Menu" role="menu">
+      <ul
+        class="spectrum-Menu"
+        role="menu"
+      >
         <li
           v-for="(item, i) in items"
           :key="i"
@@ -33,7 +36,11 @@
           @click="(e) => clickItem(e, item)"
         >
           <span class="spectrum-Menu-itemLabel">
-            <slot v-if="$slots.item" :item="item" name="item" />
+            <slot
+              v-if="$slots.item"
+              :item="item"
+              name="item"
+            />
             <template v-else>
               {{ item.text }}
             </template>

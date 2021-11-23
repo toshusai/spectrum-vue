@@ -4,7 +4,10 @@
     :class="cssClass"
     :style="style"
   >
-    <ul class="spectrum-Menu" role="menu">
+    <ul
+      class="spectrum-Menu"
+      role="menu"
+    >
       <li
         v-for="(item, i) in items"
         :key="i"

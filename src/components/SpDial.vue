@@ -7,8 +7,15 @@
     ]"
   >
     <div class="spectrum-Dial-controls">
-      <div v-if="label" class="spectrum-Dial-labelContainer">
-        <label id="dialLabel" class="spectrum-Dial-label" for="labeledDial">
+      <div
+        v-if="label"
+        class="spectrum-Dial-labelContainer"
+      >
+        <label
+          id="dialLabel"
+          class="spectrum-Dial-label"
+          for="labeledDial"
+        >
           {{ label }}
         </label>
         <div
@@ -31,7 +38,7 @@
           class="spectrum-Dial-input"
           v-bind="$attrs"
           :disabled="disabled"
-        />
+        >
       </div>
     </div>
   </div>

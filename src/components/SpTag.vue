@@ -1,6 +1,12 @@
 <template>
-  <div :class="cssClass" tabindex="0">
-    <span class="spectrum-Tag-label" @click="$emit('select')">{{ label }}</span>
+  <div
+    :class="cssClass"
+    tabindex="0"
+  >
+    <span
+      class="spectrum-Tag-label"
+      @click="$emit('select')"
+    >{{ label }}</span>
     <button
       v-if="removable"
       type="reset"

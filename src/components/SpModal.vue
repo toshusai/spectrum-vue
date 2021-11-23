@@ -1,5 +1,9 @@
 <template>
-  <div v-show="isOpen" ref="modal" class="spectrum-Modal-wrapper">
+  <div
+    v-show="isOpen"
+    ref="modal"
+    class="spectrum-Modal-wrapper"
+  >
     <div class="spectrum-Underlay is-open" />
     <div class="spectrum-Modal is-open">
       <div class="spectrum-Dialog">

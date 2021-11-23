@@ -1,6 +1,9 @@
 <template>
   <div style="max-width: min-content">
-    <div class="spectrum-Textfield" :class="cssClass">
+    <div
+      class="spectrum-Textfield"
+      :class="cssClass"
+    >
       <svg
         v-if="valid"
         class="
@@ -35,7 +38,7 @@
         :placeholder="placeholder"
         @change="(e) => $emit('change', e.target.value)"
         @input="(e) => $emit('input', e.target.value)"
-      />
+      >
     </div>
     <div
       class="spectrum-HelpText spectrum-HelpText--sizeS"
