@@ -1,9 +1,10 @@
 <template>
   <svg
-    class="spectrum-Icon spectrum-Icon--sizeM"
+    class="spectrum-Icon"
+    :class="`spectrum-Icon--size` + size"
     focusable="false"
     aria-hidden="true"
-    aria-label="Edit"
+    :aria-label="name"
   >
     <use :xlink:href="`#spectrum-icon-18-${name}`" />
   </svg>
@@ -18,5 +19,6 @@ import { Component, Prop } from "vue-property-decorator";
 @Component({})
 export default class SpIcon extends Vue {
   @Prop({ default: "" }) name!: string;
+  @Prop({ default: "M" }) size!: string;
 }
 </script>
