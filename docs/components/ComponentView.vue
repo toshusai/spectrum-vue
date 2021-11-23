@@ -31,9 +31,21 @@
       >
       </sp-table>
     </template>
+
+    <template v-if="slotData.length > 0">
+      <h3>Slots</h3>
+      <sp-table
+        style="width: 100%"
+        class="spectrum-Code spectrum-Code--sizeXS"
+        :headers="slotHeaders"
+        :data="slotData"
+      >
+      </sp-table>
+    </template>
   </div>
 </template>
 <script lang="ts">
+import hljs from "highlight.js";
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 
@@ -42,6 +54,7 @@ export default class ComponentView extends Vue {
   @Prop({ default: "" }) name!: string;
   @Prop({ default: () => [] }) propData!: any[];
   @Prop({ default: () => [] }) eventData!: any[];
+  @Prop({ default: () => [] }) slotData!: any[];
 
   propHeaders = [
     { text: "Prop", key: "prop" },
@@ -53,5 +66,14 @@ export default class ComponentView extends Vue {
     { text: "Event", key: "event" },
     { text: "Argument", key: "arg" },
   ];
+
+  slotHeaders = [
+    { text: "Slot", key: "name" },
+    { text: "Description", key: "description" },
+  ];
+
+  mounted() {
+    hljs.highlightAll();
+  }
 }
 </script>

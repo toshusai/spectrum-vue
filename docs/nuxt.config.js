@@ -27,6 +27,7 @@ export default {
     "@spectrum-css/vars/dist/spectrum-light.css",
     "@spectrum-css/vars/dist/spectrum-dark.css",
     "@toshusai/spectrum-vue/dist/index.css",
+    "highlight.js/styles/github-dark.css",
   ],
 
   plugins: ["~/plugins/register"],

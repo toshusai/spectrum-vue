@@ -41,6 +41,9 @@
 </template>
 
 <style>
+pre > code {
+  font-family: "Sans Mono", "Consolas", "Courier", monospace;
+}
 .sidenav {
   position: fixed;
   top: 0px;
@@ -68,10 +71,11 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop } from "vue-property-decorator";
+import { Component, Prop, Watch } from "vue-property-decorator";
 import loadicons from "loadicons";
 import { links } from "../data/links";
 import GithubButton from "vue-github-button";
+import hljs from "highlight.js";
 
 @Component({
   components: {
