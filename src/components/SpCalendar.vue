@@ -51,10 +51,7 @@
       aria-readonly="true"
       aria-disabled="false"
     >
-      <table
-        role="presentation"
-        class="spectrum-Calendar-table"
-      >
+      <table role="presentation" class="spectrum-Calendar-table">
         <thead role="presentation">
           <tr role="row">
             <th
@@ -64,21 +61,14 @@
               scope="col"
               class="spectrum-Calendar-tableCell"
             >
-              <abbr
-                class="spectrum-Calendar-dayOfWeek"
-                :title="d"
-              >
+              <abbr class="spectrum-Calendar-dayOfWeek" :title="d">
                 {{ d }}
               </abbr>
             </th>
           </tr>
         </thead>
         <tbody role="presentation">
-          <tr
-            v-for="(_, j) in days"
-            :key="`tr_${j}`"
-            role="row"
-          >
+          <tr v-for="(_, j) in days" :key="`tr_${j}`" role="row">
             <sp-calendar-date
               v-for="(d, i) in days[j]"
               :key="`td_${j}${i}`"
@@ -94,9 +84,7 @@
     </div>
   </div>
 </template>
-<style>
-@import "@spectrum-css/calendar";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

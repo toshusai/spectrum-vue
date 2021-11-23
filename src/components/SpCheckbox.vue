@@ -1,15 +1,12 @@
 <template>
-  <label
-    class="spectrum-Checkbox"
-    :class="cssClass"
-  >
+  <label class="spectrum-Checkbox" :class="cssClass">
     <input
       id="checkbox-0"
       type="checkbox"
       class="spectrum-Checkbox-input"
       :checked="checked"
       @change="$emit('change', !checked)"
-    >
+    />
     <span class="spectrum-Checkbox-box">
       <svg
         class="
@@ -37,9 +34,7 @@
     </span>
   </label>
 </template>
-<style>
-@import "@spectrum-css/checkbox";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

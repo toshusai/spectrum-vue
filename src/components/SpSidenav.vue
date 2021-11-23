@@ -19,9 +19,7 @@
   </nav>
 </template>
 
-<style>
-@import "@spectrum-css/sidenav";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

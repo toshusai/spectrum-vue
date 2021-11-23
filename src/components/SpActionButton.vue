@@ -21,9 +21,7 @@
   </button>
 </template>
 
-<style>
-@import "@spectrum-css/actionbutton";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

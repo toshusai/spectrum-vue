@@ -1,8 +1,5 @@
 <template>
-  <div
-    ref="el"
-    class="spectrum-ColorArea"
-  >
+  <div ref="el" class="spectrum-ColorArea">
     <div
       type="range"
       style="pointer-events: all; z-index: 2"
@@ -24,10 +21,7 @@
       max="1"
       step="0.01"
     /> -->
-    <div
-      class="spectrum-ColorArea-gradient"
-      :style="gradientStyle"
-    />
+    <div class="spectrum-ColorArea-gradient" :style="gradientStyle" />
 
     <div
       class="spectrum-ColorHandle spectrum-ColorArea-handle"
@@ -54,11 +48,7 @@
   </div>
 </template>
 
-<style>
-@import "@spectrum-css/colorarea";
-@import "@spectrum-css/colorloupe";
-@import "@spectrum-css/colorhandle";
-</style>
+
 
 <script lang="ts">
 import * as convert from "color-convert";

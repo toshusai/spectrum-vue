@@ -19,9 +19,7 @@
   </div>
 </template>
 
-<style>
-@import "@spectrum-css/tabs";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

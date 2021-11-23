@@ -13,7 +13,7 @@
         class="spectrum-Textfield-input spectrum-InputGroup-input"
         aria-invalid="false"
         v-bind="$attrs"
-      >
+      />
     </div>
     <button
       tabindex="-1"
@@ -42,9 +42,7 @@
     </button>
   </div>
 </template>
-<style>
-@import "@spectrum-css/inputgroup";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";

@@ -3,10 +3,7 @@
     class="spectrum-Slider"
     :class="{ 'is-disabled': disabled, 'spectrum-Slider--filled': filled }"
   >
-    <div
-      v-if="label"
-      class="spectrum-Slider-labelContainer"
-    >
+    <div v-if="label" class="spectrum-Slider-labelContainer">
       <label
         id="spectrum-Slider-label-8"
         class="spectrum-Slider-label"
@@ -24,14 +21,8 @@
         {{ valueDisplay }}
       </div>
     </div>
-    <div
-      ref="controls"
-      class="spectrum-Slider-controls"
-    >
-      <div
-        v-if="ramp"
-        class="spectrum-Slider-ramp"
-      >
+    <div ref="controls" class="spectrum-Slider-controls">
+      <div v-if="ramp" class="spectrum-Slider-ramp">
         <svg
           viewBox="0 0 240 16"
           preserveAspectRatio="none"
@@ -43,11 +34,7 @@
           />
         </svg>
       </div>
-      <div
-        v-else
-        class="spectrum-Slider-track"
-        :style="`width:${position}%`"
-      />
+      <div v-else class="spectrum-Slider-track" :style="`width:${position}%`" />
       <div
         class="spectrum-Slider-handle"
         :style="`left: ${position}%; cursor: pointer`"
@@ -61,7 +48,7 @@
           :min="min"
           :max="max"
           :disabled="disabled"
-        >
+        />
       </div>
       <div
         v-if="!ramp"
@@ -73,9 +60,7 @@
   </div>
 </template>
 
-<style>
-@import "@spectrum-css/slider";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

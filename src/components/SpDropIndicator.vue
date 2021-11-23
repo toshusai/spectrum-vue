@@ -2,9 +2,7 @@
   <div class="spectrum-DropIndicator spectrum-DropIndicator--horizontal" />
 </template>
 
-<style>
-@import "@spectrum-css/dropindicator";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

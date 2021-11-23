@@ -29,25 +29,18 @@
             style="background: white"
             src="img/x.png"
             alt="Flowers"
-          >
+          />
         </div>
         <span class="spectrum-TreeView-itemLabel">
           <slot :item="item" />
         </span>
       </a>
     </li>
-    <sp-drop-indicator
-      ref="di"
-      style="display: none"
-      :style="diStyle"
-    />
+    <sp-drop-indicator ref="di" style="display: none" :style="diStyle" />
   </ul>
 </template>
 
-<style>
-@import "@spectrum-css/treeview";
-@import "@spectrum-css/thumbnail";
-</style>
+
 
 <script lang="ts">
 import { Component, Prop, Ref, Vue } from "vue-property-decorator";

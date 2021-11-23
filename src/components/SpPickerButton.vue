@@ -27,9 +27,7 @@
     </div>
   </button>
 </template>
-<style>
-@import "@spectrum-css/pickerbutton";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";

@@ -1,29 +1,20 @@
 <template>
   <div
-    class="spectrum-Avatar "
-    :class="[
-      disabled ?'is-disabled': '',
-      `spectrum-Avatar--size${size}`
-    ]"
+    class="spectrum-Avatar"
+    :class="[disabled ? 'is-disabled' : '', `spectrum-Avatar--size${size}`]"
   >
-    <img
-      class="spectrum-Avatar-image"
-      :src="src"
-      alt="Avatar"
-    >
+    <img class="spectrum-Avatar-image" :src="src" alt="Avatar" />
   </div>
 </template>
-<style>
-@import "@spectrum-css/avatar";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop }from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
 export default class SpAvatar extends Vue {
-    @Prop({ default: false }) disabled!: boolean
-    @Prop({ default: "100" }) size!: string
-    @Prop({ default: "" }) src!: string
+  @Prop({ default: false }) disabled!: boolean;
+  @Prop({ default: "100" }) size!: string;
+  @Prop({ default: "" }) src!: string;
 }
 </script>

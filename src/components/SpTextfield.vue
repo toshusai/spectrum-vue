@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="spectrum-Textfield"
-    :class="cssClass"
-  >
+  <div class="spectrum-Textfield" :class="cssClass">
     <svg
       v-if="valid"
       class="
@@ -42,15 +39,11 @@
       @focus="(e) => $emit('focus', e)"
       @blur="(e) => $emit('blur', e)"
       @keydown="(e) => $emit('keydown', e)"
-    >
+    />
   </div>
 </template>
 
-<style>
-@import "@spectrum-css/textfield";
-@import "@spectrum-css/icon";
-@import "@spectrum-css/helptext";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

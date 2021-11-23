@@ -9,9 +9,7 @@
   </svg>
 </template>
 
-<style>
-@import "@spectrum-css/icon";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

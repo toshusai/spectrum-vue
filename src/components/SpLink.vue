@@ -12,9 +12,7 @@
     <slot />
   </a>
 </template>
-<style>
-@import "@spectrum-css/link";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

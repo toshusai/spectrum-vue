@@ -1,9 +1,6 @@
 <template>
   <div class="spectrum-Modal-wrapper spectrum-CSSExample-dialog">
-    <div
-      class="spectrum-Underlay"
-      :class="[isOpen ? 'is-open' : '']"
-    />
+    <div class="spectrum-Underlay" :class="[isOpen ? 'is-open' : '']" />
     <div
       class="spectrum-Modal"
       :class="[isOpen ? 'is-open' : '', large ? 'spectrum-Dialog--large' : '']"
@@ -45,7 +42,7 @@
               spectrum-Divider--horizontal
               spectrum-Dialog-divider
             "
-          >
+          />
           <section class="spectrum-Dialog-content">
             <slot />
           </section>
@@ -75,9 +72,7 @@
     </div>
   </div>
 </template>
-<style>
-@import "@spectrum-css/dialog";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

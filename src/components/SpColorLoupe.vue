@@ -13,9 +13,7 @@
     </g>
   </svg>
 </template>
-<style>
-@import "@spectrum-css/colorloupe";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
