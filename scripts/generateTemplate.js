@@ -143,7 +143,7 @@ for (let i = 0; i < dir.length; i++) {
 exportNames.map(name => {
     const kebab = Case.kebab(name)
     const path = `../docs/pages/${kebab}.vue`
-    if (name != "ActionButton" && fs.existsSync(path)) {
+    if (name != "ActionButton" || name == "Accordion" && fs.existsSync(path)) {
         // console.warn(`Already exists ${path}`);
         return
     }

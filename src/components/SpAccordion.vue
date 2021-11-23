@@ -57,4 +57,12 @@ export default class SpAccordion extends Vue {
   @Prop({ default: false }) disabled!: boolean;
   @Prop({ default: "" }) header!: string;
 }
+
+/**
+ * <code>
+ * <sp-accordion header="Accordion">
+ *   Content
+ * </sp-accordion>
+ * </code>
+ */
 </script>

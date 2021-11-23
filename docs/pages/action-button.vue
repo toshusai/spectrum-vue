@@ -1,107 +1,162 @@
+
 <template>
-  <component-view
+    <component-view
     name="ActionButton"
     :propData="propData"
     :eventData="eventData"
-  >
-    <h3>Size</h3>
-    <sp-action-button size="S">S</sp-action-button>
-    <sp-action-button size="M">M</sp-action-button>
-    <sp-action-button size="L">L</sp-action-button>
-    <code-view :code="code1" />
+    :slotData="slotData"
+    >
+        <h3>Standard</h3>
 
-    <div v-for="(t, i) in title" :key="i">
-      <h3>{{ t.title }}</h3>
-      <sp-action-button
-        v-for="(x, i) in t.items"
-        :key="`standard${i}`"
-        :selected="x.selected"
-        :disabled="x.disabled"
-        :quiet="t.quiet"
-        :emphasized="t.emphasized"
-        style="margin: 8px"
-      >
-        {{ x.text }}
-      </sp-action-button>
-      <code-view :code="t.code" />
-    </div>
-  </component-view>
+<sp-action-button size="S">S</sp-action-button>
+<sp-action-button size="M">M</sp-action-button>
+<sp-action-button size="L">L</sp-action-button>
+<code-view :code="`&lt;sp-action-button size=&quot;S&quot;&gt;S&lt;/sp-action-button&gt;
+&lt;sp-action-button size=&quot;M&quot;&gt;M&lt;/sp-action-button&gt;
+&lt;sp-action-button size=&quot;L&quot;&gt;L&lt;/sp-action-button&gt;`"></code-view>
+
+<h3>Standard</h3>
+
+<sp-action-button>
+  default
+</sp-action-button>
+
+<sp-action-button :selected="true">
+  selected
+</sp-action-button>
+
+<sp-action-button :disabled="true">
+  disabled
+</sp-action-button>
+
+<sp-action-button :selected="true" :disabled="true">
+  selected + disabled
+</sp-action-button>
+<code-view :code="`&lt;sp-action-button&gt;
+  default
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :selected=&quot;true&quot;&gt;
+  selected
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :disabled=&quot;true&quot;&gt;
+  disabled
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :selected=&quot;true&quot; :disabled=&quot;true&quot;&gt;
+  selected + disabled
+&lt;/sp-action-button&gt;`"></code-view>
+
+<h3>Quiet</h3>
+
+<sp-action-button :quiet="true">
+  default
+</sp-action-button>
+
+<sp-action-button :quiet="true" :selected="true">
+  selected
+</sp-action-button>
+
+<sp-action-button :quiet="true" :disabled="true">
+  disabled
+</sp-action-button>
+
+<sp-action-button :quiet="true" :selected="true" :disabled="true">
+  selected + disabled
+</sp-action-button>
+<code-view :code="`&lt;sp-action-button :quiet=&quot;true&quot;&gt;
+  default
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :quiet=&quot;true&quot; :selected=&quot;true&quot;&gt;
+  selected
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :quiet=&quot;true&quot; :disabled=&quot;true&quot;&gt;
+  disabled
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :quiet=&quot;true&quot; :selected=&quot;true&quot; :disabled=&quot;true&quot;&gt;
+  selected + disabled
+&lt;/sp-action-button&gt;`"></code-view>
+
+<h3>Emphasized</h3>
+
+<sp-action-button :emphasized="true">
+  default
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :selected="true">
+  selected
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :disabled="true">
+  disabled
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :selected="true" :disabled="true">
+  selected + disabled
+</sp-action-button>
+<code-view :code="`&lt;sp-action-button :emphasized=&quot;true&quot;&gt;
+  default
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :emphasized=&quot;true&quot; :selected=&quot;true&quot;&gt;
+  selected
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :emphasized=&quot;true&quot; :disabled=&quot;true&quot;&gt;
+  disabled
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :emphasized=&quot;true&quot; :selected=&quot;true&quot; :disabled=&quot;true&quot;&gt;
+  selected + disabled
+&lt;/sp-action-button&gt;`"></code-view>
+
+</code>
+<h3>Emphasized + Quiet</h3>
+
+<sp-action-button :emphasized="true" :quiet="true">
+  default
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :quiet="true" :selected="true">
+  selected
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :quiet="true" :disabled="true">
+  disabled
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :quiet="true" :selected="true" :disabled="true">
+  selected + disabled
+</sp-action-button>
+<code-view :code="`&lt;sp-action-button :emphasized=&quot;true&quot; :quiet=&quot;true&quot;&gt;
+  default
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :emphasized=&quot;true&quot; :quiet=&quot;true&quot; :selected=&quot;true&quot;&gt;
+  selected
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :emphasized=&quot;true&quot; :quiet=&quot;true&quot; :disabled=&quot;true&quot;&gt;
+  disabled
+&lt;/sp-action-button&gt;
+
+&lt;sp-action-button :emphasized=&quot;true&quot; :quiet=&quot;true&quot; :selected=&quot;true&quot; :disabled=&quot;true&quot;&gt;
+  selected + disabled
+&lt;/sp-action-button&gt;`"></code-view>
+
+    </component-view>
 </template>
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-
+import Vue from "vue";
+import { Component } from "vue-property-decorator";
 @Component({})
-export default class index extends Vue {
-  propData = [
-    { prop: "quiet", type: "boolean", default: "false" },
-    { prop: "selected", type: "boolean", default: "false" },
-    { prop: "emphasized", type: "boolean", default: "false" },
-    { prop: "disabled", type: "boolean", default: "false" },
-    { prop: "icon", type: "boolean", default: "false" },
-    { prop: "size", type: "string", default: "M" },
-  ];
-
-  eventData = [
-    { event: "click", arg: "Event" },
-    { event: "pointerdown", arg: "Event" },
-  ];
-
-  code1 = `<sp-action-button size="S">S</sp-action-button>
-<sp-action-button size="M">M</sp-action-button>
-<sp-action-button size="L">L</sp-action-button>`;
-
-  emp = [
-    { text: "default", selected: false, disabled: false },
-    { text: "selected", selected: true, disabled: false },
-    { text: "disabled", selected: false, disabled: true },
-    { text: "selected + disabled", selected: true, disabled: true },
-  ];
-
-  title = [
-    {
-      title: "Standard",
-      quiet: false,
-      emphasized: false,
-      code: `<sp-action-button>default</sp-action-button>
-<sp-action-button :selected="true">selected</sp-action-button>
-<sp-action-button :disabled="true">disabled</sp-action-button>
-<sp-action-button :selected="true" :disabled="true">selected + disabled</sp-action-button>`,
-    },
-    {
-      title: "Quiet",
-      quiet: true,
-      emphasized: false,
-      code: `<sp-action-button :quiet="true">default</sp-action-button>
-<sp-action-button :quiet="true" :selected="true">selected</sp-action-button>
-<sp-action-button :quiet="true" :disabled="true">disabled</sp-action-button>
-<sp-action-button :quiet="true" :selected="true" :disabled="true">selected + disabled</sp-action-button>`,
-    },
-    {
-      title: "Emphasized",
-      quiet: false,
-      emphasized: true,
-      code: `<sp-action-button :emphasized="true">default</sp-action-button>
-<sp-action-button :emphasized="true" :selected="true">selected</sp-action-button>
-<sp-action-button :emphasized="true" :disabled="true">disabled</sp-action-button>
-<sp-action-button :emphasized="true" :selected="true" :disabled="true">selected + disabled</sp-action-button>`,
-    },
-    {
-      title: "Emphasized + Quiet",
-      quiet: true,
-      emphasized: true,
-      code: `<sp-action-button :quiet="true" :emphasized="true">default</sp-action-button>
-<sp-action-button :quiet="true" :emphasized="true" :selected="true">selected</sp-action-button>
-<sp-action-button :quiet="true" :emphasized="true" :disabled="true">disabled</sp-action-button>
-<sp-action-button :quiet="true" :emphasized="true" :selected="true" :disabled="true">selected + disabled</sp-action-button>`,
-    },
-  ].map((x) => {
-    return {
-      title: x.title,
-      items: this.emp,
-      quiet: x.quiet,
-      emphasized: x.emphasized,
-      code: x.code,
-    };
-  });
+export default class ActionButtonPage extends Vue {
+  propData = [{"prop":"quiet","default":"false","type":"boolean"},{"prop":"item","default":"false","type":"boolean"},{"prop":"corner","default":"false","type":"boolean"},{"prop":"selected","default":"false","type":"boolean"},{"prop":"emphasized","default":"false","type":"boolean"},{"prop":"disabled","default":"false","type":"boolean"},{"prop":"size","default":"\"M\"","type":"string"}];
+  slotData = [{"name":"default"}];
+  eventData = [];
 }
 </script>
