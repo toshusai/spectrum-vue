@@ -4,9 +4,7 @@
   </h1>
 </template>
 
-<style>
-@import "@spectrum-css/typography";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

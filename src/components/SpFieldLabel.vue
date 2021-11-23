@@ -19,9 +19,7 @@
     </svg>
   </label>
 </template>
-<style>
-@import "@spectrum-css/fieldlabel";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

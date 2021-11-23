@@ -1,10 +1,8 @@
 <template>
-  <hr class="spectrum-Divider spectrum-Divider--sizeM">
+  <hr class="spectrum-Divider spectrum-Divider--sizeM" />
 </template>
 
-<style>
-@import "@spectrum-css/divider";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

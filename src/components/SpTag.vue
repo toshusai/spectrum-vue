@@ -1,12 +1,6 @@
 <template>
-  <div
-    :class="cssClass"
-    tabindex="0"
-  >
-    <span
-      class="spectrum-Tag-label"
-      @click="$emit('select')"
-    >{{ label }}</span>
+  <div :class="cssClass" tabindex="0">
+    <span class="spectrum-Tag-label" @click="$emit('select')">{{ label }}</span>
     <button
       v-if="removable"
       type="reset"
@@ -27,10 +21,7 @@
     </button>
   </div>
 </template>
-<style>
-@import "@spectrum-css/tag";
-@import "@spectrum-css/button";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

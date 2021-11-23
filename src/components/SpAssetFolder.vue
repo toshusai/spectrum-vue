@@ -1,9 +1,6 @@
 <template>
   <div class="spectrum-Asset">
-    <svg
-      viewBox="0 0 32 32"
-      class="spectrum-Asset-folder"
-    >
+    <svg viewBox="0 0 32 32" class="spectrum-Asset-folder">
       <path
         class="spectrum-Asset-folderBackground"
         d="M3,29.5c-1.4,0-2.5-1.1-2.5-2.5V5c0-1.4,1.1-2.5,2.5-2.5h10.1c0.5,0,1,0.2,1.4,0.6l3.1,3.1c0.2,0.2,0.4,0.3,0.7,0.3H29c1.4,0,2.5,1.1,2.5,2.5v18c0,1.4-1.1,2.5-2.5,2.5H3z"
@@ -15,15 +12,11 @@
     </svg>
   </div>
 </template>
-<style>
-@import "@spectrum-css/asset";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
-import { Component }from "vue-property-decorator";
+import { Component } from "vue-property-decorator";
 
 @Component({})
-export default class AssetFolder extends Vue {
-
-}
+export default class AssetFolder extends Vue {}
 </script>

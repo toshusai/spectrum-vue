@@ -4,10 +4,7 @@
     :class="cssClass"
     :style="style"
   >
-    <ul
-      class="spectrum-Menu"
-      role="menu"
-    >
+    <ul class="spectrum-Menu" role="menu">
       <li
         v-for="(item, i) in items"
         :key="i"
@@ -20,11 +17,7 @@
     </ul>
   </div>
 </template>
-<style>
-@import "@spectrum-css/actionmenu";
-@import "@spectrum-css/popover";
-@import "@spectrum-css/menu";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

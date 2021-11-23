@@ -10,9 +10,7 @@
     <slot />
   </div>
 </template>
-<style>
-@import "@spectrum-css/buttongroup";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

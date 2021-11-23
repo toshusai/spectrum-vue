@@ -41,9 +41,7 @@
     </a>
   </nav>
 </template>
-<style>
-@import "@spectrum-css/pagination";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

@@ -9,27 +9,19 @@
     <div class="spectrum-ProgressCircle-track" />
     <div class="spectrum-ProgressCircle-fills">
       <div class="spectrum-ProgressCircle-fillMask1">
-        <div
-          class="spectrum-ProgressCircle-fillSubMask1"
-          :style="mask1Style"
-        >
+        <div class="spectrum-ProgressCircle-fillSubMask1" :style="mask1Style">
           <div class="spectrum-ProgressCircle-fill" />
         </div>
       </div>
       <div class="spectrum-ProgressCircle-fillMask2">
-        <div
-          class="spectrum-ProgressCircle-fillSubMask2"
-          :style="mask2Style"
-        >
+        <div class="spectrum-ProgressCircle-fillSubMask2" :style="mask2Style">
           <div class="spectrum-ProgressCircle-fill" />
         </div>
       </div>
     </div>
   </div>
 </template>
-<style>
-@import "@spectrum-css/progresscircle";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

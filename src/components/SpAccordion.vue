@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="spectrum-Accordion"
-    role="region"
-  >
+  <div class="spectrum-Accordion" role="region">
     <div
       class="spectrum-Accordion-item"
       :class="{ 'is-open': isOpen, 'is-disabled': disabled }"
@@ -19,10 +16,7 @@
           <template v-if="header">
             {{ header }}
           </template>
-          <slot
-            v-else
-            name="header"
-          />
+          <slot v-else name="header" />
         </button>
         <svg
           class="
@@ -37,18 +31,13 @@
         </svg>
       </h3>
 
-      <div
-        class="spectrum-Accordion-itemContent"
-        role="region"
-      >
+      <div class="spectrum-Accordion-itemContent" role="region">
         <slot />
       </div>
     </div>
   </div>
 </template>
-<style>
-@import "@spectrum-css/accordion";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

@@ -1,12 +1,6 @@
 <template>
-  <div
-    ref="el"
-    class="spectrum-ColorSlider"
-  >
-    <div
-      class="spectrum-ColorSlider-checkerboard"
-      role="presentation"
-    >
+  <div ref="el" class="spectrum-ColorSlider">
+    <div class="spectrum-ColorSlider-checkerboard" role="presentation">
       <div
         class="spectrum-ColorSlider-gradient"
         role="presentation"
@@ -45,15 +39,11 @@
       max="100"
       step="1"
       @pointerdown="start"
-    >
+    />
   </div>
 </template>
 
-<style>
-@import "@spectrum-css/colorslider";
-@import "@spectrum-css/colorloupe";
-@import "@spectrum-css/colorhandle";
-</style>
+
 
 <script lang="ts">
 import * as convert from "color-convert";

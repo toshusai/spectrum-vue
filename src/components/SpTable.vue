@@ -12,11 +12,7 @@
       </tr>
     </thead>
     <tbody class="spectrum-Table-body">
-      <tr
-        v-for="(d, i) in data"
-        :key="`data_${i}`"
-        class="spectrum-Table-row"
-      >
+      <tr v-for="(d, i) in data" :key="`data_${i}`" class="spectrum-Table-row">
         <td
           v-for="(header, j) in headers"
           :key="`data_header_${j}`"
@@ -30,9 +26,7 @@
   </table>
 </template>
 
-<style>
-@import "@spectrum-css/table";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

@@ -7,9 +7,7 @@
     <slot />
   </span>
 </template>
-<style>
-@import "@spectrum-css/menu";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

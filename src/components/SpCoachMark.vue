@@ -5,9 +5,7 @@
     <div class="spectrum-CoachMarkIndicator-ring" />
   </div>
 </template>
-<style>
-@import "@spectrum-css/coachmark";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";

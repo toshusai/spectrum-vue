@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="spectrum-Textfield"
-    :class="cssClass"
-  >
+  <div class="spectrum-Textfield" :class="cssClass">
     <svg
       v-if="valid"
       class="
@@ -46,15 +43,11 @@
       @blur="(e) => $emit('blur', e)"
       @keydown="(e) => $emit('keydown', e)"
       @pointerdown="(e) => pointerdown(e)"
-    >
+    />
   </div>
 </template>
 
-<style>
-@import "@spectrum-css/textfield";
-@import "@spectrum-css/icon";
-@import "@spectrum-css/helptext";
-</style>
+
 
 
 <script lang="ts">

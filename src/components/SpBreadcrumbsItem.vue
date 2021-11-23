@@ -2,7 +2,11 @@
   <li class="spectrum-Breadcrumbs-item">
     <button
       v-if="nested"
-      class="spectrum-ActionButton spectrum-ActionButton--sizeM spectrum-ActionButton--quiet"
+      class="
+        spectrum-ActionButton
+        spectrum-ActionButton--sizeM
+        spectrum-ActionButton--quiet
+      "
     >
       <svg
         class="spectrum-Icon spectrum-Icon--sizeM spectrum-Breadcrumbs-folder"
@@ -16,8 +20,8 @@
       v-else
       class="spectrum-Breadcrumbs-itemLink"
       :class="{
-        'is-dragged' : dragged,
-        'is-disabled': disabled
+        'is-dragged': dragged,
+        'is-disabled': disabled,
       }"
       role="link"
       tabindex="0"
@@ -26,7 +30,11 @@
     </div>
     <svg
       v-if="chevron"
-      class="spectrum-Icon spectrum-UIIcon-ChevronRight75 spectrum-Breadcrumbs-itemSeparator"
+      class="
+        spectrum-Icon
+        spectrum-UIIcon-ChevronRight75
+        spectrum-Breadcrumbs-itemSeparator
+      "
       focusable="false"
       aria-hidden="true"
     >
@@ -34,18 +42,16 @@
     </svg>
   </li>
 </template>
-<style>
-@import "@spectrum-css/breadcrumb";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop }from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
 export default class SpBreadcrumbs extends Vue {
-  @Prop({ default: true}) chevron!: boolean
-  @Prop({ default: false }) nested!: boolean
-  @Prop({ default: false }) dragged!: boolean
-  @Prop({ default: false }) disabled!: boolean
+  @Prop({ default: true }) chevron!: boolean;
+  @Prop({ default: false }) nested!: boolean;
+  @Prop({ default: false }) dragged!: boolean;
+  @Prop({ default: false }) disabled!: boolean;
 }
 </script>

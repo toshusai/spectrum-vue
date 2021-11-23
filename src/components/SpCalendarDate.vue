@@ -17,9 +17,7 @@
     </span>
   </td>
 </template>
-<style>
-@import "@spectrum-css/calendar";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

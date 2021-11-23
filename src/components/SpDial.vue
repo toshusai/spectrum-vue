@@ -7,15 +7,8 @@
     ]"
   >
     <div class="spectrum-Dial-controls">
-      <div
-        v-if="label"
-        class="spectrum-Dial-labelContainer"
-      >
-        <label
-          id="dialLabel"
-          class="spectrum-Dial-label"
-          for="labeledDial"
-        >
+      <div v-if="label" class="spectrum-Dial-labelContainer">
+        <label id="dialLabel" class="spectrum-Dial-label" for="labeledDial">
           {{ label }}
         </label>
         <div
@@ -38,14 +31,12 @@
           class="spectrum-Dial-input"
           v-bind="$attrs"
           :disabled="disabled"
-        >
+        />
       </div>
     </div>
   </div>
 </template>
-<style>
-@import "@spectrum-css/dial";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

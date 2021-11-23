@@ -48,7 +48,7 @@
             style="background: white"
             src="img/x.png"
             alt="Flowers"
-          >
+          />
         </div>
         <span class="spectrum-TreeView-itemLabel">
           <slot :item="item" />
@@ -80,10 +80,7 @@
   </ul>
 </template>
 
-<style>
-@import "@spectrum-css/treeview";
-@import "@spectrum-css/thumbnail";
-</style>
+
 
 <script lang="ts">
 import { Component, Prop, PropSync, Vue } from "vue-property-decorator";

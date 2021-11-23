@@ -1,9 +1,7 @@
 <template>
   <span :class="cssClass"><slot /></span>
 </template>
-<style>
-@import "@spectrum-css/badge";
-</style>
+
 <script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";

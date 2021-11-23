@@ -1,9 +1,5 @@
 <template>
-  <div
-    v-show="isOpen"
-    ref="modal"
-    class="spectrum-Modal-wrapper"
-  >
+  <div v-show="isOpen" ref="modal" class="spectrum-Modal-wrapper">
     <div class="spectrum-Underlay is-open" />
     <div class="spectrum-Modal is-open">
       <div class="spectrum-Dialog">
@@ -13,11 +9,7 @@
   </div>
 </template>
 
-<style>
-@import "@spectrum-css/modal";
-@import "@spectrum-css/dialog";
-@import "@spectrum-css/underlay";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";

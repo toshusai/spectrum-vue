@@ -4,9 +4,7 @@
   </div>
 </template>
 
-<style>
-@import "@spectrum-css/actiongroup";
-</style>
+
 
 <script lang="ts">
 import Vue from "vue";
