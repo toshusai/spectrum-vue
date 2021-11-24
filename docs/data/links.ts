@@ -55,7 +55,6 @@ export const links = [
     { text: "FieldLabel", href: "/field-label", },
     { text: "Form", href: "/form", noPreview: true },
     { text: "FormItem", href: "/form-item", noPreview: true },
-    { text: "H1", href: "/h1", },
     { text: "HelpText", href: "/help-text", },
     { text: "HintTextfield", href: "/hint-textfield", },
     { text: "Icon", href: "/icon", },
