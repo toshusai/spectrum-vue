@@ -1,9 +1,6 @@
 <template>
   <nav>
-    <ul
-      class="spectrum-Breadcrumbs"
-      :class="cssClass"
-    >
+    <ul class="spectrum-Breadcrumbs" :class="cssClass">
       <slot />
     </ul>
   </nav>
@@ -25,4 +22,13 @@ export default class SpBreadcrumbs extends Vue {
     ];
   }
 }
+/**
+<code>
+<sp-breadcrumbs>
+  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+</sp-breadcrumbs>
+</code>
+ */
 </script>

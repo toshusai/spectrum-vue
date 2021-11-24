@@ -51,10 +51,7 @@
       aria-readonly="true"
       aria-disabled="false"
     >
-      <table
-        role="presentation"
-        class="spectrum-Calendar-table"
-      >
+      <table role="presentation" class="spectrum-Calendar-table">
         <thead role="presentation">
           <tr role="row">
             <th
@@ -64,21 +61,14 @@
               scope="col"
               class="spectrum-Calendar-tableCell"
             >
-              <abbr
-                class="spectrum-Calendar-dayOfWeek"
-                :title="d"
-              >
+              <abbr class="spectrum-Calendar-dayOfWeek" :title="d">
                 {{ d }}
               </abbr>
             </th>
           </tr>
         </thead>
         <tbody role="presentation">
-          <tr
-            v-for="(_, j) in days"
-            :key="`tr_${j}`"
-            role="row"
-          >
+          <tr v-for="(_, j) in days" :key="`tr_${j}`" role="row">
             <sp-calendar-date
               v-for="(d, i) in days[j]"
               :key="`td_${j}${i}`"
@@ -109,7 +99,7 @@ const weekDay3 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   },
 })
 export default class SpCalendar extends Vue {
-  @Prop({ default: () => new Date().getFullYear() }) year!: number;
+  @Prop({ required: false }) year!: number;
   @Prop({ required: false }) month: number | undefined;
   @Prop({ default: "Single" }) weekDayType!: string;
   @Prop({ default: "Header" }) header!: string;
@@ -117,12 +107,13 @@ export default class SpCalendar extends Vue {
 
   day1 = new Date();
   monthPrivate: number = new Date().getMonth();
+  yearPrivate: number = new Date().getFullYear();
 
   /**
    * calender Header like 2020/03
    */
   get calenderHeader() {
-    return `${this.year} ${this.computedMonth + 1}`;
+    return `${this.computedYear} ${this.computedMonth + 1}`;
   }
 
   /**
@@ -133,12 +124,24 @@ export default class SpCalendar extends Vue {
     if (this.month) return this.month;
     return this.monthPrivate;
   }
-
   set computedMonth(value: number) {
     if (this.month) {
       this.$emit("changeMonth", value);
     } else {
       this.monthPrivate = value;
+    }
+  }
+
+  get computedYear() {
+    if (this.year) return this.year;
+    return this.yearPrivate;
+  }
+
+  set computedYear(value: number) {
+    if (this.year) {
+      this.$emit("changeYear", value);
+    } else {
+      this.yearPrivate = value;
     }
   }
 
@@ -152,9 +155,13 @@ export default class SpCalendar extends Vue {
   }
 
   get days() {
-    this.day1 = new Date(this.year, this.computedMonth, 1);
+    this.day1 = new Date(this.computedYear, this.computedMonth, 1);
     const day = this.day1.getDay();
-    const num = new Date(this.year, this.computedMonth + 1, 0).getDate();
+    const num = new Date(
+      this.computedYear,
+      this.computedMonth + 1,
+      0
+    ).getDate();
 
     const array: number[][] = [];
     for (let i = 0; i < day; i++) {
@@ -175,7 +182,7 @@ export default class SpCalendar extends Vue {
   change(date: number, e: Event) {
     this.$emit(
       "change",
-      new Date(this.date.getFullYear(), this.date.getMonth(), date),
+      new Date(this.computedYear, this.computedMonth, date),
       e
     );
   }
@@ -185,12 +192,14 @@ export default class SpCalendar extends Vue {
       this.computedMonth++;
     } else {
       this.computedMonth = 0;
+      this.computedYear++;
     }
   }
 
   prev() {
     if (this.computedMonth == 0) {
       this.computedMonth = 11;
+      this.computedYear--;
     } else {
       this.computedMonth--;
     }
@@ -198,7 +207,7 @@ export default class SpCalendar extends Vue {
 
   isSelected(date: number) {
     return (
-      this.date.getFullYear() == this.year &&
+      this.date.getFullYear() == this.computedYear &&
       this.date.getMonth() == this.computedMonth &&
       this.date.getDate() == date
     );
@@ -207,10 +216,21 @@ export default class SpCalendar extends Vue {
   isToday(date: number) {
     const now = new Date();
     return (
-      now.getFullYear() == this.year &&
+      now.getFullYear() == this.computedYear &&
       now.getMonth() == this.computedMonth &&
       now.getDate() == date
     );
   }
 }
+/**
+<code>
+<sp-calendar :date="date" @change="v => date = v" />
+<div>
+{{ date.toISOString().substr(0,10) }}
+</div>
+</code>
+<component>
+date = new Date();
+</component>
+ */
 </script>

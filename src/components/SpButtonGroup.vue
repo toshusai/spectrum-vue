@@ -20,4 +20,20 @@ export default class SpButtonGroup extends Vue {
   @Prop({ default: false }) vertical!: boolean;
   @Prop({ default: false }) dialog!: boolean;
 }
+/**
+<code>
+<sp-button-group>
+  <sp-button :group="true">Button</sp-button>
+  <sp-button :group="true" type="primary">Button</sp-button>
+  <sp-button :group="true" type="primary" :quiet="true">Button</sp-button>
+</sp-button-group>
+</code>
+<code>
+<sp-button-group :vertical="true">
+  <sp-button :group="true">Button</sp-button>
+  <sp-button :group="true" type="primary">Button</sp-button>
+  <sp-button :group="true" type="primary" :quiet="true">Button</sp-button>
+</sp-button-group>
+</code>
+ */
 </script>
