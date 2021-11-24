@@ -17,11 +17,13 @@ const dir = fs.readdirSync("../src/components")
  */
 function getSlots(src) {
     const slots = []
-    const slotReg = new RegExp(/<slot.*name="(.*?)".*\/>?/mg)
-    var match = slotReg.exec(src)
+    const slotReg = new RegExp(/<slot.*?name="(.*?)".*?\/>?/sg)
+    var tmp = src
+    var match = slotReg.exec(tmp)
     while (match != null) {
         slots.push(match[1])
-        match = slotReg.exec(src)
+        tmp = tmp.replace(match[0], "")
+        match = slotReg.exec(tmp)
     }
     if (src.match(/<slot \/>/)) {
         slots.push("default")

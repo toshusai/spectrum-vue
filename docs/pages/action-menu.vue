@@ -45,7 +45,7 @@ import { Component } from "vue-property-decorator";
 @Component({})
 export default class ActionMenuPage extends Vue {
   propData = [{"prop":"items","type":"MenuItem[]","default":"() => []"},{"prop":"icon","type":"boolean","default":"true"},{"prop":"size","type":"string","default":"\"M\""}];
-  slotData = [{"name":"default"}];
+  slotData = [{"name":"item"},{"name":"default"}];
   eventData = [];
 
   
