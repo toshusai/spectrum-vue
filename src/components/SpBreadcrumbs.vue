@@ -1,6 +1,9 @@
 <template>
   <nav>
-    <ul class="spectrum-Breadcrumbs" :class="cssClass">
+    <ul
+      class="spectrum-Breadcrumbs"
+      :class="cssClass"
+    >
       <slot />
     </ul>
   </nav>
