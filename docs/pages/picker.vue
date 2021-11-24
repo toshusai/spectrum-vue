@@ -1,14 +1,24 @@
+
 <template>
-  <component-view name="Picker" :propData="propData" :eventData="eventData">
-    <sp-picker></sp-picker>
-  </component-view>
+    <component-view
+    name="Picker"
+    :propData="propData"
+    :eventData="eventData"
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class PickerPage extends Vue {
-  propData = [];
+  propData = [{"prop":"items","type":"MenuItem[]","default":"() => []"},{"prop":"selected","type":"MenuItem"},{"prop":"disabled","type":"boolean","default":"false"},{"prop":"invalid","type":"boolean","default":"false"},{"prop":"size","type":"string","default":"\"M\""},{"prop":"quiet","type":"boolean","default":"false"}];
+  slotData = [{"name":"default"}];
   eventData = [];
+
+  
 }
 </script>

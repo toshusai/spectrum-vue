@@ -1,12 +1,6 @@
 <template>
-  <div
-    ref="el"
-    class="spectrum-ColorSlider"
-  >
-    <div
-      class="spectrum-ColorSlider-checkerboard"
-      role="presentation"
-    >
+  <div ref="el" class="spectrum-ColorSlider">
+    <div class="spectrum-ColorSlider-checkerboard" role="presentation">
       <div
         class="spectrum-ColorSlider-gradient"
         role="presentation"
@@ -45,7 +39,7 @@
       max="100"
       step="1"
       @pointerdown="start"
-    >
+    />
   </div>
 </template>
 
@@ -101,4 +95,25 @@ export default class SpColorSlider extends Vue {
     });
   }
 }
+/**
+<h3>Hue</h3>
+<code>
+<sp-color-slider :h="h" @change="v => h = v" />
+<div>
+  {{ h }}
+</div>
+</code>
+
+<h3>Alpha</h3>
+<code>
+<sp-color-slider :h="a" :alpha="true" @change="v => a = v" />
+<div>
+  {{ a }}
+</div>
+</code>
+<component>
+h = 0;
+a = 0;
+</component>
+ */
 </script>

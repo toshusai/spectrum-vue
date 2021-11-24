@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="spectrum-Accordion"
-    role="region"
-  >
+  <div class="spectrum-Accordion" role="region">
     <div
       class="spectrum-Accordion-item"
       :class="{ 'is-open': isOpen, 'is-disabled': disabled }"
@@ -19,10 +16,7 @@
           <template v-if="header">
             {{ header }}
           </template>
-          <slot
-            v-else
-            name="header"
-          />
+          <slot v-else name="header" />
         </button>
         <svg
           class="
@@ -37,10 +31,7 @@
         </svg>
       </h3>
 
-      <div
-        class="spectrum-Accordion-itemContent"
-        role="region"
-      >
+      <div class="spectrum-Accordion-itemContent" role="region">
         <slot />
       </div>
     </div>
@@ -59,10 +50,16 @@ export default class SpAccordion extends Vue {
 }
 
 /**
- * <code>
- * <sp-accordion header="Accordion">
- *   Content
- * </sp-accordion>
- * </code>
+<code>
+<sp-accordion header="Accordion">
+  Content
+</sp-accordion>
+</code>
+
+<code>
+<sp-accordion :disabled="true" header="Accordion">
+  Content
+</sp-accordion>
+</code>
  */
 </script>

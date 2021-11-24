@@ -1,52 +1,48 @@
+
 <template>
-  <component-view
+    <component-view
     name="ColorSlider"
     :propData="propData"
     :eventData="eventData"
-  >
-    <h4>Hue</h4>
-    <sp-color-slider :h="h" @change="changeH" />
-    <div>
-      {{ h }}
-    </div>
+    :slotData="slotData"
+    >
+        <h3>Hue</h3>
 
-    <h4>Alpha</h4>
-    <sp-color-slider :h="a" :alpha="true" @change="changeA" />
-    <div>
-      {{ a }}
-    </div>
-  </component-view>
+<sp-color-slider :h="h" @change="v => h = v" />
+<div>
+  {{ h }}
+</div>
+<code-view :code="`&lt;sp-color-slider :h=&quot;h&quot; @change=&quot;v =&gt; h = v&quot; /&gt;
+&lt;div&gt;
+  {{ h }}
+&lt;/div&gt;`"></code-view>
+
+<h3>Alpha</h3>
+
+<sp-color-slider :h="a" :alpha="true" @change="v => a = v" />
+<div>
+  {{ a }}
+</div>
+<code-view :code="`&lt;sp-color-slider :h=&quot;a&quot; :alpha=&quot;true&quot; @change=&quot;v =&gt; a = v&quot; /&gt;
+&lt;div&gt;
+  {{ a }}
+&lt;/div&gt;`"></code-view>
+
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
-export default class index extends Vue {
-  propData = [
-    {
-      prop: "h",
-      type: "number",
-      default: "0",
-      description: "h is 0 - 360. if enable alpha, h is 0.0-1.0",
-    },
-    {
-      prop: "alpha",
-      type: "boolean",
-      default: "false",
-      description: "",
-    },
-  ];
+export default class ColorSliderPage extends Vue {
+  propData = [{"prop":"h","type":"number","default":"0"},{"prop":"alpha","type":"boolean","default":"false"}];
+  slotData = [];
+  eventData = [];
 
-  eventData = [{ event: "change", arg: "number" }];
+  
+h = 0;
+a = 0;
 
-  h = 0;
-  a = 0;
-  changeA(a: number) {
-    this.a = a;
-  }
-
-  changeH(h: number) {
-    this.h = h;
-  }
 }
 </script>

@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="spectrum-Textfield"
-    :class="cssClass"
-  >
+  <div class="spectrum-Textfield" :class="cssClass">
     <svg
       v-if="valid"
       class="
@@ -42,7 +39,7 @@
       @focus="(e) => $emit('focus', e)"
       @blur="(e) => $emit('blur', e)"
       @keydown="(e) => $emit('keydown', e)"
-    >
+    />
   </div>
 </template>
 
@@ -106,4 +103,22 @@ export default class SpTextfield extends Vue {
     this.changeOrInput("change", e);
   }
 }
+/**
+<h3>Standard</h3>
+<code>
+<sp-textfield placeholder="default" />
+<sp-textfield placeholder="default" :valud="true" />
+<sp-textfield placeholder="default" hint="Hint" />
+<sp-textfield placeholder="default" error="Error" />
+<sp-textfield placeholder="default" :disabled="true" />
+</code>
+<h3>Quiet</h3>
+<code>
+<sp-textfield placeholder="default" :quiet="true" />
+<sp-textfield placeholder="default" :valud="true" :quiet="true" />
+<sp-textfield placeholder="default" hint="Hint" :quiet="true" />
+<sp-textfield placeholder="default" error="Error" :quiet="true" />
+<sp-textfield placeholder="default" :disabled="true" :quiet="true" />
+</code>
+ */
 </script>

@@ -54,4 +54,13 @@ export default class SpBreadcrumbs extends Vue {
   @Prop({ default: false }) dragged!: boolean;
   @Prop({ default: false }) disabled!: boolean;
 }
+/**
+<code>
+<sp-breadcrumbs>
+  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+</sp-breadcrumbs>
+</code>
+ */
 </script>

@@ -1,14 +1,24 @@
+
 <template>
-  <component-view name="Dropzone" :propData="propData" :eventData="eventData">
-    <sp-dropzone></sp-dropzone>
-  </component-view>
+    <component-view
+    name="Dropzone"
+    :propData="propData"
+    :eventData="eventData"
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class DropzonePage extends Vue {
-  propData = [];
+  propData = [{"prop":"text","type":"string","default":"\"Drag and Drop Your File\""},{"prop":"dragged","type":"boolean","default":"false"}];
+  slotData = [{"name":"default"}];
   eventData = [];
+
+  
 }
 </script>

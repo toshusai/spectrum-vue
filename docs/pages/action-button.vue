@@ -147,16 +147,18 @@
 &lt;sp-action-button :emphasized=&quot;true&quot; :quiet=&quot;true&quot; :selected=&quot;true&quot; :disabled=&quot;true&quot;&gt;
   selected + disabled
 &lt;/sp-action-button&gt;`"></code-view>
-
     </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class ActionButtonPage extends Vue {
-  propData = [{"prop":"quiet","default":"false","type":"boolean"},{"prop":"item","default":"false","type":"boolean"},{"prop":"corner","default":"false","type":"boolean"},{"prop":"selected","default":"false","type":"boolean"},{"prop":"emphasized","default":"false","type":"boolean"},{"prop":"disabled","default":"false","type":"boolean"},{"prop":"size","default":"\"M\"","type":"string"}];
+  propData = [{"prop":"quiet","type":"boolean","default":"false"},{"prop":"item","type":"boolean","default":"false"},{"prop":"corner","type":"boolean","default":"false"},{"prop":"selected","type":"boolean","default":"false"},{"prop":"emphasized","type":"boolean","default":"false"},{"prop":"disabled","type":"boolean","default":"false"},{"prop":"size","type":"string","default":"\"M\""}];
   slotData = [{"name":"default"}];
   eventData = [];
+
+  
 }
 </script>

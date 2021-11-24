@@ -57,89 +57,88 @@ export default class SpActionButton extends Vue {
 }
 
 /**
- * <h3>Standard</h3>
- * <code>
- * <sp-action-button size="S">S</sp-action-button>
- * <sp-action-button size="M">M</sp-action-button>
- * <sp-action-button size="L">L</sp-action-button>
- * </code>
- *
- * <h3>Standard</h3>
- * <code>
- * <sp-action-button>
- *   default
- * </sp-action-button>
- *
- * <sp-action-button :selected="true">
- *   selected
- * </sp-action-button>
- *
- * <sp-action-button :disabled="true">
- *   disabled
- * </sp-action-button>
- *
- * <sp-action-button :selected="true" :disabled="true">
- *   selected + disabled
- * </sp-action-button>
- * </code>
- *
- * <h3>Quiet</h3>
- * <code>
- * <sp-action-button :quiet="true">
- *   default
- * </sp-action-button>
- *
- * <sp-action-button :quiet="true" :selected="true">
- *   selected
- * </sp-action-button>
- *
- * <sp-action-button :quiet="true" :disabled="true">
- *   disabled
- * </sp-action-button>
- *
- * <sp-action-button :quiet="true" :selected="true" :disabled="true">
- *   selected + disabled
- * </sp-action-button>
- * </code>
- *
- * <h3>Emphasized</h3>
- * <code>
- * <sp-action-button :emphasized="true">
- *   default
- * </sp-action-button>
- *
- * <sp-action-button :emphasized="true" :selected="true">
- *   selected
- * </sp-action-button>
- *
- * <sp-action-button :emphasized="true" :disabled="true">
- *   disabled
- * </sp-action-button>
- *
- * <sp-action-button :emphasized="true" :selected="true" :disabled="true">
- *   selected + disabled
- * </sp-action-button>
- * </code>
- *
- * </code>
- * <h3>Emphasized + Quiet</h3>
- * <code>
- * <sp-action-button :emphasized="true" :quiet="true">
- *   default
- * </sp-action-button>
- *
- * <sp-action-button :emphasized="true" :quiet="true" :selected="true">
- *   selected
- * </sp-action-button>
- *
- * <sp-action-button :emphasized="true" :quiet="true" :disabled="true">
- *   disabled
- * </sp-action-button>
- *
- * <sp-action-button :emphasized="true" :quiet="true" :selected="true" :disabled="true">
- *   selected + disabled
- * </sp-action-button>
- * </code>
- *
+<h3>Standard</h3>
+<code>
+<sp-action-button size="S">S</sp-action-button>
+<sp-action-button size="M">M</sp-action-button>
+<sp-action-button size="L">L</sp-action-button>
+</code>
+
+<h3>Standard</h3>
+<code>
+<sp-action-button>
+  default
+</sp-action-button>
+
+<sp-action-button :selected="true">
+  selected
+</sp-action-button>
+
+<sp-action-button :disabled="true">
+  disabled
+</sp-action-button>
+
+<sp-action-button :selected="true" :disabled="true">
+  selected + disabled
+</sp-action-button>
+</code>
+
+<h3>Quiet</h3>
+<code>
+<sp-action-button :quiet="true">
+  default
+</sp-action-button>
+
+<sp-action-button :quiet="true" :selected="true">
+  selected
+</sp-action-button>
+
+<sp-action-button :quiet="true" :disabled="true">
+  disabled
+</sp-action-button>
+
+<sp-action-button :quiet="true" :selected="true" :disabled="true">
+  selected + disabled
+</sp-action-button>
+</code>
+
+<h3>Emphasized</h3>
+<code>
+<sp-action-button :emphasized="true">
+  default
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :selected="true">
+  selected
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :disabled="true">
+  disabled
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :selected="true" :disabled="true">
+  selected + disabled
+</sp-action-button>
+</code>
+
+</code>
+<h3>Emphasized + Quiet</h3>
+<code>
+<sp-action-button :emphasized="true" :quiet="true">
+  default
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :quiet="true" :selected="true">
+  selected
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :quiet="true" :disabled="true">
+  disabled
+</sp-action-button>
+
+<sp-action-button :emphasized="true" :quiet="true" :selected="true" :disabled="true">
+  selected + disabled
+</sp-action-button>
+</code>
  */
 </script>
