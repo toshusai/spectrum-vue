@@ -8,6 +8,7 @@
       type="checkbox"
       class="spectrum-Checkbox-input"
       :checked="checked"
+      :disabled="disabled"
       @change="$emit('change', !checked)"
     >
     <span class="spectrum-Checkbox-box">
@@ -61,4 +62,34 @@ export default class SpCheckbox extends Vue {
     ];
   }
 }
+/**
+<code>
+<sp-checkbox>Checkbox</sp-checkbox>
+</code>
+<code>
+<sp-checkbox :emphasized="true">Checkbox</sp-checkbox>
+</code>
+<code>
+<sp-checkbox :indeterminate="true">Checkbox</sp-checkbox>
+</code>
+<code>
+<sp-checkbox :invalid="true">Checkbox</sp-checkbox>
+</code>
+<code>
+<sp-checkbox :disabled="true">Checkbox</sp-checkbox>
+</code>
+
+<h3>Size</h3>
+<code>
+<div>
+  <sp-checkbox size="S">Checkbox</sp-checkbox>
+</div>
+<div>
+  <sp-checkbox size="M">Checkbox</sp-checkbox>
+</div>
+<div>
+  <sp-checkbox size="L">Checkbox</sp-checkbox>
+</div>
+</code>
+ */
 </script>
