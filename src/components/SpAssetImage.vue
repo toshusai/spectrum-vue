@@ -1,6 +1,9 @@
 <template>
   <div class="spectrum-Asset">
-    <img class="spectrum-Asset-image" v-bind="$attrs" />
+    <img
+      class="spectrum-Asset-image"
+      v-bind="$attrs"
+    >
   </div>
 </template>
 

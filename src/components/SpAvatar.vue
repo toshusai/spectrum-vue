@@ -3,7 +3,11 @@
     class="spectrum-Avatar"
     :class="[disabled ? 'is-disabled' : '', `spectrum-Avatar--size${size}`]"
   >
-    <img class="spectrum-Avatar-image" :src="src" alt="Avatar" />
+    <img
+      class="spectrum-Avatar-image"
+      :src="src"
+      alt="Avatar"
+    >
   </div>
 </template>
 
