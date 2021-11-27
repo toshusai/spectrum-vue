@@ -8,19 +8,23 @@
     >
         
 <sp-checkbox>Checkbox</sp-checkbox>
-<code-view :code="`&lt;sp-checkbox&gt;Checkbox&lt;/sp-checkbox&gt;`"></code-view>
-
+<br />
 <sp-checkbox :emphasized="true">Checkbox</sp-checkbox>
-<code-view :code="`&lt;sp-checkbox :emphasized=&quot;true&quot;&gt;Checkbox&lt;/sp-checkbox&gt;`"></code-view>
-
+<br />
 <sp-checkbox :indeterminate="true">Checkbox</sp-checkbox>
-<code-view :code="`&lt;sp-checkbox :indeterminate=&quot;true&quot;&gt;Checkbox&lt;/sp-checkbox&gt;`"></code-view>
-
+<br />
 <sp-checkbox :invalid="true">Checkbox</sp-checkbox>
-<code-view :code="`&lt;sp-checkbox :invalid=&quot;true&quot;&gt;Checkbox&lt;/sp-checkbox&gt;`"></code-view>
-
+<br />
 <sp-checkbox :disabled="true">Checkbox</sp-checkbox>
-<code-view :code="`&lt;sp-checkbox :disabled=&quot;true&quot;&gt;Checkbox&lt;/sp-checkbox&gt;`"></code-view>
+<code-view :code="`&lt;sp-checkbox&gt;Checkbox&lt;/sp-checkbox&gt;
+&lt;br /&gt;
+&lt;sp-checkbox :emphasized=&quot;true&quot;&gt;Checkbox&lt;/sp-checkbox&gt;
+&lt;br /&gt;
+&lt;sp-checkbox :indeterminate=&quot;true&quot;&gt;Checkbox&lt;/sp-checkbox&gt;
+&lt;br /&gt;
+&lt;sp-checkbox :invalid=&quot;true&quot;&gt;Checkbox&lt;/sp-checkbox&gt;
+&lt;br /&gt;
+&lt;sp-checkbox :disabled=&quot;true&quot;&gt;Checkbox&lt;/sp-checkbox&gt;`"></code-view>
 
 <h3>Size</h3>
 

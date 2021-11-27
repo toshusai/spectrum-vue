@@ -65,17 +65,13 @@ export default class SpCheckbox extends Vue {
 /**
 <code>
 <sp-checkbox>Checkbox</sp-checkbox>
-</code>
-<code>
+<br />
 <sp-checkbox :emphasized="true">Checkbox</sp-checkbox>
-</code>
-<code>
+<br />
 <sp-checkbox :indeterminate="true">Checkbox</sp-checkbox>
-</code>
-<code>
+<br />
 <sp-checkbox :invalid="true">Checkbox</sp-checkbox>
-</code>
-<code>
+<br />
 <sp-checkbox :disabled="true">Checkbox</sp-checkbox>
 </code>
 
