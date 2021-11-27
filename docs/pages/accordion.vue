@@ -1,22 +1,38 @@
+
 <template>
-  <component-view
+    <component-view
     name="Accordion"
     :propData="propData"
     :eventData="eventData"
     :slotData="slotData"
-  >
-    <sp-accordion header="Accordion"> Here is Content. </sp-accordion>
-    <code-view :code="code" />
-  </component-view>
+    >
+        
+<sp-accordion header="Accordion">
+  Content
+</sp-accordion>
+<code-view :code="`&lt;sp-accordion header=&quot;Accordion&quot;&gt;
+  Content
+&lt;/sp-accordion&gt;`"></code-view>
+
+
+<sp-accordion :disabled="true" header="Accordion">
+  Content
+</sp-accordion>
+<code-view :code="`&lt;sp-accordion :disabled=&quot;true&quot; header=&quot;Accordion&quot;&gt;
+  Content
+&lt;/sp-accordion&gt;`"></code-view>
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class AccordionPage extends Vue {
-  propData = [{ prop: "header", type: "string", default: "''" }];
+  propData = [{"prop":"disabled","type":"boolean","default":"false"},{"prop":"header","type":"string","default":"\"\""}];
+  slotData = [{"name":"header"},{"name":"default"}];
   eventData = [];
-  slotData = [{ name: "default" }];
-  code = `<sp-accordion header="Accordion"> Here is Content. </sp-accordion>`;
+
+  
 }
 </script>

@@ -21,5 +21,13 @@ import Vue from "vue";
 import { Component } from "vue-property-decorator";
 
 @Component({})
-export default class AssetImage extends Vue {}
+export default class AssetFile extends Vue {}
+/**
+<code>
+<sp-asset-file />
+</code>
+<code>
+<sp-asset-file style="width: 64px" />
+</code>
+ */
 </script>

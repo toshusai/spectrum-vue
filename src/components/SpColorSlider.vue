@@ -101,4 +101,25 @@ export default class SpColorSlider extends Vue {
     });
   }
 }
+/**
+<h3>Hue</h3>
+<code>
+<sp-color-slider :h="h" @change="v => h = v" />
+<div>
+  {{ h }}
+</div>
+</code>
+
+<h3>Alpha</h3>
+<code>
+<sp-color-slider :h="a" :alpha="true" @change="v => a = v" />
+<div>
+  {{ a }}
+</div>
+</code>
+<component>
+h = 0;
+a = 0;
+</component>
+ */
 </script>

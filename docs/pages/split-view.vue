@@ -1,14 +1,24 @@
+
 <template>
-  <component-view name="SplitView" :propData="propData" :eventData="eventData">
-    <sp-split-view></sp-split-view>
-  </component-view>
+    <component-view
+    name="SplitView"
+    :propData="propData"
+    :eventData="eventData"
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class SplitViewPage extends Vue {
-  propData = [];
+  propData = [{"prop":"vertical","type":"boolean","default":"false"}];
+  slotData = [{"name":"default"}];
   eventData = [];
+
+  
 }
 </script>

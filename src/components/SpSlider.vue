@@ -141,4 +141,70 @@ export default class SpSlider extends Vue {
     this.controls = this.$el.querySelector(".spectrum-Slider-controls");
   }
 }
+/**
+<h3>Standard</h3>
+<code>
+<sp-slider :min="0" :max="1" :value="value1" @input="(v) => (value1 = v)" />
+{{ value1 }}
+</code>
+
+<h3>filled</h3>
+<code>
+<sp-slider
+  :filled="true"
+  :min="0"
+  :max="100"
+  :value="value2"
+  @input="(v) => (value2 = v)"
+/>
+{{ value2 }}
+</code>
+
+<h3>label + showValue</h3>
+<code>
+<sp-slider
+  :label="'This is label'"
+  :showValue="true"
+  :min="0"
+  :max="100"
+  :value="value3"
+  @input="(v) => (value3 = v)"
+/>
+{{ value3 }}
+</code>
+
+<h3>step</h3>
+<code>
+<sp-slider
+  :label="'min 0, max 50, step 5'"
+  :showValue="true"
+  :min="0"
+  :max="50"
+  :step="5"
+  :value="value4"
+  @input="(v) => (value4 = v)"
+/>
+</code>
+
+<h3>ramp</h3>
+<code>
+<sp-slider
+  :label="'Ramp'"
+  :showValue="true"
+  :min="0"
+  :max="100"
+  :value="value5"
+  :ramp="true"
+  @input="(v) => (value5 = v)"
+/>
+</code>
+
+<component>
+value1: number = 0.5;
+value2: number = 0;
+value3: number = 0;
+value4: number = 0;
+value5: number = 50;
+</component>
+ */
 </script>

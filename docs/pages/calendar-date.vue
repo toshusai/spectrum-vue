@@ -1,18 +1,24 @@
+
 <template>
-  <component-view
+    <component-view
     name="CalendarDate"
     :propData="propData"
     :eventData="eventData"
-  >
-    <sp-calendar-date></sp-calendar-date>
-  </component-view>
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class CalendarDatePage extends Vue {
-  propData = [];
+  propData = [{"prop":"outsideMonth","type":"boolean","default":"false"},{"prop":"today","type":"boolean","default":"false"},{"prop":"selected","type":"boolean","default":"false"},{"prop":"day","type":"number","default":"0"}];
+  slotData = [];
   eventData = [];
+
+  
 }
 </script>

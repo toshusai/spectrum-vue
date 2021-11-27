@@ -85,4 +85,27 @@ export default class SpActionMenu extends Vue {
     ];
   }
 }
+/**
+<h3>Standard</h3>
+<code>
+<sp-action-menu :items="items"></sp-action-menu>
+<sp-action-menu :items="items">ActionMenu</sp-action-menu>
+</code>
+<h3>size</h3>
+<code>
+<sp-action-menu :items="items" size="S"></sp-action-menu>
+<sp-action-menu :items="items" size="S">Size S</sp-action-menu>
+</code>
+<h3>slot item</h3>
+<code>
+<sp-action-menu :items="items">
+  <template #item="{ item }">
+    <div style="white-space: nowrap">
+      <sp-icon name="Image" />
+      {{ item.text }}
+    </div>
+  </template>
+</sp-action-menu>
+</code>
+ */
 </script>

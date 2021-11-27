@@ -1,14 +1,24 @@
+
 <template>
-  <component-view name="Combobox" :propData="propData" :eventData="eventData">
-    <sp-combobox></sp-combobox>
-  </component-view>
+    <component-view
+    name="Combobox"
+    :propData="propData"
+    :eventData="eventData"
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class ComboboxPage extends Vue {
-  propData = [];
+  propData = [{"prop":"disabled","type":"boolean","default":"false"},{"prop":"quiet","type":"boolean","default":"false"},{"prop":"invalid","type":"boolean","default":"false"}];
+  slotData = [{"name":"default"}];
   eventData = [];
+
+  
 }
 </script>

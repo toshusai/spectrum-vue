@@ -25,4 +25,13 @@ export default class SpBreadcrumbs extends Vue {
     ];
   }
 }
+/**
+<code>
+<sp-breadcrumbs>
+  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+</sp-breadcrumbs>
+</code>
+ */
 </script>
