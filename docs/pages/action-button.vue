@@ -6,7 +6,7 @@
     :eventData="eventData"
     :slotData="slotData"
     >
-        <h3>Standard</h3>
+        <h3>Size</h3>
 
 <sp-action-button size="S">S</sp-action-button>
 <sp-action-button size="M">M</sp-action-button>
@@ -114,7 +114,6 @@
   selected + disabled
 &lt;/sp-action-button&gt;`"></code-view>
 
-</code>
 <h3>Emphasized + Quiet</h3>
 
 <sp-action-button :emphasized="true" :quiet="true">

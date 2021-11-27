@@ -49,4 +49,52 @@ export default class SpInlineAlert extends Vue {
   @Prop({ default: "" }) header!: string;
   @Prop({ default: "info" }) type!: string;
 }
+/**
+<h3>Type</h3>
+<code>
+<sp-inline-alert>
+  <template #header>
+    Header
+  </template>
+  In-LineAlert
+</sp-inline-alert>
+<sp-inline-alert type="negative">
+  <template #header>
+    Header
+  </template>
+  In-LineAlert
+</sp-inline-alert>
+<sp-inline-alert type="success">
+  <template #header>
+    Header
+  </template>
+  In-LineAlert
+</sp-inline-alert>
+<sp-inline-alert type="help">
+  <template #header>
+    Header
+  </template>
+  In-LineAlert
+</sp-inline-alert>
+<sp-inline-alert type="error">
+  <template #header>
+    Header
+  </template>
+  In-LineAlert
+</sp-inline-alert>
+</code>
+
+<h3>Hooter</h3>
+<code>
+<sp-inline-alert>
+  <template #header>
+    Header
+  </template>
+  In-LineAlert
+  <template #footer>
+    <sp-button type="secondary">Footer</sp-button>
+  </template>
+</sp-inline-alert>
+</code>
+ */
 </script>
