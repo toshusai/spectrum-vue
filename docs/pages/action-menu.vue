@@ -12,12 +12,14 @@
 <sp-action-menu :items="items">ActionMenu</sp-action-menu>
 <code-view :code="`&lt;sp-action-menu :items=&quot;items&quot;&gt;&lt;/sp-action-menu&gt;
 &lt;sp-action-menu :items=&quot;items&quot;&gt;ActionMenu&lt;/sp-action-menu&gt;`"></code-view>
+
 <h3>size</h3>
 
 <sp-action-menu :items="items" size="S"></sp-action-menu>
 <sp-action-menu :items="items" size="S">Size S</sp-action-menu>
 <code-view :code="`&lt;sp-action-menu :items=&quot;items&quot; size=&quot;S&quot;&gt;&lt;/sp-action-menu&gt;
 &lt;sp-action-menu :items=&quot;items&quot; size=&quot;S&quot;&gt;Size S&lt;/sp-action-menu&gt;`"></code-view>
+
 <h3>slot item</h3>
 
 <sp-action-menu :items="items">
