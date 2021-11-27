@@ -1,7 +1,7 @@
 # spectrum-vue
-
-[![npm version](https://badge.fury.io/js/@toshusai%2Fspectrum-vue.svg)](https://badge.fury.io/js/@toshusai%2Fspectrum-vue)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/@toshusai%2Fspectrum-vue)](https://www.npmjs.com/package/@toshusai%2Fspectrum-vue)
+[![Types](https://img.shields.io/npm/types/@toshusai%2Fspectrum-vue)](https://www.npmjs.com/package/@toshusai%2Fspectrum-vue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
 UI Components for Vue based on [Adobe Spectrum](https://spectrum.adobe.com/) ([spectrum-css](https://github.com/adobe/spectrum-css))
 
