@@ -1,7 +1,7 @@
 # spectrum-vue
-
-[![npm version](https://badge.fury.io/js/@toshusai%2Fspectrum-vue.svg)](https://badge.fury.io/js/@toshusai%2Fspectrum-vue)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/@toshusai%2Fspectrum-vue)](https://www.npmjs.com/package/@toshusai%2Fspectrum-vue)
+[![Types](https://img.shields.io/npm/types/@toshusai%2Fspectrum-vue)](https://www.npmjs.com/package/@toshusai%2Fspectrum-vue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
 UI Components for Vue based on [Adobe Spectrum](https://spectrum.adobe.com/) ([spectrum-css](https://github.com/adobe/spectrum-css))
 
@@ -45,7 +45,23 @@ MIT
 
 # Development
 
-
+Serve documents site.
+http://localhost:10000/spectrum-vue
 ```
+cd docs
+npm install
+npm run dev
+```
+
+Build and replace dev docs node_modules.
+```
+npm install
 npm run build && rsync dist docs/node_modules/@toshusai/spectrum-vue
+```
+
+Generate docs.
+Check [scripts/README.md](./scripts/README.md)
+```
+cd scripts
+node generateTemplate.js
 ```

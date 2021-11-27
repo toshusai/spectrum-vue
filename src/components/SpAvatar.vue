@@ -22,8 +22,8 @@ export default class SpAvatar extends Vue {
   @Prop({ default: "" }) src!: string;
 }
 /**
-<code>
 <h3>Standard</h3>
+<code>
 <sp-avatar src="https://github.com/toshusai.png" />
 <sp-avatar size="50" src="https://github.com/toshusai.png" />
 </code>

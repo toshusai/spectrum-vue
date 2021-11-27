@@ -57,7 +57,7 @@ export default class SpActionButton extends Vue {
 }
 
 /**
-<h3>Standard</h3>
+<h3>Size</h3>
 <code>
 <sp-action-button size="S">S</sp-action-button>
 <sp-action-button size="M">M</sp-action-button>
@@ -121,7 +121,6 @@ export default class SpActionButton extends Vue {
 </sp-action-button>
 </code>
 
-</code>
 <h3>Emphasized + Quiet</h3>
 <code>
 <sp-action-button :emphasized="true" :quiet="true">

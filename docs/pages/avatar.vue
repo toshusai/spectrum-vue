@@ -6,12 +6,11 @@
     :eventData="eventData"
     :slotData="slotData"
     >
-        
-<h3>Standard</h3>
+        <h3>Standard</h3>
+
 <sp-avatar src="https://github.com/toshusai.png" />
 <sp-avatar size="50" src="https://github.com/toshusai.png" />
-<code-view :code="`&lt;h3&gt;Standard&lt;/h3&gt;
-&lt;sp-avatar src=&quot;https://github.com/toshusai.png&quot; /&gt;
+<code-view :code="`&lt;sp-avatar src=&quot;https://github.com/toshusai.png&quot; /&gt;
 &lt;sp-avatar size=&quot;50&quot; src=&quot;https://github.com/toshusai.png&quot; /&gt;`"></code-view>
 
 <h3>Disabled</h3>

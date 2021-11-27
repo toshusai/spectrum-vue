@@ -91,11 +91,13 @@ export default class SpActionMenu extends Vue {
 <sp-action-menu :items="items"></sp-action-menu>
 <sp-action-menu :items="items">ActionMenu</sp-action-menu>
 </code>
+
 <h3>size</h3>
 <code>
 <sp-action-menu :items="items" size="S"></sp-action-menu>
 <sp-action-menu :items="items" size="S">Size S</sp-action-menu>
 </code>
+
 <h3>slot item</h3>
 <code>
 <sp-action-menu :items="items">
