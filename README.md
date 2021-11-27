@@ -45,7 +45,23 @@ MIT
 
 # Development
 
-
+Serve documents site.
+http://localhost:10000/spectrum-vue
 ```
+cd docs
+npm install
+npm run dev
+```
+
+Build and replace dev docs node_modules.
+```
+npm install
 npm run build && rsync dist docs/node_modules/@toshusai/spectrum-vue
+```
+
+Generate docs.
+Check [scripts/README.md](./scripts/README.md)
+```
+cd scripts
+node generateTemplate.js
 ```
