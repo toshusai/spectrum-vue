@@ -1,14 +1,24 @@
+
 <template>
-  <component-view name="ColorLoupe" :propData="propData" :eventData="eventData">
-    <sp-color-loupe></sp-color-loupe>
-  </component-view>
+    <component-view
+    name="ColorLoupe"
+    :propData="propData"
+    :eventData="eventData"
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class ColorLoupePage extends Vue {
-  propData = [];
+  propData = [{"prop":"color","type":"Color","default":"new Color()"}];
+  slotData = [];
   eventData = [];
+
+  
 }
 </script>

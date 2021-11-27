@@ -17,7 +17,6 @@ import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
 export default class TimelineLayer extends Vue {
-  @Prop({ default: false }) primary!: boolean;
   @Prop({ default: false }) disabled!: boolean;
   @Prop({ default: false }) quiet!: boolean;
   @Prop({ default: false }) group!: boolean;
@@ -34,4 +33,19 @@ export default class TimelineLayer extends Vue {
     ];
   }
 }
+/**
+<code>
+<sp-button>Button</sp-button>
+</code>
+<code>
+<sp-button type="primary">Button</sp-button>
+<sp-button type="primary" :quiet="true">Button</sp-button>
+</code>
+<code>
+<sp-button type="secondary">Button</sp-button>
+</code>
+<code>
+<sp-button :disabled="true">Button</sp-button>
+</code>
+ */
 </script>

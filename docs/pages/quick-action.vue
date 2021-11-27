@@ -1,18 +1,24 @@
+
 <template>
-  <component-view
+    <component-view
     name="QuickAction"
     :propData="propData"
     :eventData="eventData"
-  >
-    <sp-quick-action></sp-quick-action>
-  </component-view>
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class QuickActionPage extends Vue {
-  propData = [];
+  propData = [{"prop":"isOpen","type":"boolean","default":"false"},{"prop":"textOnly","type":"boolean","default":"false"}];
+  slotData = [{"name":"default"}];
   eventData = [];
+
+  
 }
 </script>

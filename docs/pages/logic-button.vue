@@ -1,18 +1,24 @@
+
 <template>
-  <component-view
+    <component-view
     name="LogicButton"
     :propData="propData"
     :eventData="eventData"
-  >
-    <sp-logic-button></sp-logic-button>
-  </component-view>
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class LogicButtonPage extends Vue {
-  propData = [];
+  propData = [{"prop":"or","type":"boolean","default":"false"}];
+  slotData = [];
   eventData = [];
+
+  
 }
 </script>

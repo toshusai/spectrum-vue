@@ -1,14 +1,24 @@
+
 <template>
-  <component-view name="MenuItem" :propData="propData" :eventData="eventData">
-    <sp-menu-item></sp-menu-item>
-  </component-view>
+    <component-view
+    name="MenuItem"
+    :propData="propData"
+    :eventData="eventData"
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class MenuItemPage extends Vue {
-  propData = [];
+  propData = [{"prop":"disabled","type":"boolean","default":"false"}];
+  slotData = [{"name":"default"}];
   eventData = [];
+
+  
 }
 </script>

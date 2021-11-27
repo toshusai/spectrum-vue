@@ -1,18 +1,24 @@
+
 <template>
-  <component-view
+    <component-view
     name="PaginationButton"
     :propData="propData"
     :eventData="eventData"
-  >
-    <sp-pagination-button></sp-pagination-button>
-  </component-view>
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class PaginationButtonPage extends Vue {
-  propData = [];
+  propData = [{"prop":"type","type":"string","default":"\"cta\""},{"prop":"size","type":"string","default":"\"M\""}];
+  slotData = [];
   eventData = [];
+
+  
 }
 </script>

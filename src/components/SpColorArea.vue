@@ -159,4 +159,18 @@ export default class SpColorArea extends Vue {
     });
   }
 }
+/**
+<code>
+<sp-color-area :color="color" @change="v => color = v" />
+<div>
+{{color}}
+</div>
+</code>
+<import>
+import { Color } from "@toshusai/spectrum-vue";
+</import>
+<component>
+color = new Color();
+</component>
+ */
 </script>

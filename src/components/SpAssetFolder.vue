@@ -22,4 +22,12 @@ import { Component } from "vue-property-decorator";
 
 @Component({})
 export default class AssetFolder extends Vue {}
+/**
+<code>
+<sp-asset-folder />
+</code>
+<code>
+<sp-asset-folder style="width: 64px" />
+</code>
+ */
 </script>

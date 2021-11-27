@@ -1,14 +1,24 @@
+
 <template>
-  <component-view name="CoachMark" :propData="propData" :eventData="eventData">
-    <sp-coach-mark></sp-coach-mark>
-  </component-view>
+    <component-view
+    name="CoachMark"
+    :propData="propData"
+    :eventData="eventData"
+    :slotData="slotData"
+    >
+        
+    </component-view>
 </template>
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+
 @Component({})
 export default class CoachMarkPage extends Vue {
   propData = [];
+  slotData = [];
   eventData = [];
+
+  
 }
 </script>
