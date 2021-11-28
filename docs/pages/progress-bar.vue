@@ -15,7 +15,7 @@ import { Component } from "vue-property-decorator";
 
 @Component({})
 export default class ProgressBarPage extends Vue {
-  propData = [{"prop":"value","type":"number","default":"0"},{"prop":"indeterminate","type":"false","default":"false"},{"prop":"sideLabel","type":"false","default":"false"},{"prop":"overBackground","type":"false","default":"false"},{"prop":"size","type":"string","default":"\"M\""}];
+  propData = [{"prop":"value","type":"number","default":"0"},{"prop":"indeterminate","type":"boolean","default":"false"},{"prop":"sideLabel","type":"boolean","default":"false"},{"prop":"overBackground","type":"boolean","default":"false"},{"prop":"size","type":"string","default":"\"M\""}];
   slotData = [{"name":"default"}];
   eventData = [];
 
