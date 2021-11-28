@@ -3,7 +3,7 @@
     v-bind="$attrs"
     :class="cssClass"
     :disabled="disabled"
-    @click="(e) => $emit('click', e)"
+    v-on="$listeners" 
   >
     <span class="spectrum-Button-label">
       <slot />
