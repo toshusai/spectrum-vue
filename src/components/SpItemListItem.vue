@@ -79,6 +79,7 @@ export default class SpListItemList extends Vue {
       document.body.removeEventListener("pointerup", up);
     };
     document.body.addEventListener("pointerup", up);
+    this.$emit('pointerdown', item, e)
   }
 
   getPos(e: MouseEvent) {
@@ -108,6 +109,7 @@ export default class SpListItemList extends Vue {
       el.style.top = height * (i + 1) + "px";
     }
     el.style.display = "";
+    this.$emit('pointermove', item, e)
   }
 
   pointerup(e: MouseEvent, item: any, i: number) {
@@ -118,6 +120,7 @@ export default class SpListItemList extends Vue {
       this.$emit("move", { item: this.dragItem, i: i + 1 });
     }
     this.dragItem = null;
+    this.$emit('pointerup', item, e)
   }
 }
 </script>
