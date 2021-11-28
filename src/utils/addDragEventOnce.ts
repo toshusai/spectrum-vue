@@ -15,10 +15,12 @@ export default function addDragEventOnce(
         document.body.removeEventListener("touchmove", callback);
         document.body.removeEventListener("pointerup", removeEvent);
         document.body.removeEventListener("mouseleave", removeEvent);
+        document.body.removeEventListener("mouseup", removeEvent);
         document.body.removeEventListener("touchend", removeEvent);
         if (onUp) onUp(e);
     };
     document.body.addEventListener("pointerup", removeEvent);
     document.body.addEventListener("mouseleave", removeEvent);
+    document.body.addEventListener("mouseup", removeEvent);
     document.body.addEventListener("touchend", removeEvent);
 }
