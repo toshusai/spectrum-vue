@@ -68,6 +68,7 @@
             "
             type="button"
             @click="(e) => $emit('close', e)"
+            @pointerdown="(e) => $emit('close-pointerdown', e)"
           >
             <svg
               class="spectrum-Icon spectrum-UIIcon-Cross500"
