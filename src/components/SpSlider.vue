@@ -15,13 +15,13 @@
         {{ label }}
       </label>
       <div
-        v-if="showValue"
+        v-if="valueText !== ''"
         class="spectrum-Slider-value"
         role="textbox"
         aria-readonly="true"
         aria-labelledby="spectrum-Slider-label-8"
       >
-        {{ valueDisplay }}
+        {{ valueText }}
       </div>
     </div>
     <div
@@ -84,7 +84,7 @@ import addDragEventOnce from "../utils/addDragEventOnce";
 export default class SpSlider extends Vue {
   @Prop({ default: false }) disabled!: boolean;
   @Prop({ default: false }) filled!: boolean;
-  @Prop({ default: false }) showValue!: boolean;
+  @Prop({ default: "" }) valueText!: string;
   @Prop({ default: false }) ramp!: boolean;
   @Prop({ default: "" }) label!: string;
   @Prop({ default: 0 }) value!: number;
@@ -105,10 +105,6 @@ export default class SpSlider extends Vue {
   get width() {
     if (this.controls) return this.controls.getBoundingClientRect().width;
     return Number.MAX_SAFE_INTEGER;
-  }
-
-  get valueDisplay() {
-    return Math.round(this.value).toString();
   }
 
   pointerdown(e: MouseEvent | Touch) {
@@ -164,7 +160,7 @@ export default class SpSlider extends Vue {
 <code>
 <sp-slider
   :label="'This is label'"
-  :showValue="true"
+  :valueText="value3"
   :min="0"
   :max="100"
   :value="value3"
@@ -177,7 +173,7 @@ export default class SpSlider extends Vue {
 <code>
 <sp-slider
   :label="'min 0, max 50, step 5'"
-  :showValue="true"
+  :valueText="value4"
   :min="0"
   :max="50"
   :step="5"
@@ -190,7 +186,7 @@ export default class SpSlider extends Vue {
 <code>
 <sp-slider
   :label="'Ramp'"
-  :showValue="true"
+  :valueText="value5"
   :min="0"
   :max="100"
   :value="value5"

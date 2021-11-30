@@ -36,7 +36,7 @@
 
 <sp-slider
   :label="'This is label'"
-  :showValue="true"
+  :valueText="value3"
   :min="0"
   :max="100"
   :value="value3"
@@ -45,7 +45,7 @@
 {{ value3 }}
 <code-view :code="`&lt;sp-slider
   :label=&quot;'This is label'&quot;
-  :showValue=&quot;true&quot;
+  :valueText=&quot;value3&quot;
   :min=&quot;0&quot;
   :max=&quot;100&quot;
   :value=&quot;value3&quot;
@@ -57,7 +57,7 @@
 
 <sp-slider
   :label="'min 0, max 50, step 5'"
-  :showValue="true"
+  :valueText="value4"
   :min="0"
   :max="50"
   :step="5"
@@ -66,7 +66,7 @@
 />
 <code-view :code="`&lt;sp-slider
   :label=&quot;'min 0, max 50, step 5'&quot;
-  :showValue=&quot;true&quot;
+  :valueText=&quot;value4&quot;
   :min=&quot;0&quot;
   :max=&quot;50&quot;
   :step=&quot;5&quot;
@@ -78,7 +78,7 @@
 
 <sp-slider
   :label="'Ramp'"
-  :showValue="true"
+  :valueText="value5"
   :min="0"
   :max="100"
   :value="value5"
@@ -87,7 +87,7 @@
 />
 <code-view :code="`&lt;sp-slider
   :label=&quot;'Ramp'&quot;
-  :showValue=&quot;true&quot;
+  :valueText=&quot;value5&quot;
   :min=&quot;0&quot;
   :max=&quot;100&quot;
   :value=&quot;value5&quot;
@@ -104,7 +104,7 @@ import { Component } from "vue-property-decorator";
 
 @Component({})
 export default class SliderPage extends Vue {
-  propData = [{"prop":"disabled","type":"boolean","default":"false"},{"prop":"filled","type":"boolean","default":"false"},{"prop":"showValue","type":"boolean","default":"false"},{"prop":"ramp","type":"boolean","default":"false"},{"prop":"label","type":"string","default":"\"\""},{"prop":"value","type":"number","default":"0"},{"prop":"step","type":"number","default":"0"},{"prop":"min","type":"number","default":"0"},{"prop":"max","type":"number","default":"0"},{"prop":"offset","type":"number","default":"0"}];
+  propData = [{"prop":"disabled","type":"boolean","default":"false"},{"prop":"filled","type":"boolean","default":"false"},{"prop":"valueText","type":"string","default":"\"\""},{"prop":"ramp","type":"boolean","default":"false"},{"prop":"label","type":"string","default":"\"\""},{"prop":"value","type":"number","default":"0"},{"prop":"step","type":"number","default":"0"},{"prop":"min","type":"number","default":"0"},{"prop":"max","type":"number","default":"0"},{"prop":"offset","type":"number","default":"0"}];
   slotData = [];
   eventData = [];
 

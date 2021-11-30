@@ -3,7 +3,6 @@
     class="
       spectrum-TreeView spectrum-TreeView--sizeS spectrum-TreeView--thumbnail
     "
-    style="position: relative; margin: 0"
   >
     <li
       v-for="(item, i) in items"
@@ -27,8 +26,7 @@
           <img
             class="spectrum-Thumbnail-image"
             style="background: white"
-            src="img/x.png"
-            alt="Flowers"
+            :src="item.src"
           >
         </div>
         <span class="spectrum-TreeView-itemLabel">
@@ -79,6 +77,7 @@ export default class SpListItemList extends Vue {
       document.body.removeEventListener("pointerup", up);
     };
     document.body.addEventListener("pointerup", up);
+    this.$emit('pointerdown', item, e)
   }
 
   getPos(e: MouseEvent) {
@@ -108,6 +107,7 @@ export default class SpListItemList extends Vue {
       el.style.top = height * (i + 1) + "px";
     }
     el.style.display = "";
+    this.$emit('pointermove', item, e)
   }
 
   pointerup(e: MouseEvent, item: any, i: number) {
@@ -118,6 +118,7 @@ export default class SpListItemList extends Vue {
       this.$emit("move", { item: this.dragItem, i: i + 1 });
     }
     this.dragItem = null;
+    this.$emit('pointerup', item, e)
   }
 }
 </script>
