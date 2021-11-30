@@ -15,6 +15,7 @@
           medium ? 'spectrum-Dialog--medium' : '',
           large ? 'spectrum-Dialog--large' : '',
           fullscree ? 'spectrum-Dialog--fullscreen' : '',
+          dismissable ? 'spectrum-Dialog--dismissable': ''
         ]"
         role="dialog"
         tabindex="-1"
@@ -27,7 +28,13 @@
             :style="`background-image: url(${hero})`"
           />
           <h1 class="spectrum-Dialog-heading">
-            {{ header }}
+            <slot
+              v-if="!!$scopedSlots.header || !!$slots.header"
+              name="header"
+            />
+            <template v-else>
+              {{ header }}
+            </template>
           </h1>
           <svg
             v-if="alert"
@@ -51,7 +58,7 @@
           </section>
           <slot name="footer" />
           <button
-            v-if="dismissible"
+            v-if="dismissable"
             aria-label="Dismiss"
             class="
               spectrum-ActionButton
@@ -61,6 +68,7 @@
             "
             type="button"
             @click="(e) => $emit('close', e)"
+            @pointerdown="(e) => $emit('close-pointerdown', e)"
           >
             <svg
               class="spectrum-Icon spectrum-UIIcon-Cross500"
@@ -85,7 +93,7 @@ export default class SpDialog extends Vue {
   @Prop({ default: "" }) header!: string;
   @Prop({ default: "" }) hero!: string;
   @Prop({ default: false }) isOpen!: boolean;
-  @Prop({ default: false }) dismissible!: boolean;
+  @Prop({ default: false }) dismissable!: boolean;
   @Prop({ default: false }) small!: boolean;
   @Prop({ default: false }) medium!: boolean;
   @Prop({ default: false }) large!: boolean;

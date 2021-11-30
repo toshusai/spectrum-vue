@@ -2,8 +2,7 @@
   <button
     :class="cssClass"
     :disabled="disabled"
-    @click="click"
-    @pointerdown="pointerdown"
+    v-on="$listeners" 
   >
     <svg
       v-if="corner"
@@ -45,14 +44,6 @@ export default class SpActionButton extends Vue {
       this.emphasized ? "spectrum-ActionButton--emphasized" : "",
       this.selected ? "is-selected" : "",
     ];
-  }
-
-  click(e: Event) {
-    this.$emit("click", e);
-  }
-
-  pointerdown(e: Event) {
-    this.$emit("pointerdown", e);
   }
 }
 
