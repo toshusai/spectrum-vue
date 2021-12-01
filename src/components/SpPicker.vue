@@ -1,6 +1,7 @@
 <template>
   <div>
     <button
+      ref="button"
       class="spectrum-Picker"
       :class="[
         invalid ? 'is-invalid' : '',
@@ -12,8 +13,12 @@
       :disabled="disabled"
       @click="open"
     >
-      <span class="spectrum-Picker-label is-placeholder">
-        <slot />
+      <span
+        class="spectrum-Picker-label"
+        :class="[value ? '' : 'is-placeholder']"
+      >
+        <slot v-if="!value" />
+        <span v-else>{{ value.text }}</span>
       </span>
       <svg
         v-if="invalid"
@@ -38,8 +43,10 @@
       </svg>
     </button>
     <div
+      ref="popover"
       class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover"
       :class="{ 'is-open': isOpen }"
+      style="position: fixed; z-index: 100"
     >
       <ul
         class="spectrum-Menu"
@@ -48,17 +55,18 @@
         <li
           v-for="(item, i) in items"
           :key="i"
-          class="spectrum-Menu-item is-selected"
-          :class="item == selected ? `is-selected` : ``"
+          class="spectrum-Menu-item"
+          :class="value && value.id == item.id ? `is-selected` : ``"
           role="option"
           aria-selected="true"
           tabindex="0"
+          @click="(e) => change(e, item)"
         >
           <span class="spectrum-Menu-itemLabel">
             {{ item.text }}
           </span>
           <svg
-            v-if="selected == item"
+            v-if="value && value.id == item.id"
             class="
               spectrum-Icon
               spectrum-UIIcon-Checkmark100
@@ -78,27 +86,37 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop } from "vue-property-decorator";
+import { Component, Prop, Ref } from "vue-property-decorator";
 import MenuItem from "../utils/MenuItem";
 
 @Component({})
 export default class SpPicker extends Vue {
   @Prop({ default: () => [] }) items!: MenuItem[];
-  @Prop({}) selected!: MenuItem;
+  @Prop({}) value!: MenuItem;
   @Prop({ default: false }) disabled!: boolean;
   @Prop({ default: false }) invalid!: boolean;
   @Prop({ default: "M" }) size!: string;
   @Prop({ default: false }) quiet!: boolean;
+  @Prop({ default: () => () => false }) select!: (item: MenuItem) => boolean;
+  @Ref() button!: HTMLElement;
+  @Ref() popover!: HTMLElement;
   isOpen: boolean = false;
+
+  change(e: Event, item: MenuItem) {
+    this.$emit("change", e, item);
+    this.close();
+  }
+
+  close(e?: Event) {
+    if (e && this.button.contains(e.target as HTMLElement)) return;
+    if (e && this.popover.contains(e.target as HTMLElement)) return;
+    this.isOpen = false;
+    document.removeEventListener("pointerdown", this.close);
+  }
 
   open(e: Event) {
     this.isOpen = true;
-    const close = (e: Event) => {
-      if (this.$el.contains(e.target as HTMLElement)) return;
-      this.isOpen = false;
-      document.removeEventListener("pointerdown", close);
-    };
-    document.addEventListener("pointerdown", close);
+    document.addEventListener("pointerdown", this.close);
     this.$emit("click", e);
   }
 }
