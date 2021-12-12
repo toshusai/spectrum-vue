@@ -15,8 +15,8 @@ import { Component } from "vue-property-decorator";
 
 @Component({})
 export default class PickerPage extends Vue {
-  propData = [{"prop":"items","type":"MenuItem[]","default":"() => []"},{"prop":"selected","type":"MenuItem"},{"prop":"disabled","type":"boolean","default":"false"},{"prop":"invalid","type":"boolean","default":"false"},{"prop":"size","type":"string","default":"\"M\""},{"prop":"quiet","type":"boolean","default":"false"}];
-  slotData = [{"name":"default"}];
+  propData = [{"prop":"items","type":"MenuItem[]","default":"() => []"},{"prop":"value","type":"MenuItem"},{"prop":"disabled","type":"boolean","default":"false"},{"prop":"invalid","type":"boolean","default":"false"},{"prop":"size","type":"string","default":"\"M\""},{"prop":"quiet","type":"boolean","default":"false"},{"prop":"select","type":"(item: MenuItem) => boolean","default":"() => () => false"}];
+  slotData = [];
   eventData = [];
 
   

@@ -29,7 +29,7 @@ import { Component } from "vue-property-decorator";
 
 @Component({})
 export default class AccordionPage extends Vue {
-  propData = [{"prop":"disabled","type":"boolean","default":"false"},{"prop":"header","type":"string","default":"\"\""}];
+  propData = [{"prop":"defaultIsOpen","type":"boolean","default":"false"},{"prop":"disabled","type":"boolean","default":"false"},{"prop":"header","type":"string","default":"\"\""}];
   slotData = [{"name":"header"},{"name":"default"}];
   eventData = [];
 

@@ -49,13 +49,18 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop } from "vue-property-decorator";
+import { Component, Prop, PropSync } from "vue-property-decorator";
 
 @Component({})
 export default class SpAccordion extends Vue {
   isOpen: boolean = false;
+  @Prop({ default: false }) defaultIsOpen!: boolean;
   @Prop({ default: false }) disabled!: boolean;
   @Prop({ default: "" }) header!: string;
+
+  mounted() {
+    this.isOpen = this.defaultIsOpen;
+  }
 }
 
 /**
