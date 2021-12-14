@@ -7,7 +7,7 @@ UI Components for Vue based on [Adobe Spectrum](https://spectrum.adobe.com/) ([s
 
 [Document & Demo](https://toshusai.github.io/spectrum-vue/)
 
-__:warning:__ This project is work in progress. Not a stable version. May make destructive changes.
+__:warning:__ This project is work in progress. Not a stable version. May make breaking changes.
 
 - It was created __"based"__ on Spectrum and is not the same as Spectrum.
 - This project was not developed by Adobe.
