@@ -69,6 +69,8 @@ import SpTextArea from "./components/SpTextArea.vue"
 import SpTextfield from "./components/SpTextfield.vue"
 import SpToast from "./components/SpToast.vue"
 import SpTreeItem from "./components/SpTreeItem.vue"
+import SpTreeView from "./components/SpTreeView.vue"
+import SpTreeViewItem from "./components/SpTreeViewItem.vue"
 import Color from "./utils/Color"
 import DropPosition from "./utils/DropPosition"
 import Item from "./utils/Item"
@@ -147,6 +149,8 @@ export {
     SpTextfield,
     SpToast,
     SpTreeItem,
+    SpTreeView,
+    SpTreeViewItem,
     Color,
     DropPosition,
     Item,
