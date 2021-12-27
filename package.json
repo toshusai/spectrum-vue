@@ -85,7 +85,7 @@
     "color-convert": "^2.0.1",
     "eslint": "7.32.0",
     "rollup": "^2.23.1",
-    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-import-css": "^3.0.2",
     "rollup-plugin-peer-deps-external": "^2.2.3",
     "rollup-plugin-typescript2": "^0.27.2",
     "rollup-plugin-vue": "^5.1.6",
