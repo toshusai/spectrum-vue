@@ -1,11 +1,9 @@
 name: cd
 
-on: [push, pull_request]
-
-# defaults:
-#   run:
-#     shell: bash
-#     working-directory: docs
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   cd:
