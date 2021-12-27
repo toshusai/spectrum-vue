@@ -47,6 +47,7 @@
       class="spectrum-Popover spectrum-Popover--bottom spectrum-Picker-popover"
       :class="{ 'is-open': isOpen }"
       style="position: fixed; z-index: 100"
+      :style="popoverStyle"
     >
       <ul
         class="spectrum-Menu"
@@ -100,7 +101,16 @@ export default class SpPicker extends Vue {
   @Prop({ default: () => () => false }) select!: (item: MenuItem) => boolean;
   @Ref() button!: HTMLElement;
   @Ref() popover!: HTMLElement;
+
   isOpen: boolean = false;
+
+  popoverY : number = 0;
+
+  get popoverStyle(): Partial<CSSStyleDeclaration>{
+    return {
+      top: this.popoverY + "px"
+    }
+  }
 
   change(e: Event, item: MenuItem) {
     this.$emit("change", e, item);
@@ -118,6 +128,14 @@ export default class SpPicker extends Vue {
     this.isOpen = true;
     document.addEventListener("pointerdown", this.close);
     this.$emit("click", e);
+    const rect =  this.popover.getBoundingClientRect()
+    const tr = this.$el.getBoundingClientRect()
+    
+    if(tr.top + tr.height + rect.height > window.innerHeight){
+      this.popoverY =  tr.top- rect.height - 16;
+    }else {
+      this.popoverY =  tr.top + tr.height 
+    }
   }
 }
 </script>
