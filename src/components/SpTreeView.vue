@@ -13,7 +13,8 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component({ })
-export default class SpListItemList extends Vue {
+export default class SpTreeView extends Vue {
   @Prop({ default: '' }) thumbnail!: string;
+  @Prop({ default: "M"}) size!: string;
 }
 </script>
