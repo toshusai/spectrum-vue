@@ -26,7 +26,7 @@ export default class SpActionButton extends Vue {
     return [
       "spectrum-ActionGroup",
       this.quiet ? "spectrum-ActionGroup--quiet" : "",
-      this.vertical ? "spectrum-ActionGroup--vertical" : "",
+      this.vertical ? "spectrum-ActionGroup--vertical" : "spectrum-ActionGroup--horizontal",
       this.compact ? "spectrum-ActionGroup--compact" : "",
     ];
   }
