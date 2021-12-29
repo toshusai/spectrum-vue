@@ -17,7 +17,7 @@
 
 <sp-action-group :compact="true">
   <sp-action-button :quiet="true">
-    <sp-icon name="Plus" />
+    <sp-icon name="Add" />
   </sp-action-button>
   <sp-divider :vertical="true" />
   <sp-action-button :quiet="true">
@@ -26,7 +26,7 @@
 </sp-action-group>
 <code-view :code="`&lt;sp-action-group :compact=&quot;true&quot;&gt;
   &lt;sp-action-button :quiet=&quot;true&quot;&gt;
-    &lt;sp-icon name=&quot;Plus&quot; /&gt;
+    &lt;sp-icon name=&quot;Add&quot; /&gt;
   &lt;/sp-action-button&gt;
   &lt;sp-divider :vertical=&quot;true&quot; /&gt;
   &lt;sp-action-button :quiet=&quot;true&quot;&gt;
