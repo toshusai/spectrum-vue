@@ -1,3 +1,6 @@
+# v0.2.6
+- Remove debug.
+
 # v0.2.5
 - Add popover allow position.
 
