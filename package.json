@@ -1,6 +1,6 @@
 {
   "name": "@toshusai/spectrum-vue",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "UI Components for Vue based on Adobe Spectrum",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
