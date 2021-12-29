@@ -4,11 +4,12 @@ export const RIGHT = 2;
 
 export default function addDragEventOnce(
     callback: (e: MouseEvent | TouchEvent) => void,
-    onUp?: (e: MouseEvent | TouchEvent) => void
+    onUp?: (e: MouseEvent | TouchEvent) => void,
+    options?: AddEventListenerOptions
 ) {
-    document.body.addEventListener("mousemove", callback);
-    document.body.addEventListener("pointermove", callback);
-    document.body.addEventListener("touchmove", callback);
+    document.body.addEventListener("mousemove", callback, options);
+    document.body.addEventListener("pointermove", callback, options);
+    document.body.addEventListener("touchmove", callback, options);
     const removeEvent = (e: MouseEvent | TouchEvent) => {
         document.body.removeEventListener("mousemove", callback);
         document.body.removeEventListener("pointermove", callback);
