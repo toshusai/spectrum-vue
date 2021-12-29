@@ -1,3 +1,6 @@
+# v0.2.7
+- Fix build
+
 # v0.2.6
 - Remove debug.
 
