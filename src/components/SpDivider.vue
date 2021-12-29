@@ -28,7 +28,7 @@ export default class SpDivider extends Vue {
 <code>
 <sp-action-group :compact="true">
   <sp-action-button :quiet="true">
-    <sp-icon name="Plus" />
+    <sp-icon name="Add" />
   </sp-action-button>
   <sp-divider :vertical="true" />
   <sp-action-button :quiet="true">
