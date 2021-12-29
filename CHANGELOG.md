@@ -1,3 +1,6 @@
+# v0.2.5
+- Add popover allow position.
+
 # v0.2.4
 - Fix slider movement.
 
