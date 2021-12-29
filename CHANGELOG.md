@@ -1,3 +1,6 @@
+# v0.2.4
+- Fix slider movement.
+
 # v0.2.3
 - Improve slider UX.
 
