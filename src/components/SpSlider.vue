@@ -48,10 +48,12 @@
         class="spectrum-Slider-track"
         :style="`width:${position}%`"
       />
+      <!-- @touchstart="prevent" for disable iOS back swipe -->
       <div
         class="spectrum-Slider-handle"
         :style="`left: ${position}%; cursor: pointer`"
         @pointerdown="pointerdown"
+        @touchstart="prevent"
       >
         <input
           type="range"
@@ -68,7 +70,6 @@
         class="spectrum-Slider-track"
         :style="`width:${100 - position}%`"
       />
-      <!-- <div class="spectrum-Slider-fill" :style="`left: 0%; width: 0%`" /> -->
     </div>
   </div>
 </template>
@@ -107,34 +108,51 @@ export default class SpSlider extends Vue {
     return Number.MAX_SAFE_INTEGER;
   }
 
-  pointerdown(e: MouseEvent | Touch) {
+  pointerdown(e: MouseEvent | TouchEvent | PointerEvent) {
+    //@ts-ignore
     this.start = e.pageX;
     const startValue = this.value;
-    addDragEventOnce((e) => {
-      if (e instanceof MouseEvent) {
-        // px space
-        const delta = e.pageX - this.start;
-        // value space 1 - 0
-        const range = this.max - this.min;
-        const rate = range / this.width;
-        const newValue = startValue + delta * rate;
-        if (newValue < this.min) return;
-        else if (newValue > this.max) return;
+    e.preventDefault();
+    addDragEventOnce(
+      (e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        if (e instanceof MouseEvent) {
+          // px space
+          const delta = e.pageX - this.start;
+          // value space 1 - 0
+          const range = this.max - this.min;
+          const rate = range / this.width;
+          const newValue = startValue + delta * rate;
+          if (newValue < this.min) {
+            this.$emit("input", this.min);
+            return;
+          } else if (newValue > this.max) {
+            this.$emit("input", this.max);
+            return;
+          }
 
-        if (this.step == 0) {
-          this.$emit("input", newValue);
-        } else {
-          const v = Math.round(newValue);
-          if (v % this.step == 0) {
-            this.$emit("input", v);
+          if (this.step == 0) {
+            this.$emit("input", newValue);
+          } else {
+            const v = Math.round(newValue);
+            if (v % this.step == 0) {
+              this.$emit("input", v);
+            }
           }
         }
-      }
-    });
+      },
+      undefined,
+      { passive: false }
+    );
   }
 
   mounted() {
     this.controls = this.$el.querySelector(".spectrum-Slider-controls");
+  }
+
+  prevent(e: Event) {
+    e.preventDefault();
   }
 }
 /**

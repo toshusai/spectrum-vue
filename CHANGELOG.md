@@ -1,3 +1,6 @@
+# v0.2.3
+- Improve slider UX.
+
 # v0.2.2
 - Add horizontal class to default ActionGroup.
 - Support vertical Divider.
