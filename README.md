@@ -31,7 +31,7 @@ Object.entries(components).forEach(([name, component]) => {
 
 Add style.
 ```js
-import "@toshusai/spectrum-vue/dist/index.css",
+import "@toshusai/spectrum-vue/dist/index.css"
 ```
 
 Add global css.  
@@ -112,7 +112,7 @@ Add global css.
 | SpSplitViewPane     | :white_check_mark: |
 | SpSplitViewSplitter | :white_check_mark: |
 | SpTable             | :white_check_mark: |
-| SpTabs              | :white_check_mark: |
+| SpTabs              | :construction:     |
 | SpTag               | :white_check_mark: |
 | SpTextArea          | :white_check_mark: |
 | SpTextfield         | :white_check_mark: |
@@ -120,6 +120,7 @@ Add global css.
 | SpTreeItem          | :construction:     |
 | SpTreeView          | :construction:     |
 | SpTreeViewItem      | :construction:     |
+
 # License
 MIT
 
