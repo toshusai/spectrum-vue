@@ -17,8 +17,6 @@
         class="spectrum-Dialog-grid"
         style="display: block"
       >
-        {{ style }}
-        {{ targetRect }}
         <slot />
       </div>
     </section>
