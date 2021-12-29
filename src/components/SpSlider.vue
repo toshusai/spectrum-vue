@@ -97,10 +97,14 @@ export default class SpSlider extends Vue {
   controls: HTMLElement | null = null;
   start = -1;
 
+  lerp(a:number,b:number,t:number){
+return a + (b-a) * t
+  }
+
   get position() {
     const size = this.max - this.min;
     if (size == 0) return 0;
-    return (this.value / size) * 100;
+    return ((this.value - this.min)/ size) * 100;
   }
 
   get width() {
@@ -166,8 +170,8 @@ export default class SpSlider extends Vue {
 <code>
 <sp-slider
   :filled="true"
-  :min="0"
-  :max="100"
+  :min="1"
+  :max="8"
   :value="value2"
   @input="(v) => (value2 = v)"
 />
@@ -215,7 +219,7 @@ export default class SpSlider extends Vue {
 
 <component>
 value1: number = 0.5;
-value2: number = 0;
+value2: number = 1;
 value3: number = 0;
 value4: number = 0;
 value5: number = 50;

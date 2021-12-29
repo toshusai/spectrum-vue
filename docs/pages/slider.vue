@@ -17,16 +17,16 @@
 
 <sp-slider
   :filled="true"
-  :min="0"
-  :max="100"
+  :min="1"
+  :max="8"
   :value="value2"
   @input="(v) => (value2 = v)"
 />
 {{ value2 }}
 <code-view :code="`&lt;sp-slider
   :filled=&quot;true&quot;
-  :min=&quot;0&quot;
-  :max=&quot;100&quot;
+  :min=&quot;1&quot;
+  :max=&quot;8&quot;
   :value=&quot;value2&quot;
   @input=&quot;(v) =&gt; (value2 = v)&quot;
 /&gt;
@@ -110,7 +110,7 @@ export default class SliderPage extends Vue {
 
   
 value1: number = 0.5;
-value2: number = 0;
+value2: number = 1;
 value3: number = 0;
 value4: number = 0;
 value5: number = 50;
