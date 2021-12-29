@@ -1,12 +1,10 @@
 <template>
   <div
-    class="
-      spectrum-Popover spectrum-Popover--right spectrum-Popover--withTip
-      spectrum-Popover
-    "
-    :style="`z-index: 100; top: ${top}px; left: ${left}px`"
+    class="spectrum-Popover spectrum-Popover--withTip spectrum-Popover"
+    style="z-index: 100; position: fixed"
+    :style="style"
     role="presentation"
-    :class="[isOpen ? 'is-open' : '']"
+    :class="[isOpen ? 'is-open' : '', `spectrum-Popover--${popPosition}`]"
   >
     <section
       class="spectrum-Dialog spectrum-Dialog--small"
@@ -19,14 +17,32 @@
         class="spectrum-Dialog-grid"
         style="display: block"
       >
+        {{ style }}
+        {{ targetRect }}
         <slot />
       </div>
     </section>
+
+    <!-- TOP -->
     <svg
-      idth="12"
+      v-if="popPosition == 'top' || popPosition == 'bottom'"
+      width="23"
+      height="12"
+      class="spectrum-Popover-tip"
+      :style="secondAllowPosition == 'left' ? `left: 16px` : `right: 16px`"
+    >
+      <path
+        class="spectrum-Popover-tip-triangle"
+        d="M 0.7071067811865476 0 L 11.414213562373096 10.707106781186548 L 22.121320343559645 0"
+      />
+    </svg>
+
+    <svg
+      v-else
+      width="12"
       height="23"
       class="spectrum-Popover-tip"
-      style="top: 16px"
+      :style="secondAllowPosition == 'top' ? `top: 16px` : `bottom: 16px`"
     >
       <path
         class="spectrum-Popover-tip-triangle"
@@ -40,14 +56,68 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Component } from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 
 @Component({})
 export default class SpPopover extends Vue {
-  top = 0;
-  left = 0;
+  @Prop({ default: false }) left!: boolean;
+  @Prop({ default: false }) top!: boolean;
+  @Prop({ default: "left-top" }) allowPos!: string;
+
+  targetRect?: DOMRect;
+
+  h = 0;
+  v = 0;
 
   isOpen = false;
+
+  get popPosition() {
+    if (this.allowPos.startsWith("left")) return "right";
+    if (this.allowPos.startsWith("right")) return "left";
+    if (this.allowPos.startsWith("bottom")) return "top";
+    if (this.allowPos.startsWith("top")) return "bottom";
+  }
+
+  get secondAllowPosition() {
+    return this.allowPos.split("-")[1];
+  }
+
+  style: Partial<CSSStyleDeclaration> = {};
+  getStyle(): Partial<CSSStyleDeclaration> {
+    const rect = this.$el.getBoundingClientRect();
+    let left = "";
+    let right = "";
+    let top = "";
+    let bottom = "";
+    if (this.targetRect) {
+      if (this.allowPos.startsWith("left")) {
+        left = this.targetRect.left + this.targetRect.width + "px";
+      } else if (this.allowPos.startsWith("right")) {
+        right = window.innerWidth - this.targetRect.left + "px";
+      } else if (this.allowPos.startsWith("top")) {
+        top = this.targetRect.top + this.targetRect.height + "px";
+      } else if (this.allowPos.startsWith("bottom")) {
+        bottom = window.innerHeight - this.targetRect.top + "px";
+      }
+      if (this.allowPos.endsWith("left")) {
+        left = this.targetRect.left + "px";
+      } else if (this.allowPos.endsWith("right")) {
+        right = window.innerWidth - this.targetRect.right + "px";
+      } else if (this.allowPos.endsWith("top")) {
+        top = this.targetRect.top + "px";
+      } else if (this.allowPos.endsWith("bottom")) {
+        bottom = window.innerHeight - this.targetRect.bottom + "px";
+      }
+    }
+    console.log(this.targetRect, left, top, right, bottom);
+
+    return {
+      left: left,
+      right: right,
+      top: top,
+      bottom: bottom,
+    };
+  }
 
   open(el: HTMLElement) {
     if (this.isOpen) {
@@ -56,9 +126,10 @@ export default class SpPopover extends Vue {
       return;
     }
     const rect = el.getBoundingClientRect();
-    this.top = rect.top;
-    this.left = rect.left + rect.width;
+    this.targetRect = rect;
     this.isOpen = true;
+
+    this.style = this.getStyle();
 
     requestAnimationFrame(() => {
       document.body.addEventListener("pointerdown", this.close);
@@ -71,4 +142,23 @@ export default class SpPopover extends Vue {
     document.body.removeEventListener("pointerdown", this.close);
   }
 }
+/**
+<code>
+<sp-action-button @click="e => $refs.popover1.open(e.target)"> Open </sp-action-button>
+<sp-popover ref="popover1"> <h3>Content</h3> </sp-popover>
+</code>
+<code>
+<sp-action-button @click="e => $refs.popover2.open(e.target)"> Open </sp-action-button>
+<sp-popover ref="popover2" allow-pos="bottom-left"> <h3>Content</h3> </sp-popover>
+</code>
+<code>
+<div style="display: flex">
+  <sp-action-button @click="e => $refs.popover3.open(e.target)"> Open </sp-action-button>
+</div
+<sp-popover ref="popover3" allow-pos="right-top"> <h3>Content</h3> </sp-popover>
+</code>
+
+<component>
+</component>
+ */
 </script>
