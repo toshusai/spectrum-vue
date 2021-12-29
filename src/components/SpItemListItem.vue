@@ -121,4 +121,13 @@ export default class SpListItemList extends Vue {
     this.$emit('pointerup', item, e)
   }
 }
+/**
+<code>
+<sp-item-list-item :items="['A', 'B', 'C']" selectedItem="A"> 
+  <template v-slot="{item}">
+    {{item}}
+  </template>
+</sp-item-list-item>
+</code>
+ */
 </script>
