@@ -71,11 +71,10 @@ pre > code {
 
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop, Watch } from "vue-property-decorator";
 import loadicons from "loadicons";
 import { links } from "../data/links";
 import GithubButton from "vue-github-button";
-import hljs from "highlight.js";
+import Component from "vue-class-component";
 
 @Component({
   components: {

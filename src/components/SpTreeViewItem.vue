@@ -24,9 +24,11 @@
 
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import Vue from "vue";
+import Component from "vue-class-component";
+import { Prop } from "vue-property-decorator";
 
-@Component({ })
+@Component({})
 export default class SpTreeViewItem extends Vue {
   @Prop({ default: '' }) thumbnail!: string;
   @Prop({ default: false}) selected!: boolean;
