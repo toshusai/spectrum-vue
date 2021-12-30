@@ -46,8 +46,6 @@
 </template>
 <script lang="ts">
 import hljs from "highlight.js";
-
-
 import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component({})

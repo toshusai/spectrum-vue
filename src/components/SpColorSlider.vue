@@ -49,12 +49,8 @@
   </div>
 </template>
 
-
-
 <script lang="ts">
 import * as convert from "color-convert";
-
-
 import { Vue, Component, Prop } from "vue-property-decorator";
 import addDragEventOnce from "../utils/addDragEventOnce";
 

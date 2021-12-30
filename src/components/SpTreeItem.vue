@@ -80,12 +80,8 @@
   </ul>
 </template>
 
-
-
 <script lang="ts">
-
-
-import { Prop, PropSync } from "vue-property-decorator";
+import { Vue, Component, Prop, PropSync } from "vue-property-decorator";
 import DropPosition from "../utils/DropPosition";
 import Item from "../utils/Item";
 

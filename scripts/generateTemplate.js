@@ -148,8 +148,6 @@ const template = `
     </component-view>
 </template>
 <script lang="ts">
-
-
 ${IMPORT}
 @Component({})
 export default class ${classNameKeyword}Page extends Vue {

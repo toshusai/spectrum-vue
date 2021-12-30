@@ -54,13 +54,9 @@
   </div>
 </template>
 
-
-
 <script lang="ts">
 import * as convert from "color-convert";
-
-
-import { Prop, Watch } from "vue-property-decorator";
+import { Vue, Component, Prop, Watch } from "vue-property-decorator";
 import Color from "../utils/Color";
 import addDragEventOnce from "../utils/addDragEventOnce";
 
