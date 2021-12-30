@@ -78,7 +78,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop, Ref } from "vue-property-decorator";
+import Component from "vue-class-component";
+import { Prop } from "vue-property-decorator";
 import addDragEventOnce from "../utils/addDragEventOnce";
 
 @Component({})

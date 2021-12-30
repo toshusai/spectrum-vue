@@ -40,7 +40,8 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop } from "vue-property-decorator";
+import Component from "vue-class-component";
+import { Prop } from "vue-property-decorator";
 
 @Component({})
 export default class SpProgressBar extends Vue {

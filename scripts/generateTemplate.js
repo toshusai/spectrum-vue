@@ -36,7 +36,7 @@ function escapeHTML(str) {
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
-        // .replace(/'/g, "&#039;");
+    // .replace(/'/g, "&#039;");
 }
 
 
@@ -78,13 +78,13 @@ function getComponentInfo(src) {
             }
             const compReg = new RegExp(/<component>(.*?)<\/component>/s)
             var m = compReg.exec(doc)
-            if(m){
+            if (m) {
                 doc = doc.replace(m[0], "")
                 comp = m[1]
             }
             const impReg = new RegExp(/<import>(.*?)<\/import>/s)
             var m = impReg.exec(doc)
-            if(m){
+            if (m) {
                 doc = doc.replace(m[0], "")
                 imp = m[1]
             }
@@ -102,19 +102,19 @@ function getComponentInfo(src) {
                 if (!ts.isCallExpression(exp)) return
                 const decFuncName = exp.expression.getText(sourceFile)
                 if (decFuncName != "Prop" && decFuncName != "PropSync") return;
-                if(exp.arguments.length != 1)return
+                if (exp.arguments.length != 1) return
                 const a = exp.arguments[0]
                 if (!ts.isObjectLiteralExpression(a)) return
                 var prop = {
                     prop: m.name.text,
-                        type: m.type.getText(sourceFile),
+                    type: m.type.getText(sourceFile),
                 }
                 a.properties.forEach(p => {
                     if (!ts.isPropertyAssignment(p)) return
-                    if(p.name.getText(sourceFile) == "default")
-                    prop.default = p.initializer.getText(sourceFile)
-                    if(p.name.getText(sourceFile) == "required")
-                    prop.required= p.initializer.getText(sourceFile)
+                    if (p.name.getText(sourceFile) == "default")
+                        prop.default = p.initializer.getText(sourceFile)
+                    if (p.name.getText(sourceFile) == "required")
+                        prop.required = p.initializer.getText(sourceFile)
                 })
                 props.push(prop)
             })
@@ -134,8 +134,8 @@ const slotKeyword = `__SLOT`
 const classNameKeyword = `__CLASSNAME`
 const PROP_DATA = `__PROP_DATA`
 const SLOT_DATA = `__SLOT_DATA`
-const ADDITIONAL= `__ADDITIONAL`
-const IMPORT= `__IMPORT`
+const ADDITIONAL = `__ADDITIONAL`
+const IMPORT = `__IMPORT`
 const template = `
 <template>
     <component-view
@@ -149,7 +149,7 @@ const template = `
 </template>
 <script lang="ts">
 import Vue from "vue";
-import { Component } from "vue-property-decorator";
+import Component from "vue-class-component";
 ${IMPORT}
 @Component({})
 export default class ${classNameKeyword}Page extends Vue {

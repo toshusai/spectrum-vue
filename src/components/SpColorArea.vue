@@ -59,7 +59,8 @@
 <script lang="ts">
 import * as convert from "color-convert";
 import Vue from "vue";
-import { Component, Prop, Watch } from "vue-property-decorator";
+import Component from "vue-class-component";
+import { Prop, Watch } from "vue-property-decorator";
 import Color from "../utils/Color";
 import addDragEventOnce from "../utils/addDragEventOnce";
 

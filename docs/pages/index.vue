@@ -75,7 +75,7 @@
 <script lang="ts">
 import { Color } from "@toshusai/spectrum-vue";
 import Vue from "vue";
-import { Component } from "vue-property-decorator";
+import Component from "vue-class-component";
 import { links } from "../data/links";
 
 @Component({})
