@@ -96,9 +96,9 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Component from "vue-class-component";
-import { Prop } from "vue-property-decorator";
+
+
+import { Vue, Component, Prop } from "vue-property-decorator";
 import SpCalendarDate from "./SpCalendarDate.vue";
 
 const weekDay1 = ["S", "M", "T", "W", "T", "F", "S"];

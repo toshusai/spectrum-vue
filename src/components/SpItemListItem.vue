@@ -45,9 +45,7 @@
 
 
 <script lang="ts">
-import Vue from "vue";
-import Component from "vue-class-component";
-import { Prop, Ref } from "vue-property-decorator";
+import { Vue, Component, Prop, Ref } from "vue-property-decorator";
 import DropPosition from "../utils/DropPosition";
 import SpDropIndicator from "./SpDropIndicator.vue";
 

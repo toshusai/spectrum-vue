@@ -148,8 +148,8 @@ const template = `
     </component-view>
 </template>
 <script lang="ts">
-import Vue from "vue";
-import Component from "vue-class-component";
+
+
 ${IMPORT}
 @Component({})
 export default class ${classNameKeyword}Page extends Vue {

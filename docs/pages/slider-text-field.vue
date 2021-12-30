@@ -9,8 +9,7 @@
   </component-view>
 </template>
 <script lang="ts">
-import Component from "vue-class-component";
-import Vue from "vue";
+import { Vue, Component } from "vue-property-decorator";
 
 @Component({})
 export default class index extends Vue {

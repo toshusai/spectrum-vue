@@ -83,8 +83,8 @@
 
 
 <script lang="ts">
-import Vue from "vue";
-import Component from "vue-class-component";
+
+
 import { Prop, PropSync } from "vue-property-decorator";
 import DropPosition from "../utils/DropPosition";
 import Item from "../utils/Item";
