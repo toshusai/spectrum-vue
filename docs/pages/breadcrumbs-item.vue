@@ -1,33 +1,36 @@
-
 <template>
-    <component-view
+  <component-view
     name="BreadcrumbsItem"
     :propData="propData"
     :eventData="eventData"
     :slotData="slotData"
-    >
-        
-<sp-breadcrumbs>
-  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
-  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
-  <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
-</sp-breadcrumbs>
-<code-view :code="`&lt;sp-breadcrumbs&gt;
+  >
+    <sp-breadcrumbs>
+      <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+      <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+      <sp-breadcrumbs-item>Item</sp-breadcrumbs-item>
+    </sp-breadcrumbs>
+    <code-view
+      :code="`&lt;sp-breadcrumbs&gt;
   &lt;sp-breadcrumbs-item&gt;Item&lt;/sp-breadcrumbs-item&gt;
   &lt;sp-breadcrumbs-item&gt;Item&lt;/sp-breadcrumbs-item&gt;
   &lt;sp-breadcrumbs-item&gt;Item&lt;/sp-breadcrumbs-item&gt;
-&lt;/sp-breadcrumbs&gt;`"></code-view>
-    </component-view>
+&lt;/sp-breadcrumbs&gt;`"
+    ></code-view>
+  </component-view>
 </template>
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 
 @Component({})
 export default class BreadcrumbsItemPage extends Vue {
-  propData = [{"prop":"chevron","type":"boolean","default":"true"},{"prop":"nested","type":"boolean","default":"false"},{"prop":"dragged","type":"boolean","default":"false"},{"prop":"disabled","type":"boolean","default":"false"}];
-  slotData = [{"name":"default"}];
+  propData = [
+    { prop: "chevron", type: "boolean", default: "true" },
+    { prop: "nested", type: "boolean", default: "false" },
+    { prop: "dragged", type: "boolean", default: "false" },
+    { prop: "disabled", type: "boolean", default: "false" },
+  ];
+  slotData = [{ name: "default" }];
   eventData = [];
-
-  
 }
 </script>

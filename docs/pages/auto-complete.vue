@@ -1,23 +1,22 @@
-
 <template>
-    <component-view
+  <component-view
     name="AutoComplete"
     :propData="propData"
     :eventData="eventData"
     :slotData="slotData"
-    >
-        
-    </component-view>
+  >
+  </component-view>
 </template>
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 
 @Component({})
 export default class AutoCompletePage extends Vue {
-  propData = [{"prop":"items","type":"string[]","default":"() => []"},{"prop":"value","type":"string","default":"\"\""}];
+  propData = [
+    { prop: "items", type: "string[]", default: "() => []" },
+    { prop: "value", type: "string", default: '""' },
+  ];
   slotData = [];
   eventData = [];
-
-  
 }
 </script>

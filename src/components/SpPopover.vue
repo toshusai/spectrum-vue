@@ -149,9 +149,10 @@ export default class SpPopover extends Vue {
 <sp-popover ref="popover2" allow-pos="bottom-left"> <h3>Content</h3> </sp-popover>
 </code>
 <code>
+<sp-popover ref="popover3" allow-pos="right-top"> <h3>Content</h3> </sp-popover>
 <div style="display: flex">
-  <sp-action-button @click="e => $refs.popover3.open(e.target)"> Open </sp-action-button>
-</div
+<sp-action-button style="margin-left: auto" @click="e => $refs.popover3.open(e.target)"> Open </sp-action-button>
+</div>
 <sp-popover ref="popover3" allow-pos="right-top"> <h3>Content</h3> </sp-popover>
 </code>
 

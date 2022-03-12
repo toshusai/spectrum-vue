@@ -1,23 +1,22 @@
-
 <template>
-    <component-view
+  <component-view
     name="TreeView"
     :propData="propData"
     :eventData="eventData"
     :slotData="slotData"
-    >
-        
-    </component-view>
+  >
+  </component-view>
 </template>
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 
 @Component({})
 export default class TreeViewPage extends Vue {
-  propData = [{"prop":"thumbnail","type":"string","default":"''"},{"prop":"size","type":"string","default":"\"M\""}];
-  slotData = [{"name":"default"}];
+  propData = [
+    { prop: "thumbnail", type: "string", default: "''" },
+    { prop: "size", type: "string", default: '"M"' },
+  ];
+  slotData = [{ name: "default" }];
   eventData = [];
-
-  
 }
 </script>

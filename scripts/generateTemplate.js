@@ -148,6 +148,7 @@ const template = `
     </component-view>
 </template>
 <script lang="ts">
+import { Vue, Component } from "vue-property-decorator";
 ${IMPORT}
 @Component({})
 export default class ${classNameKeyword}Page extends Vue {

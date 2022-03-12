@@ -17,7 +17,7 @@
         class="spectrum-Picker-label"
         :class="[value ? '' : 'is-placeholder']"
       >
-        <slot v-if="!value" />
+        <slot v-if="!!$scopedSlots.item || !!$slots.item" />
         <span v-else>{{ value.text }}</span>
       </span>
       <svg
@@ -49,10 +49,7 @@
       style="position: fixed; z-index: 100"
       :style="popoverStyle"
     >
-      <ul
-        class="spectrum-Menu"
-        role="listbox"
-      >
+      <ul class="spectrum-Menu" role="listbox">
         <li
           v-for="(item, i) in items"
           :key="i"
@@ -103,12 +100,12 @@ export default class SpPicker extends Vue {
 
   isOpen: boolean = false;
 
-  popoverY : number = 0;
+  popoverY: number = 0;
 
-  get popoverStyle(): Partial<CSSStyleDeclaration>{
+  get popoverStyle(): Partial<CSSStyleDeclaration> {
     return {
-      top: this.popoverY + "px"
-    }
+      top: this.popoverY + "px",
+    };
   }
 
   change(e: Event, item: MenuItem) {
@@ -127,14 +124,38 @@ export default class SpPicker extends Vue {
     this.isOpen = true;
     document.addEventListener("pointerdown", this.close);
     this.$emit("click", e);
-    const rect =  this.popover.getBoundingClientRect()
-    const tr = this.$el.getBoundingClientRect()
-    
-    if(tr.top + tr.height + rect.height > window.innerHeight){
-      this.popoverY =  tr.top- rect.height - 16;
-    }else {
-      this.popoverY =  tr.top + tr.height 
+    const rect = this.popover.getBoundingClientRect();
+    const tr = this.$el.getBoundingClientRect();
+
+    if (tr.top + tr.height + rect.height > window.innerHeight) {
+      this.popoverY = tr.top - rect.height - 16;
+    } else {
+      this.popoverY = tr.top + tr.height;
     }
   }
 }
+/**
+<code>
+<sp-picker :items="items" :value="value" @change="change" />
+</code>
+<import>
+</import>
+<component>
+
+  items = [
+    { id: "id", text: "text" },
+    { id: "id2", text: "text2" },
+  ];
+
+  value: any = null;
+
+  mounted() {
+    this.value = this.items[0];
+  }
+
+  change(_: any, item: any) {
+    this.value = item;
+  }
+</component>
+ */
 </script>
